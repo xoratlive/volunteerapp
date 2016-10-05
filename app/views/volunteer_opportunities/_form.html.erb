@@ -1,0 +1,33 @@
+<%= form_for(@volunteer_opportunity) do |f| %>
+  <% if @volunteer_opportunity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@volunteer_opportunity.errors.count, "error") %> prohibited this volunteer_opportunity from being saved:</h2>
+
+      <ul>
+      <% @volunteer_opportunity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Organization %><br>
+    <%= f.text_field :Organization %>
+  </div>
+  <div class="field">
+    <%= f.label :Address %><br>
+    <%= f.text_field :Address %>
+  </div>
+  <div class="field">
+    <%= f.label :Phone %><br>
+    <%= f.text_field :Phone %>
+  </div>
+  <div class="field">
+    <%= f.label :Website %><br>
+    <%= f.text_field :Website %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
