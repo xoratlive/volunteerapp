@@ -7,6 +7,8 @@ gem 'rails', '4.2.5.1'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 
+#gem for user authentication
+gem 'devise'
 
 
 # Use Uglifier as compressor for JavaScript assets
