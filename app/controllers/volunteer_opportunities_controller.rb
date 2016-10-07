@@ -25,6 +25,7 @@ class VolunteerOpportunitiesController < ApplicationController
   # POST /volunteer_opportunities.json
   def create
     @volunteer_opportunity = VolunteerOpportunity.new(volunteer_opportunity_params)
+    @volunteer_opportunity.user_id = current_user.id
 
     respond_to do |format|
       if @volunteer_opportunity.save
