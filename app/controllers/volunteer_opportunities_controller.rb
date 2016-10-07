@@ -1,6 +1,8 @@
 class VolunteerOpportunitiesController < ApplicationController
   before_action :set_volunteer_opportunity, only: [:show, :edit, :update, :destroy]
-
+  before_filter :authenticate_user!, only: [:new, :create, :edit, :update, :destroy]
+  before_filter :check_user, only: [:edit, :update, :destroy]
+  
   # GET /volunteer_opportunities
   # GET /volunteer_opportunities.json
   def index
@@ -72,4 +74,10 @@ class VolunteerOpportunitiesController < ApplicationController
     def volunteer_opportunity_params
       params.require(:volunteer_opportunity).permit(:Organization, :Address, :Phone, :Website)
     end
+    
+    def check_user
+      if current_user != @volunteer_opportunity.user
+        redirect_to root_url, alert: "Sorry, this volunteer opportunity belongs to someone else"
+    end
+  end
 end
