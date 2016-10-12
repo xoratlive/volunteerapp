@@ -5,7 +5,7 @@
 
 
   <div class="field">
-    <%= f.label :organization_name %><br />
+    <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, class: "form-control" %>
   </div>
   <div class="field">
@@ -24,6 +24,11 @@
   <div class="field">
     <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+  </div>
+
+  <div>
+  <%= f.label :I_am_a_volunteer %>
+  <%= f.check_box :volunteer, checked: true  %>
   </div>
 
   <div class="actions">
