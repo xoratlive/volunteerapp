@@ -5,6 +5,9 @@ Rails.application.routes.draw do
 
   get 'pages/contact'
 
+  get 'organization' => "volunteer_opportunities#organization"
+
+
   root 'volunteer_opportunities#index'
 
 
