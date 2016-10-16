@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161012082852) do
+ActiveRecord::Schema.define(version: 20161016075127) do
+
+  create_table "claim_opportunities", force: :cascade do |t|
+    t.string   "please_explain_why_you_are_interested_in_this_opportunity"
+    t.datetime "created_at",                                                null: false
+    t.datetime "updated_at",                                                null: false
+    t.integer  "volunteer_opportunity_id"
+    t.integer  "organization_id"
+    t.integer  "volunteer_id"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false

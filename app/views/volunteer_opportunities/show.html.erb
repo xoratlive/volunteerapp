@@ -4,7 +4,6 @@
   <strong>Position:</strong>
   <%= @volunteer_opportunity.Organization %>
 </p>
-
 <p>
   <strong>Address:</strong>
   <%= @volunteer_opportunity.Address %>
@@ -18,6 +17,10 @@
 <p>
   <strong>Website:</strong>
   <%= @volunteer_opportunity.Website %>
+</p>
+
+<p>
+  <%= link_to "Claim Opportunity", new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity) %>
 </p>
 
 <% if current_user == @volunteer_opportunity.user %>
