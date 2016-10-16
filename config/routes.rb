@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
+  
   devise_for :users
-  resources :volunteer_opportunities
+  resources :volunteer_opportunities do
+    resources :claim_opportunities
+  end
+  
   get 'pages/about'
 
   get 'pages/contact'
