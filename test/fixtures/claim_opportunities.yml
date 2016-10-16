@@ -1,0 +1,7 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  please_explain_why_you_are_interested_in_this_opportunity: MyString
+
+two:
+  please_explain_why_you_are_interested_in_this_opportunity: MyString
