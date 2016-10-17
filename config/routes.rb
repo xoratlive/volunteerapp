@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :volunteer_opportunities do
-    resources :claim_opportunities
+    resources :claim_opportunities, only: [:new, :create]
   end
   
   get 'pages/about'
@@ -10,6 +10,10 @@ Rails.application.routes.draw do
   get 'pages/contact'
 
   get 'organization' => "volunteer_opportunities#organization"
+
+  get 'opportunities_to_claim' => "claim_opportunities#opportunities_to_claim"
+
+  get 'opportunities_that_have_been_claimed' => "claim_opportunities#opportunities_that_have_been_claimed"
 
 
   root 'volunteer_opportunities#index'

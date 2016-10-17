@@ -29,6 +29,12 @@
       <a class="navbar-brand" href="/">Volunteer App</a>
     </div>
 
+
+
+
+
+    
+
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
@@ -43,12 +49,13 @@
       </form>
       <ul class="nav navbar-nav navbar-right">
       <% if user_signed_in? %>
-        <li><%= link_to "Manage Volunteer Opportunities", organization_path %></li>
-        <li><%= link_to "Edit Profile", edit_user_registration_path %></li>
-        <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
+        <li><%= link_to "View the people that have claimed your volunteer opportunities", opportunities_to_claim_path %></li>
+        <li><%= link_to "Manage your volunteer opportunities", organization_path %></li>
+        <li><%= link_to "Edit your profile", edit_user_registration_path %></li>
+        <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
       <% else %>
-        <li><%= link_to "Sign Up", new_user_registration_path %></li>
-        <li><%= link_to "Sign In", new_user_session_path %></li>
+        <li><%= link_to "Sign up", new_user_registration_path %></li>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
       <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->

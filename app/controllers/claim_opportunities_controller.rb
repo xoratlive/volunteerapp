@@ -2,16 +2,17 @@ class ClaimOpportunitiesController < ApplicationController
   before_action :set_claim_opportunity, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
 
-  # GET /claim_opportunities
-  # GET /claim_opportunities.json
-  def index
-    @claim_opportunities = ClaimOpportunity.all
+
+  def opportunities_to_claim
+    @claim_opportunity = ClaimOpportunity.all.where(organization: current_user).order("created_at DESC")
   end
 
-  # GET /claim_opportunities/1
-  # GET /claim_opportunities/1.json
-  def show
+  def opportunities_that_have_been_claimed
+    @claim_opportunity = ClaimOpportunity.all.where(volunteer: current_user).order("created_at DESC")
   end
+
+
+ 
 
   # GET /claim_opportunities/new
   def new
@@ -19,9 +20,6 @@ class ClaimOpportunitiesController < ApplicationController
     @volunteer_opportunity = VolunteerOpportunity.find(params[:volunteer_opportunity_id])
   end
 
-  # GET /claim_opportunities/1/edit
-  def edit
-  end
 
   # POST /claim_opportunities
   # POST /claim_opportunities.json
@@ -38,7 +36,7 @@ class ClaimOpportunitiesController < ApplicationController
 
     respond_to do |format|
       if @claim_opportunity.save
-        format.html { redirect_to root_url, notice: 'Claim opportunity was successfully created.' }
+        format.html { redirect_to root_url, notice: 'You have successfully claimed the opportunity.' }
         format.json { render :show, status: :created, location: @claim_opportunity }
       else
         format.html { render :new }
@@ -47,29 +45,7 @@ class ClaimOpportunitiesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /claim_opportunities/1
-  # PATCH/PUT /claim_opportunities/1.json
-  def update
-    respond_to do |format|
-      if @claim_opportunity.update(claim_opportunity_params)
-        format.html { redirect_to @claim_opportunity, notice: 'Claim opportunity was successfully updated.' }
-        format.json { render :show, status: :ok, location: @claim_opportunity }
-      else
-        format.html { render :edit }
-        format.json { render json: @claim_opportunity.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # DELETE /claim_opportunities/1
-  # DELETE /claim_opportunities/1.json
-  def destroy
-    @claim_opportunity.destroy
-    respond_to do |format|
-      format.html { redirect_to claim_opportunities_url, notice: 'Claim opportunity was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
