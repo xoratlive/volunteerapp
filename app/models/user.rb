@@ -3,7 +3,7 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  validates :name, presence: true
+  validates :name, :biographical_information, :address, :phone_number, presence: true
 
   has_many :volunteer_opportunities, dependent: :destroy
   has_many :opportunities_to_claim, class_name: "Claim_opportunity", foreign_key: "organization_id"

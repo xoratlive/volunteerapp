@@ -1,5 +1,26 @@
+<h1>Organization profile:</h1>
 
+<p>
+  <strong>Name:</strong>
+  <%= @volunteer_opportunity.user.name %>
+</p>
 
+<p>
+  <strong>Address:</strong>
+<%= @volunteer_opportunity.user.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+<%= @volunteer_opportunity.user.phone_number %>
+</p>
+
+<p>
+  <strong>Biographical information:</strong>
+<%= @volunteer_opportunity.user.biographical_information %>
+</p>
+
+<h1>Volunteer position information:</h1>
 <p>
   <strong>Position:</strong>
   <%= @volunteer_opportunity.Organization %>
@@ -19,12 +40,48 @@
   <%= @volunteer_opportunity.Website %>
 </p>
 
-<p>
-  <%= link_to "Claim Opportunity", new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity) %>
-</p>
+<% if user_signed_in? %>
+	<p>
+
+  		<%= link_to "Claim Opportunity", new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity) %>
+	</p>
+<% end %>
+
+
 
 <% if current_user == @volunteer_opportunity.user %>
 <%= link_to 'Edit', edit_volunteer_opportunity_path(@volunteer_opportunity) %> |
 <% end %>
 
 <%= link_to 'Back', volunteer_opportunities_path %>
+
+<h1>Volunteer opportunities posted by this organization:</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+   
+    <% @volunteer_opportunities.each do |volunteer_opportunity| %>
+      <tr>
+        <td><%= volunteer_opportunity.Organization %></td>
+        <td><%= volunteer_opportunity.Address %></td>
+        <td><%= volunteer_opportunity.Phone %></td>
+        <td><%= volunteer_opportunity.Website %></td>
+        <td><%= link_to 'Show', volunteer_opportunity %></td>
+        <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
+        <td><%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %></td>
+        <td><%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

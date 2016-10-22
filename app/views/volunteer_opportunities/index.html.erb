@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Organization</th>
       <th>Position</th>
       <th>Address</th>
       <th>Phone</th>
@@ -16,6 +17,8 @@
   <tbody>
     <% @volunteer_opportunities.each do |volunteer_opportunity| %>
       <tr>
+      
+        <td><%= volunteer_opportunity.user.name %></td>
         <td><%= volunteer_opportunity.Organization %></td>
         <td><%= volunteer_opportunity.Address %></td>
         <td><%= volunteer_opportunity.Phone %></td>

@@ -18,6 +18,21 @@
   <% end %>
 
   <div class="field">
+    <%= f.label :biographical_information %><br />
+    <%= f.text_field :biographical_information, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone_number %><br />
+    <%= f.telephone_field :phone_number, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
     <% if @minimum_password_length %>

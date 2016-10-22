@@ -1,6 +1,6 @@
 class VolunteerOpportunitiesController < ApplicationController
   before_action :set_volunteer_opportunity, only: [:show, :edit, :update, :destroy]
-  before_filter :authenticate_user!, only: [:organization, :new, :create, :edit, :update, :destroy]
+  before_filter :authenticate_user!, only: [:new, :organization, :create, :edit, :update, :destroy]
   before_filter :check_user, only: [:edit, :update, :destroy]
 
 
@@ -18,9 +18,13 @@ class VolunteerOpportunitiesController < ApplicationController
 
   # GET /volunteer_opportunities/1
   # GET /volunteer_opportunities/1.json
+  
   def show
+  @volunteer_opportunities = VolunteerOpportunity.where(user: @volunteer_opportunity.user.id).order("created_at DESC")
+
   end
 
+ 
   # GET /volunteer_opportunities/new
   def new
     @volunteer_opportunity = VolunteerOpportunity.new
@@ -85,7 +89,7 @@ class VolunteerOpportunitiesController < ApplicationController
     # Only let the creator of a volunteer opportunity edit or delete the opportunity.
     def check_user
       if current_user != @volunteer_opportunity.user
-        redirect_to root_url, alert: "Sorry, this volunteer opportunity belongs to someone else"
+        redirect_to root_url, alert: "Sorry, this volunteer opportunity belongs to someone else."
     end
   end
 end
