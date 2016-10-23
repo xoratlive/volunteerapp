@@ -35,6 +35,6 @@
 
 <br>
 
-<% if user_signed_in? %>
+<% if (user_signed_in?) && (not current_user.volunteer?) %>
 <%= link_to 'New Volunteer opportunity', new_volunteer_opportunity_path %>
 <% end %>
