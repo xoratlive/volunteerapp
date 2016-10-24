@@ -1,3 +1,31 @@
+
+<h1>Your profile:</h1>
+<strong>Image:</strong>
+<p>
+<%= image_tag current_user.image.url(:medium) %>
+</p>
+<p>
+  <strong>Name:</strong>
+  <%= current_user.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+<%= current_user.address %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+<%= current_user.phone_number %>
+</p>
+
+<p>
+<strong>Biographical information:</strong>
+<%= current_user.biographical_information %>
+</p>
+
+<% if (user_signed_in?) && (not current_user.volunteer?) %>
+<h1>Opportunities you have posted:</h1>
 <table>
   <thead>
     <tr>
@@ -27,7 +55,7 @@
 </table>
 
 <br>
-
-<% if user_signed_in? %>
+<% end %>
+<% if (user_signed_in?) && (not current_user.volunteer?) %>
 <%= link_to 'New Volunteer opportunity', new_volunteer_opportunity_path %>
 <% end %>

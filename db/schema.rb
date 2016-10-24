@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161021033959) do
+ActiveRecord::Schema.define(version: 20161024083423) do
 
   create_table "claim_opportunities", force: :cascade do |t|
     t.string   "please_explain_why_you_are_interested_in_this_opportunity"
@@ -41,6 +41,10 @@ ActiveRecord::Schema.define(version: 20161021033959) do
     t.string   "biographical_information"
     t.string   "address"
     t.integer  "phone_number"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
