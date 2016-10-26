@@ -49,8 +49,8 @@
       </form>-->
       <ul class="nav navbar-nav navbar-right">
       <% if (user_signed_in?) && (not current_user.volunteer?) %>
-        <li><%= link_to "View the people that have claimed your volunteer opportunities", opportunities_to_claim_path %></li>
-        <li><%= link_to "View your profile and your posted volunteer opportunities", organization_path %></li>
+        <li><%= link_to "View Claimed Events", opportunities_to_claim_path %></li>
+        <li><%= link_to "View your profile", organization_path %></li>
         <% end %>
         <% if (user_signed_in?) && (current_user.volunteer?) %>
         <li><%= link_to "View your profile", organization_path %></li>
@@ -67,7 +67,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-
+<div class="row">
+<%= image_tag "banner.png", class: "banner" %>
+</div>
 
 <div class="container">
   <p class="notice"><%= notice %></p>
