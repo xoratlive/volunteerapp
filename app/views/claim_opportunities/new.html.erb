@@ -1,4 +1,6 @@
-<h1>Claim Opportunity</h1>
+<h1>Claim <%= @volunteer_opportunity.Organization %> from <%= @volunteer_opportunity.user.name %></h1>
+<h4>Date: <%= @volunteer_opportunity.event_date %></h4>
+<br>
 
 <%= render 'form' %>
 

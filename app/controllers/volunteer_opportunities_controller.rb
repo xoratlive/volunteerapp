@@ -83,7 +83,7 @@ class VolunteerOpportunitiesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def volunteer_opportunity_params
-      params.require(:volunteer_opportunity).permit(:Organization, :Address, :Phone, :Website)
+      params.require(:volunteer_opportunity).permit(:event_date, :description,:Organization, :Address, :Phone, :Website)
     end
     
     # Only let the creator of a volunteer opportunity edit or delete the opportunity.
