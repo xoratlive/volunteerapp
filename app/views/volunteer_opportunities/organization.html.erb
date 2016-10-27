@@ -1,6 +1,5 @@
-
-<h1>Your profile:</h1>
-<strong>Image:</strong>
+<div class="col-md-5">
+<h2>Your profile:</h2>
 <p>
 <%= image_tag current_user.image.url(:medium) %>
 </p>
@@ -15,6 +14,12 @@
 </p>
 
 <p>
+  <strong>Email:</strong>
+<%= current_user.email %>
+</p>
+
+
+<p>
   <strong>Phone:</strong>
 <%= current_user.phone_number %>
 </p>
@@ -25,8 +30,12 @@
 </p>
 
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
-<h1>Opportunities you have posted:</h1>
-<table>
+<h2>Opportunities you have posted:</h2>
+</div>
+
+
+
+<table class= "table table-striped">
   <thead>
     <tr>
       <th>Position</th>
