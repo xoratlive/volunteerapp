@@ -5,22 +5,31 @@
 <div class="row show-top">
 <div class= "col-md-8">
     <h2>Volunteer Position - <%= @volunteer_opportunity.Organization %></h2>
+    <p>
     <strong>Description of Work:</strong>
       <%= @volunteer_opportunity.description %>
     </p>
+    <p>
     <strong>Date:</strong>
       <%= @volunteer_opportunity.event_date %>
     </p>
+    <p>
+     <strong>Start time:</strong>
+      <%= @volunteer_opportunity.start_time %>
+    </p>
+    <p>
+     <strong>End time:</strong>
+      <%= @volunteer_opportunity.end_time %>
+    </p>
+    <p>
       <strong>Address:</strong>
       <%= @volunteer_opportunity.Address %>
     </p>
-
     <p>
   <strong>Website:</strong>
   <%= @volunteer_opportunity.Website %>
    </p>
-
-    <p>
+   <p>
       <strong>Phone:</strong>
       <%= @volunteer_opportunity.Phone %>
     </p>

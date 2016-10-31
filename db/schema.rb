@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161026174631) do
+ActiveRecord::Schema.define(version: 20161031082257) do
 
   create_table "claim_opportunities", force: :cascade do |t|
     t.string   "please_explain_why_you_are_interested_in_this_opportunity"
@@ -59,7 +59,9 @@ ActiveRecord::Schema.define(version: 20161026174631) do
     t.datetime "updated_at",   null: false
     t.integer  "user_id"
     t.text     "description"
-    t.datetime "event_date"
+    t.date     "event_date"
+    t.string   "start_time"
+    t.string   "end_time"
   end
 
 end
