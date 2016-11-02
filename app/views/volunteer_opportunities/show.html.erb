@@ -39,7 +39,7 @@
     <% if user_signed_in? && current_user.volunteer? %>
       <p>
 
-      <%= link_to "Volunteer", new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity), class: "btn btn-primary" %>
+      <%= link_to "Volunteer!", new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity), class: "btn btn-primary" %>
       </p>
     <% end %>
   </div>
