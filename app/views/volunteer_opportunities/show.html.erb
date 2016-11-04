@@ -3,7 +3,7 @@
 
 <div class="container-fluid show-page-container">
 <div class="row show-top">
-<div class= "col-md-8">
+<div class= "col-md-7">
     <h2>Volunteer Position - <%= @volunteer_opportunity.Organization %></h2>
     <p>
     <strong>Description of Work:</strong>
@@ -11,15 +11,7 @@
     </p>
     <p>
     <strong>Date:</strong>
-      <%= @volunteer_opportunity.event_date %>
-    </p>
-    <p>
-     <strong>Start time:</strong>
-      <%= @volunteer_opportunity.start_time %>
-    </p>
-    <p>
-     <strong>End time:</strong>
-      <%= @volunteer_opportunity.end_time %>
+      <%= @volunteer_opportunity.event_date %> <%= @volunteer_opportunity.start_time %> - <%= @volunteer_opportunity.end_date %> <%= @volunteer_opportunity.end_time %>
     </p>
     <p>
       <strong>Address:</strong>
@@ -43,7 +35,7 @@
       </p>
     <% end %>
   </div>
-<div class="col-md-4 other-events">
+<div class="col-md-5 other-events">
 <h2>Other Events from <%= @volunteer_opportunity.user.name %>
   </h2>
 
@@ -61,7 +53,7 @@
     <% @volunteer_opportunities.each do |volunteer_opportunity| %>
       <tr>
         <td><%= volunteer_opportunity.Organization %></td>
-        <td><%= volunteer_opportunity.event_date %></td>
+        <td><%= volunteer_opportunity.event_date %> - <%= volunteer_opportunity.end_date %> </td>
 
         <td><%= link_to 'Show', volunteer_opportunity %></td>
         <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>

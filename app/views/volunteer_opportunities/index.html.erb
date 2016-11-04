@@ -16,7 +16,7 @@
   <tbody>
     <% @volunteer_opportunities.each do |volunteer_opportunity| %>
       <tr>
-        <td><%= volunteer_opportunity.event_date %></td>
+        <td><%= volunteer_opportunity.event_date %> - <%= volunteer_opportunity.end_date %> </td>
         <td><%= volunteer_opportunity.user.name %></td>
         <td><%= volunteer_opportunity.Organization %></td>
         <td><%= volunteer_opportunity.Phone %></td>
