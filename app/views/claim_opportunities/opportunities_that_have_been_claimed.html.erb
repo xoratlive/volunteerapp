@@ -4,7 +4,6 @@
 <table class= "table table-striped">
   <thead>
     <tr>
-      <th>Event date</th>
       <th>Organization</th>
       <th>Position</th>
       <th>Phone</th>
@@ -15,7 +14,6 @@
   <tbody>
     <% @claim_opportunity.each do |claim_opportunity| %>
       <tr>
-        <td><%= claim_opportunity.volunteer_opportunity.event_date  %> - <%= claim_opportunity.volunteer_opportunity.end_date  %> </td>
         <td><%= claim_opportunity.volunteer_opportunity.user.name %></td>
         <td><%= claim_opportunity.volunteer_opportunity.Organization %></td>
         <td><%= claim_opportunity.volunteer_opportunity.Phone  %></td>

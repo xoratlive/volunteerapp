@@ -6,10 +6,10 @@
 <br>
 <br>
 <br>
+<h2>Displaying all opportunities </h2>
 <table class= "table table-striped">
   <thead>
     <tr>
-      <th>Event Date</th>
       <th>Organization</th>
       <th>Position</th>
       <th>Phone</th>
@@ -20,7 +20,6 @@
   <tbody>
     <% @volunteer_opportunities.each do |volunteer_opportunity| %>
       <tr>
-        <td><%= volunteer_opportunity.event_date %> - <%= volunteer_opportunity.end_date %> </td>
         <td><%= volunteer_opportunity.user.name %></td>
         <td><%= volunteer_opportunity.Organization %></td>
         <td><%= volunteer_opportunity.Phone %></td>

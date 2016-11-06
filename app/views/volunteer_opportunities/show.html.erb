@@ -9,10 +9,7 @@
     <strong>Description of Work:</strong>
       <%= @volunteer_opportunity.description %>
     </p>
-    <p>
-    <strong>Date:</strong>
-      <%= @volunteer_opportunity.event_date %> <%= @volunteer_opportunity.start_time %> - <%= @volunteer_opportunity.end_date %> <%= @volunteer_opportunity.end_time %>
-    </p>
+    <p> 
     <p>
       <strong>Address:</strong>
       <%= @volunteer_opportunity.Address %>
@@ -25,8 +22,92 @@
       <strong>Phone:</strong>
       <%= @volunteer_opportunity.Phone %>
     </p>
-
-
+    <strong>Availible days in the morning:</strong><br>
+        <% if @volunteer_opportunity.monday_morning == "mmondaym" %>
+          Monday
+          <% end %>
+        <% if @volunteer_opportunity.tuesday_morning == "mtuesdaym" %>
+          <br>
+          Tuesday
+          <% end %>
+        <% if @volunteer_opportunity.wednesday_morning == "mwednesdaym" %>
+          <br>
+          Wednesday
+          <% end %>
+        <% if @volunteer_opportunity.thursday_morning == "mthursdaym" %>
+          <br>
+          Thursday
+          <% end %>
+        <% if @volunteer_opportunity.friday_morning == "mfridaym" %>
+          <br>
+          Friday
+          <% end %>
+        <% if @volunteer_opportunity.saturday_morning == "msaturdaym" %>
+          <br>
+          Saturday
+          <% end %>
+        <% if @volunteer_opportunity.sunday_morning == "msundaym" %>
+          <br>
+          Sunday
+          <% end %>
+          <br> 
+      <strong>Availible days in the afternoon:</strong><br>
+        <% if @volunteer_opportunity.monday_afternoon == "amondaya" %>
+          Monday
+          <% end %>
+        <% if @volunteer_opportunity.tuesday_afternoon == "atuesdaya" %>
+          <br>
+          Tuesday
+          <% end %>
+        <% if @volunteer_opportunity.wednesday_afternoon == "awednesdaya" %>
+          <br>
+          Wednesday
+          <% end %>
+        <% if @volunteer_opportunity.thursday_afternoon == "athursdaya" %>
+          <br>
+          Thursday
+          <% end %>
+        <% if @volunteer_opportunity.friday_afternoon == "afridaya" %>
+          <br>
+          Friday
+          <% end %>
+        <% if @volunteer_opportunity.saturday_afternoon == "asaturdaya" %>
+          <br>
+          Saturday
+          <% end %>
+        <% if @volunteer_opportunity.sunday_afternoon == "asundaya" %>
+          <br>
+          Sunday
+          <% end %>
+          <br>
+        <strong>Availible days in the evening:</strong><br>
+        <% if @volunteer_opportunity.monday_evening == "emondaye" %>
+          Monday
+          <% end %>
+        <% if @volunteer_opportunity.tuesday_evening == "etuesdaye" %>
+          <br>
+          Tuesday
+          <% end %>
+        <% if @volunteer_opportunity.wednesday_evening == "ewednesdaye" %>
+          <br>
+          Wednesday
+          <% end %>
+        <% if @volunteer_opportunity.thursday_evening == "ethursdaye" %>
+          <br>
+          Thursday
+          <% end %>
+        <% if @volunteer_opportunity.friday_evening == "efridaye" %>
+          <br>
+          Friday
+          <% end %>
+        <% if @volunteer_opportunity.saturday_evening == "esaturdaye" %>
+          <br>
+          Saturday
+          <% end %>
+        <% if @volunteer_opportunity.sunday_evening == "esundaye" %>
+          <br>
+          Sunday
+          <% end %>
 
     <% if user_signed_in? && current_user.volunteer? %>
       <p>
@@ -43,7 +124,6 @@
   <thead>
     <tr>
       <th>Position</th>
-      <th>Date</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -53,7 +133,6 @@
     <% @volunteer_opportunities.each do |volunteer_opportunity| %>
       <tr>
         <td><%= volunteer_opportunity.Organization %></td>
-        <td><%= volunteer_opportunity.event_date %> - <%= volunteer_opportunity.end_date %> </td>
 
         <td><%= link_to 'Show', volunteer_opportunity %></td>
         <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>

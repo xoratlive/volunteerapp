@@ -7,7 +7,7 @@
 <br>
 <br>
 <% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mmondaym+mtuesdaym+mwednesdaym+mthursdaym+mfridaym') %>
-<h2>Displaying opportunities available in the morning on each day of the week </h2>
+<h2>Displaying opportunities available in the morning on each day of the weekday </h2>
 <% end %>
 <% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=msaturdaym+msundaym') %>
 <h2>Displaying opportunities available in the morning on each day of the weekend </h2>
@@ -36,7 +36,7 @@
 
 
 <% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=amondaya+atuesdaya+awednesdaya+athursdaya+afridaya') %>
-<h2>Displaying opportunities available in the afternoon on each day of the week </h2>
+<h2>Displaying opportunities available in the afternoon on each day of the weekday </h2>
 <% end %>
 <% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=asaturdaya+asundaya') %>
 <h2>Displaying opportunities available in the afternoon on each day of the weekend </h2>
@@ -65,7 +65,7 @@
 
 
 <% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=emondaye+etuesdaye+ewednesdaye+ethursdaye+efridaye') %>
-<h2>Displaying opportunities available in the evening on each day of the week </h2>
+<h2>Displaying opportunities available in the evening on each day of the weekday </h2>
 <% end %>
 <% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esaturdaye+esundaye') %>
 <h2>Displaying opportunities available in the evening on each day of the weekend </h2>
@@ -95,7 +95,6 @@
 <table class= "table table-striped">
   <thead>
     <tr>
-      <th>Event Date</th>
       <th>Organization</th>
       <th>Position</th>
       <th>Phone</th>
@@ -106,7 +105,6 @@
   <tbody>
     <% @volunteer_opportunities.each do |volunteer_opportunity| %>
       <tr>
-        <td><%= volunteer_opportunity.event_date %> - <%= volunteer_opportunity.end_date %> </td>
         <td><%= volunteer_opportunity.user.name %></td>
         <td><%= volunteer_opportunity.Organization %></td>
         <td><%= volunteer_opportunity.Phone %></td>
