@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161104044115) do
+ActiveRecord::Schema.define(version: 20161106084034) do
 
   create_table "claim_opportunities", force: :cascade do |t|
     t.string   "please_explain_why_you_are_interested_in_this_opportunity"
@@ -55,14 +55,35 @@ ActiveRecord::Schema.define(version: 20161104044115) do
     t.string   "Address"
     t.string   "Phone"
     t.string   "Website"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",          null: false
+    t.datetime "updated_at",          null: false
     t.integer  "user_id"
     t.text     "description"
     t.string   "event_date"
     t.string   "start_time"
     t.string   "end_time"
     t.string   "end_date"
+    t.text     "monday_morning"
+    t.text     "monday_afternoon"
+    t.text     "monday_evening"
+    t.text     "tuesday_morning"
+    t.text     "tuesday_afternoon"
+    t.text     "tuesday_evening"
+    t.text     "wednesday_morning"
+    t.text     "wednesday_afternoon"
+    t.text     "wednesday_evening"
+    t.text     "thursday_morning"
+    t.text     "thursday_afternoon"
+    t.text     "thursday_evening"
+    t.text     "friday_morning"
+    t.text     "friday_afternoon"
+    t.text     "friday_evening"
+    t.text     "saturday_morning"
+    t.text     "saturday_afternoon"
+    t.text     "saturday_evening"
+    t.text     "sunday_morning"
+    t.text     "sunday_afternoon"
+    t.text     "sunday_evening"
   end
 
 end
