@@ -1,6 +1,8 @@
 source 'http://rubygems.org'
 ruby '2.1.8'
 
+gem 'searchkick'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5.1'
 

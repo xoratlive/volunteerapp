@@ -2,6 +2,9 @@ Rails.application.routes.draw do
   
   devise_for :users
   resources :volunteer_opportunities do
+    collection do
+      get 'search'
+    end
     resources :claim_opportunities, only: [:new, :create]
   end
   

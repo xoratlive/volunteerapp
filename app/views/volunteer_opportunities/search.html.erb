@@ -1,0 +1,29 @@
+<table class= "table table-striped">
+  <thead>
+    <tr>
+      <th>Event Date</th>
+      <th>Organization</th>
+      <th>Position</th>
+      <th>Phone</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @volunteer_opportunities.each do |volunteer_opportunity| %>
+      <tr>
+        <td><%= volunteer_opportunity.event_date %> - <%= volunteer_opportunity.end_date %> </td>
+        <td><%= volunteer_opportunity.user.name %></td>
+        <td><%= volunteer_opportunity.Organization %></td>
+        <td><%= volunteer_opportunity.Phone %></td>
+        <td><%= link_to 'Show', volunteer_opportunity %></td>
+        <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
+        <td><%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %></td>
+        <td><%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>

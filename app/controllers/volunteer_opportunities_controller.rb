@@ -3,6 +3,15 @@ class VolunteerOpportunitiesController < ApplicationController
   before_filter :authenticate_user!, only: [:new, :organization, :create, :edit, :update, :destroy]
   before_filter :check_user, only: [:edit, :update, :destroy]
 
+def search
+  if params[:search].present?
+    @volunteer_opportunities = VolunteerOpportunity.search(params[:search])
+  else
+    @volunteer_opportunities = VolunteerOpportunity.all
+  end
+end
+
+
 
   # Organization URL displays volunteer opportunities that the organization has created.
   def organization
