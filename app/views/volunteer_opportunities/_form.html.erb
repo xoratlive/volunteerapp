@@ -31,90 +31,102 @@
     <%= f.label :Website %><br>
     <%= f.text_field :Website, class: "form-control" %>
   </div>
+  <h3>Mornings when this opportunity is available:</h3>
   <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :monday_morning, class: "form-control" %>
+    <%= f.label :Monday %>:
+    <%= f.radio_button :monday_morning, "mmondaym" %>Yes
+    <%= f.radio_button :monday_morning, "blank564564" %>No
+    <br>
+    <%= f.label :Tuesday %>:
+    <%= f.radio_button :tuesday_morning, "mtuesdaym" %>Yes
+    <%= f.radio_button :tuesday_morning, "blank564564" %>No
+    <br>
+    <%= f.label :Wednesday %>:
+    <%= f.radio_button :wednesday_morning, "mwednesdaym" %>Yes
+    <%= f.radio_button :wednesday_morning, "blank564564" %>No
+    <br>
+    <%= f.label :Thursday %>:
+    <%= f.radio_button :thursday_morning, "mthursdaym" %>Yes
+    <%= f.radio_button :thursday_morning, "blank564564" %>No
+    <br>
+    <%= f.label :Friday %>:
+    <%= f.radio_button :friday_morning, "mfridaym" %>Yes
+    <%= f.radio_button :friday_morning, "blank564564" %>No
+    <br>
+    <%= f.label :Saturday %>:
+    <%= f.radio_button :saturday_morning, "msaturdaym" %>Yes
+    <%= f.radio_button :saturday_morning, "blank564564" %>No
+    <br>
+    <%= f.label :Sunday %>:
+    <%= f.radio_button :sunday_morning, "msundaym" %>Yes
+    <%= f.radio_button :sunday_morning, "blank564564" %>No
   </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :monday_afternoon, class: "form-control" %>
+
+    <h3>Afternoons when this opportunity is available:</h3>
+    <div class="form-group">
+    <%= f.label :Monday %>:
+    <%= f.radio_button :monday_afternoon, "amondaya" %>Yes
+    <%= f.radio_button :monday_afternoon, "blank564564" %>No
+    <br>
+    <%= f.label :Tuesday %>:
+    <%= f.radio_button :tuesday_afternoon, "atuesdaya" %>Yes
+    <%= f.radio_button :tuesday_afternoon, "blank564564" %>No
+    <br>
+    <%= f.label :Wednesday %>:
+    <%= f.radio_button :wednesday_afternoon, "awednesdaya" %>Yes
+    <%= f.radio_button :wednesday_afternoon, "blank564564" %>No
+    <br>
+    <%= f.label :Thursday %>:
+    <%= f.radio_button :thursday_afternoon, "athursdaya" %>Yes
+    <%= f.radio_button :thursday_afternoon, "blank564564" %>No
+    <br>
+    <%= f.label :Friday %>:
+    <%= f.radio_button :friday_afternoon, "afridaya" %>Yes
+    <%= f.radio_button :friday_afternoon, "blank564564" %>No
+    <br>
+    <%= f.label :Saturday %>:
+    <%= f.radio_button :saturday_afternoon, "asaturdaya" %>Yes
+    <%= f.radio_button :saturday_afternoon, "blank564564" %>No
+    <br>
+    <%= f.label :Sunday %>:
+    <%= f.radio_button :sunday_afternoon, "asundaya" %>Yes
+    <%= f.radio_button :sunday_afternoon, "blank564564" %>No
   </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :monday_evening, class: "form-control" %>
+  <h3>Evenings when this opportunity is available:</h3>
+    <div class="form-group">
+    <%= f.label :Monday %>:
+    <%= f.radio_button :monday_evening, "emondaye" %>Yes
+    <%= f.radio_button :monday_evening, "blank564564" %>No
+    <br>
+    <%= f.label :Tuesday %>:
+    <%= f.radio_button :tuesday_evening, "etuesdaye" %>Yes
+    <%= f.radio_button :tuesday_evening, "blank564564" %>No
+    <br>
+    <%= f.label :Wednesday %>:
+    <%= f.radio_button :wednesday_evening, "ewednesdaye" %>Yes
+    <%= f.radio_button :wednesday_evening, "blank564564" %>No
+    <br>
+    <%= f.label :Thursday %>:
+    <%= f.radio_button :thursday_evening, "ethursdaye" %>Yes
+    <%= f.radio_button :thursday_evening, "blank564564" %>No
+    <br>
+    <%= f.label :Friday %>:
+    <%= f.radio_button :friday_evening, "efridaye" %>Yes
+    <%= f.radio_button :friday_evening, "blank564564" %>No
+    <br>
+    <%= f.label :Saturday %>:
+    <%= f.radio_button :saturday_evening, "esaturdaye" %>Yes
+    <%= f.radio_button :saturday_evening, "blank564564" %>No
+    <br>
+    <%= f.label :Sunday %>:
+    <%= f.radio_button :sunday_evening, "esundaye" %>Yes
+    <%= f.radio_button :sunday_evening, "blank564564" %>No
   </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :tuesday_morning, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :tuesday_afternoon, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :tuesday_evening, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :wednesday_morning, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :wednesday_afternoon, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :wednesday_evening, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :thursday_morning, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :thursday_afternoon, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :thursday_evening, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :friday_morning, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :friday_afternoon, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :friday_evening, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :saturday_morning, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :saturday_afternoon, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :saturday_evening, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :sunday_morning, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :sunday_afternoon, class: "form-control" %>
-  </div>
-  <div class="form-group">
-    <%= f.label :test %><br>
-    <%= f.text_area :sunday_evening, class: "form-control" %>
-  </div>
+
+
+
+
+
   <div class="actions">
     <%= f.submit "Submit", class: "btn btn-primary" %>
   </div>
