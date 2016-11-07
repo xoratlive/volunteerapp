@@ -1,28 +1,35 @@
-<h1>Opportunities you have claimed</h1>
-
-
-<table class= "table table-striped">
-  <thead>
-    <tr>
-      <th>Organization</th>
-      <th>Position</th>
-      <th>Phone</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @claim_opportunity.each do |claim_opportunity| %>
-      <tr>
-        <td><%= claim_opportunity.volunteer_opportunity.user.name %></td>
-        <td><%= claim_opportunity.volunteer_opportunity.Organization %></td>
-        <td><%= claim_opportunity.volunteer_opportunity.Phone  %></td>
-        
-
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h2>Connections you have claimed</h2>
 <br>
+
+
+<div class="row">
+<% @claim_opportunity.each do |claim_opportunity| %>
+
+  <div class="col-md-3">
+  <div class="paddingbottom">
+  <div class="border1">
+  <div class="boxesbackground">
+  
+  <%= claim_opportunity.volunteer_opportunity.user.name %><br>
+  </div>
+  <div class="descriptiontextpadding">
+  <%= claim_opportunity.volunteer_opportunity.Organization %><br>
+  </div>
+  
+  <center>
+  <div class="boxesbackground">
+  <%= link_to 'Learn More', claim_opportunity.volunteer_opportunity, class: 'orangefont' %><br>
+  </div>
+  </center>
+
+
+  </div>
+  </div>
+  </div>
+<% end %>
+  </div>
+
+
+
+
 
