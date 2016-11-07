@@ -1,5 +1,52 @@
+
+<h2><%= current_user.name %></h2>
+<p>
+<%= image_tag current_user.image.url(:medium) %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+<%= current_user.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+<%= current_user.email %>
+</p>
+
+
+<p>
+  <strong>Phone:</strong>
+<%= current_user.phone_number %>
+</p>
+
+<p>
+<strong>My causes:</strong>
+<%= current_user.biographical_information %>
+</p>
+
+<p>
+<%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-success" %>
+</p>
+
+
+
+
+
+
+
+
+
+
+
+
 <h2>Connections you have claimed</h2>
 <br>
+
+
+
+
+
 
 
 <div class="row">

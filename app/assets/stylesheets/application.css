@@ -70,3 +70,14 @@ padding-bottom: 25px;
 padding: 5px;
 padding-bottom: 50px; 
 }
+
+
+body { background-color:#F2F2F2 !important; }
+
+.btn.btn-success.navbar-btn {margin-right: 20px;
+}
+
+
+a.navbar-brand {
+	color: white !important;
+}

@@ -1,11 +1,7 @@
 <div class="col-md-5">
-<h2>Your profile:</h2>
+<h2><%= current_user.name %></h2>
 <p>
 <%= image_tag current_user.image.url(:medium) %>
-</p>
-<p>
-  <strong>Name:</strong>
-  <%= current_user.name %>
 </p>
 
 <p>
@@ -25,12 +21,12 @@
 </p>
 
 <p>
-<strong>Biographical information:</strong>
+<strong>My causes:</strong>
 <%= current_user.biographical_information %>
 </p>
 
 <p>
-<%= link_to "Edit your profile", edit_user_registration_path %>
+<%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-success" %>
 </p>
 
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
@@ -68,7 +64,10 @@
 </table>
 
 <br>
+<br>
 <% end %>
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
-<%= link_to 'New Volunteer opportunity', new_volunteer_opportunity_path %>
+<%= link_to 'New Volunteer opportunity', new_volunteer_opportunity_path, class: "btn btn-success" %>
 <% end %>
+
+

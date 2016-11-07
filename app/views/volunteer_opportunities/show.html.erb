@@ -22,7 +22,8 @@
       <strong>Phone:</strong>
       <%= @volunteer_opportunity.Phone %>
     </p>
-    <strong>Availible days in the morning:</strong><br>
+    <br>
+    <strong>Morning availibility:</strong><br>
         <% if @volunteer_opportunity.monday_morning == "mmondaym" %>
           Monday
           <% end %>
@@ -50,8 +51,9 @@
           <br>
           Sunday
           <% end %>
-          <br> 
-      <strong>Availible days in the afternoon:</strong><br>
+          <br>
+          <br>
+      <strong>Afternoon availibility:</strong><br>
         <% if @volunteer_opportunity.monday_afternoon == "amondaya" %>
           Monday
           <% end %>
@@ -80,7 +82,8 @@
           Sunday
           <% end %>
           <br>
-        <strong>Availible days in the evening:</strong><br>
+          <br>
+        <strong>Evening availibility: </strong><br>
         <% if @volunteer_opportunity.monday_evening == "emondaye" %>
           Monday
           <% end %>
@@ -111,8 +114,8 @@
 
     <% if user_signed_in? && current_user.volunteer? %>
       <p>
-
-      <%= link_to "Volunteer!", new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity), class: "btn btn-primary" %>
+        <br>
+      <%= link_to "Volunteer!", new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity), class: "btn btn-success" %>
       </p>
     <% end %>
   </div>
@@ -151,9 +154,7 @@
 <%= image_tag @volunteer_opportunity.user.image.url, class: "show-image" %>
 </div>
 <div class="col-md-5">
-      <strong>Name:</strong>
-      <%= @volunteer_opportunity.user.name %>
-    </p>
+  
 
     <p>
       <strong>Address:</strong>
@@ -166,7 +167,7 @@
     </p>
 
     <p>
-    <strong>Bio:</strong>
+    <strong>About Organization:</strong>
     <%= @volunteer_opportunity.user.biographical_information %>
     </p>
 </div>
@@ -178,5 +179,4 @@
 <%= link_to 'Edit', edit_volunteer_opportunity_path(@volunteer_opportunity) %> |
 <% end %>
 
-<%= link_to 'Back', volunteer_opportunities_path %>
-</div>
+

@@ -4,6 +4,8 @@
 <br>
 <p><b>Evening connections available during:&nbsp; &nbsp;</b> <a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=emondaye+etuesdaye+ewednesdaye+ethursdaye+efridaye">The entire weekday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esaturdaye+esundaye">The entire weekend</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=emondaye">Monday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=etuesdaye">Tuesday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=ewednesdaye">Wednesday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=ethursdaye">Thursday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=efridaye">Friday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esaturdaye">Saturday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esundaye">Sunday</a></p>
 <br>
+<%= link_to 'View all connections', volunteer_opportunities_path %>
+<br>
 <br>
 <br>
 <% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mmondaym+mtuesdaym+mwednesdaym+mthursdaym+mfridaym') %>
@@ -100,8 +102,9 @@
   <div class="paddingbottom">
   <div class="border1">
   <div class="boxesbackground">
-  
+  <b>
   <%= volunteer_opportunity.user.name %><br>
+  </b>
   </div>
   <div class="descriptiontextpadding">
   <%= volunteer_opportunity.Organization %><br>
