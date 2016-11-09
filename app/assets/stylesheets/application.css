@@ -13,7 +13,120 @@
  *= require_tree .
  *= require_self
  */
-       
+ 
+ .volunteer-checkbox {
+ 	margin-top: 200px;
+ 	background: #4dbfbf !important;
+ 	height: 90px;
+
+ }
+  .organization-checkbox {
+ 	margin-top: 200px;
+ 	background: #6d6d6d !important;
+ 	height: 90px;
+ 	margin-left: 10px;
+
+ }
+ .label-checkbox {
+ 	margin-top: 15px;
+ 	text-align: center;
+ }
+
+
+.btn-primary {
+	background: #4dbfbf !important;
+	border: 1px solid #4dbfbf !important;
+	opacity: 1.0 !important;
+}
+.form input {
+	opacity: 0.8 ;
+}
+.navbar  {
+	background: #6d6d6d;
+	border: none;
+	margin-bottom: 0px !important;
+	border-radius: 0px !important;
+}      
+.navbar-default {
+	border: none !important;
+}
+
+.nav a {
+	color: white !important;
+	padding-right: 15px;
+
+}
+.nav {
+	padding-top: 15px;
+	height: 75px;
+}
+/* LANDING PAGE STYLE */
+
+.hero-image {
+	height: 400px;
+	background: url("hero.jpg") ;
+	-webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	background-repeat:no-repeat;
+	background-position: center center;
+
+}
+
+.hero-image {
+	color: white;
+}
+
+.landing-page {
+	background-color: #d4d4d4;
+	min-height: 1000px;
+}
+
+.landing-page h1 {
+	font-family: 'Droid Sans' !important;
+	text-align: center;
+	font-size: 3rem;
+	border-bottom: 2px solid black;
+	padding-bottom: 10px;
+}
+.organizations-connect {
+	margin-top: 100px;
+
+}
+.organizations-connect p {
+		padding-bottom: 70px;
+}
+#circle-teal {
+	width: 140px;
+	height: 140px;
+	background: #4dbfbf;
+	-moz-border-radius: 70px;
+	-webkit-border-radius: 70px;
+	border-radius: 70px;
+	margin: 0 auto;
+}
+#circle-gray {
+	width: 140px;
+	height: 140px;
+	background: #6d6d6d;
+		-moz-border-radius: 70px;
+	-webkit-border-radius: 70px;
+	border-radius: 70px;
+	margin: 0 auto;
+}
+#circle-gray h2, #circle-teal h2 {
+	color: white;
+	font-size: 1.2rem;
+	text-align: center;
+	padding-top: 40%;
+}
+.organizations-connect p, .volunteer-connect p{
+	padding-top: 10px;
+	text-align: center;
+	font-size: 1.4rem;
+}
+
 img.banner {
 	width: 100%;
 	margin-top: -30px;
@@ -86,6 +199,20 @@ a.navbar-brand {
 
 
 
+html, body {
+	height: 100%;
+}
+.container {
+	min-height: 100%;
+	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
+	height: 100%;
+	margin: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
+}
+.footer, .push {
+	height: 200px; /* .push must be the same height as .footer */
+		background: #6d6d6d;
+
+}
 
 
 

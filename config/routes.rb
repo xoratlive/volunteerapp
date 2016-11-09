@@ -18,8 +18,7 @@ Rails.application.routes.draw do
 
   get 'opportunities_that_have_been_claimed' => "claim_opportunities#opportunities_that_have_been_claimed"
 
-
-  root 'volunteer_opportunities#index'
+  root 'pages#about'
 
 
   # The priority is based upon order of creation: first created -> highest priority.
