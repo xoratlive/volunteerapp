@@ -14,10 +14,11 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
-  <div class="container-fluid">
+  <div class="container-fluid navbar">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -26,63 +27,48 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="/">Home</a>
+    <% if (user_signed_in?) %>
+      <%= link_to "Volunteer Go", volunteer_opportunities_path, class: "navbar-brand" %>
+    <% else %>
+         <%= link_to "Volunteer Go", root_path, class: "navbar-brand" %>
+    <% end %>
     </div>
-
-
-
-
-
-    
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 
-      
-      <%= form_tag search_volunteer_opportunities_path, method: :get, class: "navbar-form navbar-left" do %>
-      
-      <p>
-    <%= text_field_tag :search, params[:search], class: "form-control" %>
-    <%= submit_tag  "Search", name: nil, class: "btn btn-success navbar-btn" %>
-      </p>
-        <% end %>
-
       <ul class="nav navbar-nav navbar-right">
       <% if (user_signed_in?) && (not current_user.volunteer?) %>
-        <li><p><%= link_to "View claimed events", opportunities_to_claim_path, class: "btn btn-success navbar-btn" %></p></li>
-        <li><p><%= link_to "View your profile", organization_path, class: "btn btn-success navbar-btn" %></p></li>
+        <li><p><%= link_to "View claimed events", opportunities_to_claim_path %></p></li>
+        <li><p><%= link_to "View your profile", organization_path %></p></li>
         <% end %>
         <% if (user_signed_in?) && (current_user.volunteer?) %>
-        <li><p><%= link_to "View your profile", opportunities_that_have_been_claimed_path, class: "btn btn-success navbar-btn" %></p></li>
+        <li><p><%= link_to "View your profile", opportunities_that_have_been_claimed_path %></p></li>
         <% end %>
 
         <% if (user_signed_in?) %>
         
 
-        <li><p><%= link_to "Sign out", destroy_user_session_path, method: :delete, class: "btn btn-success navbar-btn" %></p></li>
+        <li><p><%= link_to "Sign out", destroy_user_session_path, method: :delete %></p></li>
 
 
         <% end %>
       <% if (not user_signed_in?) %>
-        <li><p><%= link_to "Sign up", new_user_registration_path, class: "btn btn-success navbar-btn" %></p></li>
-        <li><p><%= link_to "Log in", new_user_session_path, class: "btn btn-success navbar-btn" %></p></li>
+        <li><p><%= link_to "Sign up", new_user_registration_path %></p></li>
+        <li><p><%= link_to "Log in", new_user_session_path %></p></li>
 
       <% end %>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
-<div class="row">
-<%= image_tag "banner.png", class: "banner" %>
-</div>
 
-<div class="container">
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+
+
 
 <%= yield %>
-
+<div class="push"></div>
+<div class="footer">
 </div>
-
 </body>
 </html>

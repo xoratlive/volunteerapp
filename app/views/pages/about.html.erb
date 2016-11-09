@@ -1,5 +1,103 @@
+<div class="container-fluid landing-page">
+
+    <div class="row">
+      <div class="hero-image">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
+        <%= devise_error_messages! %>
+              <div class="col-sm-offset-3 col-sm-1 volunteer-checkbox">
+                    <div class="label-checkbox">
+                      <%= f.label :I_am_a_volunteer %>
+                      <%= f.radio_button :volunteer, 1, checked: true  %>
+                    </div>
+              </div>
+              <div class="col-sm-1 organization-checkbox">
+                    <div class="label-checkbox">
+                      <%= f.label :I_am_an_organization %>
+                      <%= f.radio_button :volunteer, 0, checked: false  %>
+                    </div>
+              </div>
+            <div class="container form">
+              <div class="col-sm-offset-1 col-sm-5">
+                <h2>Sign up</h2>
+
+            <div class="field">
+              <%= f.label :name %><br />
+              <%= f.text_field :name, autofocus: true, class: "form-control" %>
+            </div>
+            <div class="field">
+              <%= f.label :email_address %><br />
+              <%= f.email_field :email, autofocus: true, class: "form-control" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password %>
+              <% if @minimum_password_length %>
+              <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+            </div>
+
+            <div class="field">
+              <%= f.label :password_confirmation %><br />
+              <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+            </div>
+           <div class="actions">
+            <%= f.submit "Sign up", class: "btn btn-primary" %>
+            </div>
+      </div><!--form container -->
 
 
+
+  
+<% end %>
+
+        </div>
+      </div>
+    </div>
+<div class="container">
+    <div class="row">
+      <div class="volunteer-connect">
+        <h1>Volunteers Connect</h1>
+        <div class="col-sm-4">
+          <div id="circle-teal"><h2>Sign Up</h2></div>
+          <p>It’s easy! Quickly create a profile that helps you connect!</p>
+
+        </div>
+
+        <div class="col-sm-4">
+          <div id="circle-gray"><h2>Add Availability</h2></div>
+          <p>Enter your available times and quickly browse your connections list</p>
+        </div>
+
+        <div class="col-sm-4">
+          <div id="circle-teal"><h2>Match and Make a Difference</h2></div>
+          <p>Find a connection and volunteer in three easy steps.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="organizations-connect">
+        <h1>Organizations Connect</h1>
+          <div class="col-sm-4">
+          <div id="circle-gray"><h2>Sign Up</h2></div>
+
+            <p>It’s easy! Quickly create a profile that connects you to volunteers</p>
+        </div>
+
+        <div class="col-sm-4">
+             <div id="circle-teal"><h2>Connect with <br>Volunteers</h2></div>
+          <p>Create a Connection and watch as volunteers find you!</p>
+        </div>
+        
+        <div class="col-sm-4">
+             <div id="circle-gray"><h2>Create Community</h2></div>
+          <p>Gain dedicated volunteers who care about your passion.</p>
+        </div>
+      </div>
+    </div><!-- row closes-->
+</div><!--container closes-->
+</div>
 
 
 
