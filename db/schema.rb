@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161110081701) do
+ActiveRecord::Schema.define(version: 20161110104855) do
 
   create_table "claim_opportunities", force: :cascade do |t|
     t.string   "please_explain_why_you_are_interested_in_this_opportunity"
@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 20161110081701) do
     t.text     "sunday_morning"
     t.text     "sunday_afternoon"
     t.text     "sunday_evening"
+    t.text     "skill_needed"
+    t.text     "what_to_bring"
   end
 
 end
