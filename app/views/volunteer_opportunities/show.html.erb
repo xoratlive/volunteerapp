@@ -168,8 +168,19 @@
     </p>
 
     <p>
-    <strong>About Organization:</strong>
+    <strong>Our mission:</strong>
     <%= @volunteer_opportunity.user.biographical_information %>
+    </p>
+
+    <p>
+    <strong>About <%= @volunteer_opportunity.user.name %>:</strong>
+    <%= @volunteer_opportunity.user.about1 %>
+    </p>
+
+
+    <p>
+    <strong>Website:</strong>
+    <%= @volunteer_opportunity.user.website %>
     </p>
 </div>
 
