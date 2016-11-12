@@ -13,25 +13,128 @@
  *= require_tree .
  *= require_self
  */
- 
- .volunteer-checkbox {
- 	margin-top: 200px;
- 	background: #4dbfbf !important;
- 	height: 90px;
 
- }
-  .organization-checkbox {
- 	margin-top: 200px;
- 	background: #6d6d6d !important;
- 	height: 90px;
- 	margin-left: 10px;
+/* Start at profile tags to edit stylings*/
+.profile-page p{
+	font-family: 'Open Sans', sans-serif; 
+	font-size: 1.5rem;
+}
 
- }
- .label-checkbox {
- 	margin-top: 15px;
- 	text-align: center;
- }
+.profile-page h2{
+	font-family: 'Droid Sans', sans-serif;
 
+
+}
+
+.profile-pic {
+	float: left;
+	width: 100px;
+	height: 100px;
+	background: #4dbfbf;
+	-moz-border-radius: 70px;
+	-webkit-border-radius: 70px;
+	border-radius: 70px;
+	margin: 0 auto;
+	padding-top: 15px;
+
+} 
+
+
+.profile-pic, p{
+
+	text-align: center;
+}
+
+.profile-page {
+	min-height: 1000px;
+	width: 95% ;
+}
+
+.profile-info {
+
+	margin-top: 10px;
+	background-color: grey;
+	text-align: left !important;
+	border: 0px solid black !important;
+	font-size: 2rem;
+	height: 20rem;
+	width: 45rem;
+	padding: 0;
+	border-radius: 10px;
+}
+
+.profile-info p{
+	text-align: left;
+	padding: 10px;
+	color: white;
+
+
+}
+
+.name-profile{
+	font-size: 2rem;
+	margin-right: 50px;
+	margin-top: 10px;
+
+}
+
+.name-profile{
+	float: left;
+
+}
+
+.connections-claimed {
+	background-color: #6D6D6D;
+	height: 7rem;
+	border-radius: 10px;
+
+}
+
+.connections-claimed h2{
+	text-align: center;
+	color: white;
+	padding-top: 15px;	
+
+}
+
+.my-causes {
+
+	margin-top: 10px;
+	background-color: #4DBFBF;
+	border: 0px solid black !important;
+	font-size: 2rem;
+	height: 30rem;
+	width: 45rem;
+	border-radius: 10px;
+
+}
+
+.my-causes p{
+	text-align: left;
+	margin-left: 10px;
+	padding-top: 10px;
+	color: white;
+
+}
+
+
+.my-preferences {
+
+	margin-top: 10px;
+	background-color: #4DBFBF;
+	border: 0px solid black !important;
+	font-size: 2rem;
+	height: 30rem;
+	width: 91rem;
+	border-radius: 10px;
+	color: white;
+}
+
+.my-preferences, h3{
+
+	text-align: center;
+} 
+/* The end of profile stylings*/
 
 .btn-primary {
 	background: #4dbfbf !important;
@@ -195,10 +298,6 @@ a.navbar-brand {
 	color: white !important;
 }
 
-
-
-
-
 html, body {
 	height: 100%;
 }
@@ -208,6 +307,43 @@ html, body {
 	height: 100%;
 	margin: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
 }
+
+.h4{
+
+	text-align: left;
+	font-size: 12px;
+}/* p tags for Claim Volunteer Event page */
+
+
+/* Starting part of forms CSS */
+
+.container-form{
+background-color: #D4D4D4;
+
+
+}
+.edit{
+	width: 95rem;
+	
+}
+
+
+.btn-lg {
+    display: block;
+    width:92rem;
+    float: left;
+}
+
+.btn-sm{
+	margin-top: 15px;
+	margin-bottom: 15px;
+	width:30rem;
+	float:center;
+
+}
+/* Ending part of forms CSS */
+
+
 .footer, .push {
 	height: 200px; /* .push must be the same height as .footer */
 		background: #6d6d6d;
