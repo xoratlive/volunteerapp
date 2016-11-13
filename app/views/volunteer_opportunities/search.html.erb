@@ -1,17 +1,6 @@
 <div class="container">
 <script>
-$("input.box").each(function() {
-    var mycookie = $.cookie($(this).attr('name'));
-    if (mycookie && mycookie == "true") {
-        $(this).prop('checked', mycookie);
-    }
-});
-$("input.box").change(function() {
-    $.cookie($(this).attr("name"), $(this).prop('checked'), {
-        path: '/',
-        expires: 365
-    });
-});
+
 
 
 
@@ -30,6 +19,21 @@ $("input.box").change(function() {
             window.location = baseUrl + queryString;
         });
     });
+
+
+
+    $("input.box").each(function() {
+    var mycookie = $.cookie($(this).attr('name'));
+    if (mycookie && mycookie == "true") {
+        $(this).prop('checked', mycookie);
+    }
+});
+$("input.box").change(function() {
+    $.cookie($(this).attr("name"), $(this).prop('checked'), {
+        path: '/',
+        expires: 365
+    });
+});
 </script>
 
 
