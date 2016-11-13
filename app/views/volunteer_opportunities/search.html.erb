@@ -1,99 +1,81 @@
-<p><b>Morning connections available during:&nbsp; &nbsp;</b> <a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mmondaym+mtuesdaym+mwednesdaym+mthursdaym+mfridaym">The entire weekday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=msaturdaym+msundaym">The entire weekend</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mmondaym">Monday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mtuesdaym">Tuesday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mwednesdaym">Wednesday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mthursdaym">Thursday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mfridaym">Friday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=msaturdaym">Saturday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=msundaym">Sunday</a></p>
-<br>
-<p><b>Afternoon connections available during:</b> <a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=amondaya+atuesdaya+awednesdaya+athursdaya+afridaya">The entire weekday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=asaturdaya+asundaya">The entire weekend</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=amondaya">Monday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=atuesdaya">Tuesday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=awednesdaya">Wednesday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=athursdaya">Thursday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=afridaya">Friday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=asaturdaya">Saturday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=asundaya">Sunday</a></p>
-<br>
-<p><b>Evening connections available during:&nbsp; &nbsp;</b> <a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=emondaye+etuesdaye+ewednesdaye+ethursdaye+efridaye">The entire weekday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esaturdaye+esundaye">The entire weekend</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=emondaye">Monday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=etuesdaye">Tuesday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=ewednesdaye">Wednesday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=ethursdaye">Thursday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=efridaye">Friday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esaturdaye">Saturday</a>—<a href="https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esundaye">Sunday</a></p>
-<br>
-<%= link_to 'View all connections', volunteer_opportunities_path %>
-<br>
-<br>
-<br>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mmondaym+mtuesdaym+mwednesdaym+mthursdaym+mfridaym') %>
-<h2>Displaying connections available in the morning on each day of the weekday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=msaturdaym+msundaym') %>
-<h2>Displaying connections available in the morning on each day of the weekend </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mmondaym') %>
-<h2>Displaying connections available in the morning on Monday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mtuesdaym') %>
-<h2>Displaying connections available in the morning on Tuesday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mwednesdaym') %>
-<h2>Displaying connections available in the morning on Wednesday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mthursdaym') %>
-<h2>Displaying connections available in the morning on Thursday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=mfridaym') %>
-<h2>Displaying connections available in the morning on Friday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=msaturdaym') %>
-<h2>Displaying connections available in the morning on Saturday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=msundaym') %>
-<h2>Displaying connections available in the morning on Sunday </h2>
-<% end %>
+<div class="container">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/jquery.cookie/1.4.1/jquery.cookie.js"></script>
+<script>
+$("input.box").each(function() {
+    var mycookie = $.cookie($(this).attr('name'));
+    if (mycookie && mycookie == "true") {
+        $(this).prop('checked', mycookie);
+    }
+});
+$("input.box").change(function() {
+    $.cookie($(this).attr("name"), $(this).prop('checked'), {
+        path: '/',
+        expires: 365
+    });
+});
 
 
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=amondaya+atuesdaya+awednesdaya+athursdaya+afridaya') %>
-<h2>Displaying connections available in the afternoon on each day of the weekday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=asaturdaya+asundaya') %>
-<h2>Displaying connections available in the afternoon on each day of the weekend </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=amondaya') %>
-<h2>Displaying connections available in the afternoon on Monday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=atuesdaya') %>
-<h2>Displaying connections available in the afternoon on Tuesday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=awednesdaya') %>
-<h2>Displaying connections available in the afternoon on Wednesday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=athursdaya') %>
-<h2>Displaying connections available in the afternoon on Thursday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=afridaya') %>
-<h2>Displaying connections available in the afternoon on Friday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=asaturdaya') %>
-<h2>Displaying connections available in the afternoon on Saturday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=asundaya') %>
-<h2>Displaying connections available in the afternoon on Sunday </h2>
-<% end %>
 
+    var baseUrl = 'https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=';
 
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=emondaye+etuesdaye+ewednesdaye+ethursdaye+efridaye') %>
-<h2>Displaying connections available in the evening on each day of the weekday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esaturdaye+esundaye') %>
-<h2>Displaying connections available in the evening on each day of the weekend </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=emondaye') %>
-<h2>Displaying connections available in the evening on Monday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=etuesdaye') %>
-<h2>Displaying connections available in the evening on Tuesday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=ewednesdaye') %>
-<h2>Displaying connections available in the evening on Wednesday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=ethursdaye') %>
-<h2>Displaying connections available in the evening on Thursday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=efridaye') %>
-<h2>Displaying connections available in the evening on Friday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esaturdaye') %>
-<h2>Displaying connections available in the evening on Saturday </h2>
-<% end %>
-<% if current_page? ('https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=esundaye') %>
-<h2>Displaying connections available in the evening on Sunday </h2>
-<% end %>
+    $(document).ready(function () {
+        $('button').click(function (e) {
+            e.preventDefault();
+
+            var queryString = $('input[type=checkbox]')
+            .filter(function() { return $(this).is(':checked'); })
+            .map(function () {
+                    return $(this).val();
+            }).get().join('+');
+
+            window.location = baseUrl + queryString;
+        });
+    });
+</script>
+
+    <p>
+    <h4>Morning connections available during:</h4>
+    Monday:<input class="box" name="1" type="checkbox" value="mmondaym" />
+    Tuesday:<input class="box" name="2" type="checkbox" value="mtuesdaym" />
+    Wednesday:<input class="box" name="3" type="checkbox" value="mwednesdaym" />
+    Thursday:<input class="box" name="4" type="checkbox" value="mthursdaym" />
+    Friday:<input class="box" name="5" type="checkbox" value="mfridaym" />
+    Saturday:<input class="box" name="6" type="checkbox" value="msaturdaym" />
+    Sunday:<input class="box" name="7" type="checkbox" value="msundaym" />
+    </p>
+    <br>
+    <p>
+    <h4>Afternoon connections available during:</h4>
+    Monday:<input class="box" name="8" type="checkbox" value="amondaya" />
+    Tuesday:<input class="box" name="9" type="checkbox" value="atuesdaya" />
+    Wednesday:<input class="box" name="10" type="checkbox" value="awednesdaya" />
+    Thursday:<input class="box" name="11" type="checkbox" value="athursdaya" />
+    Friday:<input class="box" name="12" type="checkbox" value="afridaya" />
+    Saturday:<input class="box" name="13" type="checkbox" value="asaturdaya" />
+    Sunday:<input class="box" name="14" type="checkbox" value="asundaya" />
+    </p>
+    <br>
+    <p>
+    <h4>Evening connections available during:</h4>
+    Monday:<input class="box" name="15" type="checkbox" value="emondaye" />
+    Tuesday:<input class="box" name="16" type="checkbox" value="etuesdaye" />
+    Wednesday:<input class="box" name="17" type="checkbox" value="ewednesdaye" />
+    Thursday:<input class="box" name="18" type="checkbox" value="ethursdaye" />
+    Friday:<input class="box" name="19" type="checkbox" value="efridaye" />
+    Saturday:<input class="box" name="20" type="checkbox" value="esaturdaye" />
+    Sunday:<input class="box" name="21" type="checkbox" value="esundaye" />
+    </p>
+
+    <br>
+    <button>View connections based on the above days and times</button>
+    <br>
+    <%= link_to 'View all connections', volunteer_opportunities_path %>
+
 <br>
+<br>
+<br>
+<h2>Viewing connections based on the above days and times </h2>
 <br>
 <div class="row">
 <% @volunteer_opportunities.each do |volunteer_opportunity| %>
