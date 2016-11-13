@@ -1,39 +1,5 @@
 <div class="container">
-<script>
 
-
-
-    var baseUrl = 'https://tecm4400volunteerapp.herokuapp.com/volunteer_opportunities/search?utf8=%E2%9C%93&search=';
-
-    $(document).ready(function () {
-        $('button').click(function (e) {
-            e.preventDefault();
-
-            var queryString = $('input[type=checkbox]')
-            .filter(function() { return $(this).is(':checked'); })
-            .map(function () {
-                    return $(this).val();
-            }).get().join('+');
-
-            window.location = baseUrl + queryString;
-        });
-    });
-
-
-
-    $("input.box").each(function() {
-    var mycookie = $.cookie($(this).attr('name'));
-    if (mycookie && mycookie == "true") {
-        $(this).prop('checked', mycookie);
-    }
-});
-$("input.box").change(function() {
-    $.cookie($(this).attr("name"), $(this).prop('checked'), {
-        path: '/',
-        expires: 365
-    });
-});
-</script>
 
     <p>
     <h4>Morning connections available during:</h4>
