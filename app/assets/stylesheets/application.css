@@ -38,8 +38,16 @@
 	border: 1px solid #4dbfbf !important;
 	opacity: 1.0 !important;
 }
+.btn-success{
+	background: #4dbfbf !important;
+	border: 1px solid #4dbfbf !important;
+	opacity: 1.0 !important;
+	margin-left: 10px;
+	margin-right: 10px;
+	text-align: center !important;
+}
 .form input {
-	opacity: 0.8 ;
+	opacity: 2;
 }
 .navbar  {
 	background: #6d6d6d;
@@ -64,7 +72,7 @@
 
 .hero-image {
 	height: 400px;
-	background: url("hero.jpg") ;
+	background: url("hero.png") ;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -73,6 +81,8 @@
 	background-position: center center;
 
 }
+
+
 
 .hero-image {
 	color: white;
@@ -187,15 +197,20 @@ padding-bottom: 50px;
 
 body { background-color:#F2F2F2 !important; }
 
-.btn.btn-success.navbar-btn {margin-right: 20px;
+.btn.btn-success.navbar-btn {
+	margin-right: 20px;
 }
 
 
-a.navbar-brand {
-	color: white !important;
+img.navbar-brand {
+	background: none;
+	opacity: 2 !important;
+	width: 15% !important;
+	height: 100% !important;
+	margin-bottom: -80px;
+	margin-top: -10px;
+	color: none !important;
 }
-
-
 
 
 
@@ -208,8 +223,8 @@ html, body {
 	height: 100%;
 	margin: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
 }
-.footer, .push {
-	height: 200px; /* .push must be the same height as .footer */
+.footer, .push{
+	height: 5%; /* .push must be the same height as .footer */
 		background: #6d6d6d;
 
 }
