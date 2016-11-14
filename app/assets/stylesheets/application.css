@@ -38,6 +38,11 @@
 	border: 1px solid #4dbfbf !important;
 	opacity: 1.0 !important;
 }
+.btn-success{
+	background: #4dbfbf !important;
+	border: 1px solid #4dbfbf !important;
+	opacity: 1.0 !important;
+}
 .form input {
 	opacity: 0.8 ;
 }
@@ -64,7 +69,7 @@
 
 .hero-image {
 	height: 400px;
-	background: url("hero.jpg") ;
+	background: url("hero.png") ;
 	-webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
