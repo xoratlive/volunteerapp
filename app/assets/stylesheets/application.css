@@ -82,6 +82,8 @@
 
 }
 
+
+
 .hero-image {
 	color: white;
 }
@@ -200,8 +202,14 @@ body { background-color:#F2F2F2 !important; }
 }
 
 
-a.navbar-brand {
-	color: white !important;
+img.navbar-brand {
+	background: none;
+	opacity: 2 !important;
+	width: 15% !important;
+	height: 100% !important;
+	margin-bottom: -80px;
+	margin-top: -10px;
+	color: none !important;
 }
 
 

@@ -31,9 +31,11 @@
         <span class="icon-bar"></span>
       </button>
     <% if (user_signed_in?) %>
-      <%= link_to "Volunteer Go", volunteer_opportunities_path, class: "navbar-brand" %>
+      <%= link_to image_tag("logo.png", class: "navbar-brand"), volunteer_opportunities_path %>   
+    <% end %>
     <% else %>
-         <%= link_to "Volunteer Go", root_path, class: "navbar-brand" %>
+         <%= link_to root_path do%>
+          <%= image_tag "logo.png", class: "navbar-brand" %>
     <% end %>
     </div>
 
