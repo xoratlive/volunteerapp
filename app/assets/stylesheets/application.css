@@ -13,6 +13,22 @@
  *= require_tree .
  *= require_self
  */
+h2 {
+	font-family: 'Droid Sans', sans-serif !important;
+
+}
+
+h4 {
+	font-family: 'Droid Sans', sans-serif !important;
+
+}
+
+p {
+	font-family: 'Open Sans', sans-serif !important;
+}
+/* fonts needed for all of the headers and body text */
+
+
  
  .volunteer-checkbox {
  	margin-top: 200px;
@@ -157,9 +173,7 @@ img.show-image {
 	padding-bottom: 20px;
 	border-bottom: 1px solid gray;
 }
-h2 {
-	text-align: left;
-}
+
 h1.page-title {
 	border-bottom: 1px solid gray;
 	padding-bottom: 10px;
@@ -167,31 +181,37 @@ h1.page-title {
 
 
 
-.orangefont {color: #f05253;
+.orangefont {color: white;
              font-size: 24pt;
 
 }
 
 
 .boxesbackground {
-    background-color: #4dbfbf;
-    padding: 5px; 
+   background-color: #D4D4D4;
+    padding: 5px;
+    text-align: center;
+    height: 30rem; 
+}
+
+.boxheader {
+	height: 4rem;
+	background-color: #D4D4D4;
+	text-align: center;
 }
 
 
-.border1 {
-	border-style: solid;
-    border-width: 1px;
-}
 
 .paddingbottom {
-padding-bottom: 25px;
+	padding-bottom: 40px;
+	font-size: 20px;
 
 }
 
 .descriptiontextpadding {
-padding: 5px;
-padding-bottom: 50px; 
+	padding: 5px;
+	padding-bottom: 50px; 
+	background-color: #D4D4D4;
 }
 
 
@@ -228,6 +248,45 @@ html, body {
 		background: #6d6d6d;
 
 }
+
+ /* .start of styles for the volunteer_opportunities */ 
+.subheading{  
+	background-color:#6d6d6d;
+	text-align: center !important;
+	color: white;
+	margin-top: 15px;
+}
+
+.subheading-top{  
+	background-color:#D4D4D4;
+	text-align: center !important;
+	margin-top: 15px;
+}
+
+.subheading h2{  
+	margin-bottom: 20px;
+}
+
+.subheading-top h2{  
+	margin-bottom: 20px;
+}
+
+
+.filter-button {
+	margin-left: 15px;
+ 
+}
+
+.btn-primary {
+	background: #4dbfbf !important;
+	border: 1px solid #4dbfbf !important;
+	opacity: 1.0 !important;
+}
+
+ /* .start of styles for the volunteer_opportunities */ 
+
+
+
 
 
 
