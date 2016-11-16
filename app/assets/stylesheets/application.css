@@ -225,10 +225,10 @@ body { background-color:#F2F2F2 !important; }
 img.navbar-brand {
 	background: none;
 	opacity: 2 !important;
-	width: 15% !important;
+	width: 18% !important; /* for some reason it doubles the image at 19% */
 	height: 100% !important;
 	margin-bottom: -80px;
-	margin-top: -10px;
+	margin-top: -5px;
 	color: none !important;
 }
 
@@ -246,7 +246,7 @@ html, body {
 
 
 .footer, .push{
-	height: 3%; /* .push must be the same height as .footer */
+	height: 5%; /* .push must be the same height as .footer */
 	background: #6d6d6d;
 
 
