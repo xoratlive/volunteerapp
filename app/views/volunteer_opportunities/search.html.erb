@@ -1,76 +1,94 @@
-<div class="container">
+<div class="container-fluid">
+  <div class= "row subheading-top">
+    <h2>Search by Day</h2>
+  </div>
 
+  <div class="table-responsive">
+    <table class="table">
+      <thead>
+        <tr>
+          <th></th>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+          <th>Saturday </th>
+          <th>Sunday</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <th scope="row"></th>
+          <td>Morning:<input class="box" name="1" type="checkbox" value="mmondaym"/> </td>
+          <td>Morning:<input class="box" name="2" type="checkbox" value="mtuesdaym" /></td>
+          <td>Morning:<input class="box" name="3" type="checkbox" value="mwednesdaym" /></td>
+          <td>Morning:<input class="box" name="4" type="checkbox" value="mthursdaym" /></td>
+          <td>Morning:<input class="box" name="5" type="checkbox" value="mfridaym" /></td>
+          <td>Morning:<input class="box" name="6" type="checkbox" value="msaturdaym" /></td>
+          <td>Morning:<input class="box" name="7" type="checkbox" value="msundaym" /></td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Afternoon:<input class="box" name="8" type="checkbox" value="amondaya" /></td>
+          <td>Afternoon:<input class="box" name="9" type="checkbox" value="atuesdaya" /></td>
+          <td>Afternoon:<input class="box" name="10" type="checkbox" value="awednesdaya" /></td>
+          <td>Afternoon:<input class="box" name="11" type="checkbox" value="athursdaya" /></td>
+          <td>Afternoon:<input class="box" name="12" type="checkbox" value="afridaya" /></td>
+          <td>Afternoon:<input class="box" name="13" type="checkbox" value="asaturdaya" /></td>
+          <td>Afternoon:<input class="box" name="14" type="checkbox" value="asundaya" /></td>
+        </tr>
+        <tr>
+          <th scope="row"></th>
+          <td>Evening:<input class="box" name="15" type="checkbox" value="emondaye" /></td>
+          <td>Evening:<input class="box" name="16" type="checkbox" value="etuesdaye" /></td>
+          <td>Evening:<input class="box" name="17" type="checkbox" value="ewednesdaye" /></td>
+          <td>Evening:<input class="box" name="18" type="checkbox" value="ethursdaye" /></td>
+          <td>Evening:<input class="box" name="19" type="checkbox" value="efridaye" /></td>
+          <td>Evening:<input class="box" name="20" type="checkbox" value="esaturdaye" /></td>
+          <td>Evening:<input class="box" name="21" type="checkbox" value="esundaye" /></td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>
+  
 
+  <div class= "row">
+    <div class= "filter-button">
+      <button class= "btn btn-success">View connections based on the above days and times </button>
+    </div>
+  </div>
 
-    <p>
-    <h4>Morning connections available during:</h4>
-    Monday:<input class="box" name="1" type="checkbox" value="mmondaym" />
-    Tuesday:<input class="box" name="2" type="checkbox" value="mtuesdaym" />
-    Wednesday:<input class="box" name="3" type="checkbox" value="mwednesdaym" />
-    Thursday:<input class="box" name="4" type="checkbox" value="mthursdaym" />
-    Friday:<input class="box" name="5" type="checkbox" value="mfridaym" />
-    Saturday:<input class="box" name="6" type="checkbox" value="msaturdaym" />
-    Sunday:<input class="box" name="7" type="checkbox" value="msundaym" />
-    </p>
-    <br>
-    <p>
-    <h4>Afternoon connections available during:</h4>
-    Monday:<input class="box" name="8" type="checkbox" value="amondaya" />
-    Tuesday:<input class="box" name="9" type="checkbox" value="atuesdaya" />
-    Wednesday:<input class="box" name="10" type="checkbox" value="awednesdaya" />
-    Thursday:<input class="box" name="11" type="checkbox" value="athursdaya" />
-    Friday:<input class="box" name="12" type="checkbox" value="afridaya" />
-    Saturday:<input class="box" name="13" type="checkbox" value="asaturdaya" />
-    Sunday:<input class="box" name="14" type="checkbox" value="asundaya" />
-    </p>
-    <br>
-    <p>
-    <h4>Evening connections available during:</h4>
-    Monday:<input class="box" name="15" type="checkbox" value="emondaye" />
-    Tuesday:<input class="box" name="16" type="checkbox" value="etuesdaye" />
-    Wednesday:<input class="box" name="17" type="checkbox" value="ewednesdaye" />
-    Thursday:<input class="box" name="18" type="checkbox" value="ethursdaye" />
-    Friday:<input class="box" name="19" type="checkbox" value="efridaye" />
-    Saturday:<input class="box" name="20" type="checkbox" value="esaturdaye" />
-    Sunday:<input class="box" name="21" type="checkbox" value="esundaye" />
-    </p>
-
-    <br>
-    <button>View connections based on the above days and times</button>
-    <br>
-    <%= link_to 'View all connections', volunteer_opportunities_path %>
-
-<br>
-<br>
-<br>
-<h2>Viewing connections based on the above days and times </h2>
+<div class= "row subheading">
+<h2>Viewing Connections based on the above days and times</h2>
+</div>
 <br>
 <div class="row">
 <% @volunteer_opportunities.each do |volunteer_opportunity| %>
 
   <div class="col-md-3">
   <div class="paddingbottom">
-  <div class="border1">
-  <div class="boxesbackground">
-  <b>
-  <%= volunteer_opportunity.user.name %><br>
-  </b>
+  <div class="boxheader">
+    <h3>
+      <%= volunteer_opportunity.user.name %><br>
+    </h3>
   </div>
-  <div class="descriptiontextpadding">
-  <%= volunteer_opportunity.Organization %><br>
-  </div>
+    <div class="descriptiontextpadding">
+      <%= volunteer_opportunity.Organization %><br>
+      <%= volunteer_opportunity.Address %><br>
+    </div>
   
   <center>
-  <div class="boxesbackground">
-  <%= link_to 'Learn More', volunteer_opportunity, class: 'orangefont' %><br>
-  </div>
+    <div class="btn-primary">
+      <%= link_to 'Learn More', volunteer_opportunity, class: 'orangefont' %><br>
+    </div>
   </center>
   
   <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
   <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %><br>
   <%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %><br>
   <% end %>
-  </div>
   </div>
   </div>
 <% end %>
@@ -85,5 +103,4 @@
 <br>
 <% end %>
 
-
-
+</div>
