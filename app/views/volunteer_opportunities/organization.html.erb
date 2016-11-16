@@ -37,16 +37,16 @@
 </p>
 
 <p>
-<%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-success" %>
+<%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-success" %>
 </p>
 
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
-<h2>Opportunities you have posted:</h2>
+<h2>Connections you have posted:</h2>
 </div>
 
 
 
-<table class= "table table-striped">
+<table class= "table table-responsive">
   <thead>
     <tr>
       <th>Position</th>
@@ -64,10 +64,10 @@
         <td><%= volunteer_opportunity.Address %></td>
         <td><%= volunteer_opportunity.Phone %></td>
         <td><%= volunteer_opportunity.Website %></td>
-        <td><%= link_to 'Show', volunteer_opportunity %></td>
+        <td><%= link_to 'View', volunteer_opportunity, class: "btn btn-success" %>
         <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
-        <td><%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %></td>
-        <td><%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity), class: "btn btn-success" %>
+        <%= link_to 'Delete', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
         <% end %>
       </tr>
     <% end %>
@@ -78,7 +78,9 @@
 <br>
 <% end %>
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
-<%= link_to 'New Volunteer opportunity', new_volunteer_opportunity_path, class: "btn btn-success" %>
+<%= link_to 'Create New Connection', new_volunteer_opportunity_path, class: "btn btn-success" %>
+<br>
+<br>
 <% end %>
 </div>
 

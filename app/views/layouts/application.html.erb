@@ -39,23 +39,23 @@
 
       <ul class="nav navbar-nav navbar-right">
       <% if (user_signed_in?) && (not current_user.volunteer?) %>
-        <li class="btn btn-success"><p><%= link_to "View claimed events", opportunities_to_claim_path %></p></li>
-        <li class="btn btn-success"><p><%= link_to "View your profile", organization_path %></p></li>
+        <li ><p><%= link_to "View Connections", opportunities_to_claim_path, class: "btn btn-success" %></p></li>
+        <li ><p><%= link_to "View Profile", organization_path, class: "btn btn-success" %></p></li>
         <% end %>
         <% if (user_signed_in?) && (current_user.volunteer?) %>
-        <li class="btn btn-success"><p><%= link_to "View your profile", opportunities_that_have_been_claimed_path %></p></li>
+        <li ><p><%= link_to "View your profile", opportunities_that_have_been_claimed_path, class: "btn btn-success" %></p></li>
         <% end %>
 
         <% if (user_signed_in?) %>
         
 
-        <li class="btn btn-success"><p><%= link_to "Sign out", destroy_user_session_path, method: :delete %></p></li>
+        <li ><p><%= link_to "Sign out", destroy_user_session_path, class: "btn btn-success", method: :delete %></p></li>
 
 
         <% end %>
       <% if (not user_signed_in?) %>
-        <li><p><%= link_to "Sign up", new_user_registration_path %></p></li>
-        <li><p><%= link_to "Log in", new_user_session_path %></p></li>
+        <li><p><%= link_to "Sign up", new_user_registration_path, class: "btn btn-success" %></p></li>
+        <li><p><%= link_to "Log in", new_user_session_path, class: "btn btn-success" %></p></li>
 
       <% end %>
       </ul>

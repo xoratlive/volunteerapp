@@ -317,6 +317,7 @@ h1.page-title {
 }
 
 .boxheader {
+	padding-top:2px;
 	height: 4rem;
 	background-color: #D4D4D4;
 	text-align: center;
@@ -332,7 +333,7 @@ h1.page-title {
 
 .descriptiontextpadding {
 	padding: 5px;
-	padding-bottom: 50px; 
+	padding-bottom: 20px; 
 	background-color: #D4D4D4;
 }
 
@@ -347,10 +348,10 @@ body { background-color:#F2F2F2 !important; }
 img.navbar-brand {
 	background: none;
 	opacity: 2 !important;
-	width: 15% !important;
+	width: 18% !important; /* for some reason it doubles the image at 19% */
 	height: 100% !important;
 	margin-bottom: -80px;
-	margin-top: -10px;
+	margin-top: -5px;
 	color: none !important;
 }
 
@@ -362,8 +363,9 @@ html, body {
 	min-height: 100%;
 	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
 	height: 100%;
-	margin: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
+	margin-bottom: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
 }
+
 
 .h4{
 
@@ -404,7 +406,8 @@ background-color: #D4D4D4;
 
 .footer, .push{
 	height: 5%; /* .push must be the same height as .footer */
-		background: #6d6d6d;
+	background: #6d6d6d;
+
 
 }
 
@@ -432,6 +435,7 @@ background-color: #D4D4D4;
 
 
 .filter-button {
+
 	margin-left: 15px;
  
 }
