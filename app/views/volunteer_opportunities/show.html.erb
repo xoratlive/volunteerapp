@@ -130,7 +130,7 @@
     <% end %>
   </div>
 <div class="col-md-5 other-events">
-<h2>Other Events from <%= @volunteer_opportunity.user.name %>
+<h2>Other Connections from <%= @volunteer_opportunity.user.name %>
   </h2>
 
 <table class="table table-border">
@@ -147,10 +147,10 @@
       <tr>
         <td><%= volunteer_opportunity.Organization %></td>
 
-        <td><%= link_to 'Show', volunteer_opportunity %></td>
+        <td><%= link_to 'Show', volunteer_opportunity, class: "btn btn-success" %></td>
         <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
-        <td><%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %></td>
-        <td><%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity), class: "btn btn-success" %></td>
+        <td><%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
         <% end %>
       </tr>
     <% end %>
@@ -196,8 +196,8 @@
 
 
 </div>
-<% if current_user == @volunteer_opportunity.user %>
-<%= link_to 'Edit', edit_volunteer_opportunity_path(@volunteer_opportunity) %> |
+<% if current_user == @volunteer_opportunity.user %><br>
+<%= link_to 'Edit', edit_volunteer_opportunity_path(@volunteer_opportunity), class: "btn btn-success" %>
 <% end %>
 
 </div>

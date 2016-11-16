@@ -55,13 +55,11 @@
   
 
   <div class= "row">
-    <div class= "filter-button">
-      <button>View connections based on the above days and times</button>
-    </div>
+    <div class= "btn btn-success">View Connections</div>
   </div>
 
 <div class= "row subheading">
-<h2>Viewing Connections </h2>
+<h2>Available Connections </h2>
 </div>
 <br>
 <div class="row">
@@ -77,17 +75,19 @@
     <div class="descriptiontextpadding">
       <%= volunteer_opportunity.Organization %><br>
       <%= volunteer_opportunity.Address %><br>
+      <br>
+      <center>
+      <%= link_to 'Learn More', volunteer_opportunity, class: "btn btn-success" %>
+      <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
+      <br>
+      <br>
+      <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity), class: "btn btn-success" %>
+      <%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %>
+      </center>
     </div>
+
   
-  <center>
-    <div class="btn-primary">
-      <%= link_to 'Learn More', volunteer_opportunity, class: 'orangefont' %><br>
-    </div>
-  </center>
-  
-  <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
-  <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %><br>
-  <%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %><br>
+
   <% end %>
   </div>
   </div>
@@ -99,7 +99,7 @@
 
 
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
-<%= link_to 'New Volunteer opportunity', new_volunteer_opportunity_path %>
+<%= link_to 'Create Connections', new_volunteer_opportunity_path, class: "btn btn-success" %>
 <% end %>
 
 </div>

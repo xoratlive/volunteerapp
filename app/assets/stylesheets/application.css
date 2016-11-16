@@ -210,7 +210,7 @@ h1.page-title {
 
 .descriptiontextpadding {
 	padding: 5px;
-	padding-bottom: 50px; 
+	padding-bottom: 20px; 
 	background-color: #D4D4D4;
 }
 
@@ -243,6 +243,7 @@ html, body {
 	height: 100%;
 	margin: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
 }
+
 .footer, .push{
 	height: 5%; /* .push must be the same height as .footer */
 		background: #6d6d6d;
@@ -273,6 +274,7 @@ html, body {
 
 
 .filter-button {
+
 	margin-left: 15px;
  
 }

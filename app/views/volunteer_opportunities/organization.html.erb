@@ -41,7 +41,7 @@
 </p>
 
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
-<h2>Opportunities you have posted:</h2>
+<h2>Connections you have posted:</h2>
 </div>
 
 
@@ -64,10 +64,10 @@
         <td><%= volunteer_opportunity.Address %></td>
         <td><%= volunteer_opportunity.Phone %></td>
         <td><%= volunteer_opportunity.Website %></td>
-        <td><%= link_to 'Show', volunteer_opportunity %></td>
+        <td><%= link_to 'Show', volunteer_opportunity, class: "btn btn-success" %>
         <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
-        <td><%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %></td>
-        <td><%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity), class: "btn btn-success" %>
+        <%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
         <% end %>
       </tr>
     <% end %>
