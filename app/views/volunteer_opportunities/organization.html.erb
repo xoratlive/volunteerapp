@@ -79,6 +79,8 @@
 <% end %>
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
 <%= link_to 'New Volunteer opportunity', new_volunteer_opportunity_path, class: "btn btn-success" %>
+<br>
+<br>
 <% end %>
 </div>
 
