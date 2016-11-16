@@ -244,6 +244,7 @@ html, body {
 	margin: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
 }
 
+
 .footer, .push{
 	height: 5%; /* .push must be the same height as .footer */
 		background: #6d6d6d;
