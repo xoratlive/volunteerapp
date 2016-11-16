@@ -359,11 +359,11 @@ img.navbar-brand {
 html, body {
 	height: 100%;
 }
-.container {
+.container-fluid, .container {
 	min-height: 100%;
 	height: auto !important; /* This line and the next line are not necessary unless you need IE6 support */
 	height: 100%;
-	margin-bottom: 0 auto -200px; /* the bottom margin is the negative value of the footer's height */
+	margin-top: 0 auto -100px; /* the bottom margin is the negative value of the footer's height */
 }
 
 
@@ -405,7 +405,7 @@ background-color: #D4D4D4;
 
 
 .footer, .push{
-	height: 5%; /* .push must be the same height as .footer */
+	height: 100px; /* .push must be the same height as .footer */
 	background: #6d6d6d;
 
 
