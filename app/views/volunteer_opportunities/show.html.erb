@@ -1,5 +1,5 @@
 <div class="container">
-<h1 class="page-title">Claim Volunteer Event</h1>
+<h1 class="page-title">Connect with <%= @volunteer_opportunity.user.name %> </h1>
 
 
 <div class="container-fluid show-page-container">
@@ -10,7 +10,16 @@
     <strong>Description of Work:</strong>
       <%= @volunteer_opportunity.description %>
     </p>
-     
+
+    <p>
+    <strong>Special skill needed:</strong>
+      <%= @volunteer_opportunity.skill_needed %>
+    </p>
+    <p>
+    <strong>What to bring:</strong>
+      <%= @volunteer_opportunity.what_to_bring %>
+    </p>
+  
     <p>
       <strong>Address:</strong>
       <%= @volunteer_opportunity.Address %>
@@ -116,7 +125,8 @@
     <% if user_signed_in? && current_user.volunteer? %>
       <p>
         <br>
-      <%= link_to "Volunteer!", new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity), class: "btn btn-success" %>
+      <%= link_to "Volunteer for " + @volunteer_opportunity.Organization, new_volunteer_opportunity_claim_opportunity_path(@volunteer_opportunity), class: "btn btn-success" %>
+
       </p>
     <% end %>
   </div>
@@ -168,8 +178,19 @@
     </p>
 
     <p>
-    <strong>About Organization:</strong>
+    <strong>Our mission:</strong>
     <%= @volunteer_opportunity.user.biographical_information %>
+    </p>
+
+    <p>
+    <strong>About <%= @volunteer_opportunity.user.name %>:</strong>
+    <%= @volunteer_opportunity.user.about1 %>
+    </p>
+
+
+    <p>
+    <strong>Website:</strong>
+    <%= @volunteer_opportunity.user.website %>
     </p>
 </div>
 

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161106084034) do
+ActiveRecord::Schema.define(version: 20161110104855) do
 
   create_table "claim_opportunities", force: :cascade do |t|
     t.string   "please_explain_why_you_are_interested_in_this_opportunity"
@@ -35,7 +35,6 @@ ActiveRecord::Schema.define(version: 20161106084034) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                                      null: false
     t.datetime "updated_at",                                      null: false
-    t.string   "organization"
     t.string   "name"
     t.boolean  "volunteer"
     t.string   "biographical_information"
@@ -45,6 +44,8 @@ ActiveRecord::Schema.define(version: 20161106084034) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "website"
+    t.string   "about1"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
@@ -84,6 +85,8 @@ ActiveRecord::Schema.define(version: 20161106084034) do
     t.text     "sunday_morning"
     t.text     "sunday_afternoon"
     t.text     "sunday_evening"
+    t.text     "skill_needed"
+    t.text     "what_to_bring"
   end
 
 end

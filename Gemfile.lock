@@ -111,7 +111,11 @@ GEM
       cocaine (~> 0.5.5)
       mime-types
       mimemagic (~> 0.3.0)
+<<<<<<< HEAD
     pg (0.19.0-x86-mingw32)
+=======
+    pg (0.18.4-x86-mingw32)
+>>>>>>> d4b87a2efd7feba44c6ce7eeeb93e68404e8083b
     pkg-config (1.1.7)
     rack (1.6.4)
     rack-test (0.6.3)
@@ -217,7 +221,7 @@ DEPENDENCIES
   web-console (~> 2.0)
 
 RUBY VERSION
-   ruby 2.3.1p112
+   ruby 2.1.8p440
 
 BUNDLED WITH
    1.13.6

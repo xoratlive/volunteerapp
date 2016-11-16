@@ -42,10 +42,20 @@
       <div class="col-sm-4">
         <div class="my-causes">
 
+
           <p>
           <strong>My causes:</strong>
           <%= current_user.biographical_information %>
           </p>
+
+<p>
+<strong>I'm passionate about:</strong>
+<%= current_user.about1 %>
+</p>
+
+<p>
+<%= link_to "Edit your profile", edit_user_registration_path, class: "btn btn-success" %>
+</p>
 
         </div>
       </div>

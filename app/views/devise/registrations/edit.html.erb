@@ -2,13 +2,37 @@
 <div class="container-fluid edit"> 
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
+<script>
+jQuery(document).ready(function(){
+    jQuery('#hideshow').on('click', function(event) {        
+         jQuery('#content').toggle('show');
+         jQuery('#content2').toggle('show');
+    });
+});
+
+jQuery(document).ready(function(){
+jQuery('#content2').hide(1);
+});
+
+
+function change()
+{
+    var elem = document.getElementById("hideshow");
+    if (elem.value=="Edit profile") elem.value = "Change password";
+    else elem.value = "Edit profile";
+}
+</script>
+
+
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
   <%= devise_error_messages! %>
 
+  <div id=content>
    <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name, autofocus: true, class: "form-control" %>
   </div>
+  
 
   <div class="field">
     <%= f.label :email_address %><br />
@@ -19,9 +43,27 @@
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
+  <% if (user_signed_in?) && (not current_user.volunteer?) %>
   <div class="field">
+    <%= f.label :our_mission %><br />
+    <% else %>
     <%= f.label :tell_us_about_your_causes %><br />
+    <% end %>
     <%= f.text_field :biographical_information, autofocus: true, class: "form-control" %>
+  </div>
+
+  <% if (user_signed_in?) && (not current_user.volunteer?) %>
+  <div class="field">
+    <%= f.label :tell_us_about_your_organization %><br />
+    <% else %>
+    <%= f.label :tell_us_what_you_are_passionate_about %><br />
+    <% end %>
+    <%= f.text_field :about1, autofocus: true, class: "form-control" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :website %><br />
+    <%= f.text_field :website, autofocus: true, class: "form-control" %>
   </div>
 
   <div class="field">
@@ -33,35 +75,40 @@
     <%= f.label :phone_number %><br />
     <%= f.telephone_field :phone_number, autofocus: true, maxlength: 10, class: "form-control" %>
   </div>
-
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
-  </div>
   <div class="field">
     <%= f.label :image %><br />
     <%= f.file_field :image, autofocus: true, class: "form-control" %>
   </div>
+  </div>
+  <div id=content2>
+<div class="field">
+    <%= f.label :new_password %><i>(<% if @minimum_password_length %><em><%= @minimum_password_length %> characters minimum</em>)</i><% end %><br />
+    <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
+    <div class="field">
+    <%= f.label :new_password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
+  </div>
+
+</div>
+</div>
+<div class="field">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "off", class: "form-control" %>
+</div>
+
+
+
 
   <div class="actions">
-    <center><%= f.submit "Update", class: "btn btn-primary btn-lg" %></center>
+
+    <%= f.submit "Update Account", class: "btn btn-success" %>
   </div>
 <% end %>
 
+<input type='button' onclick="change()" id='hideshow' value='Change Password' class='btn btn-success' >
+
+<h3>Cancel my account</h3>
+>>>>>>> d4b87a2efd7feba44c6ce7eeeb93e68404e8083b
 
 <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger btn-sm" %></p>
 
