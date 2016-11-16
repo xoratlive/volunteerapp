@@ -195,6 +195,7 @@ h1.page-title {
 }
 
 .boxheader {
+	padding-top:2px;
 	height: 4rem;
 	background-color: #D4D4D4;
 	text-align: center;

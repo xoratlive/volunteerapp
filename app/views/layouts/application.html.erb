@@ -44,8 +44,8 @@
 
       <ul class="nav navbar-nav navbar-right">
       <% if (user_signed_in?) && (not current_user.volunteer?) %>
-        <li ><p><%= link_to "View claimed events", opportunities_to_claim_path, class: "btn btn-success" %></p></li>
-        <li ><p><%= link_to "View your profile", organization_path, class: "btn btn-success" %></p></li>
+        <li ><p><%= link_to "View Connections", opportunities_to_claim_path, class: "btn btn-success" %></p></li>
+        <li ><p><%= link_to "View Profile", organization_path, class: "btn btn-success" %></p></li>
         <% end %>
         <% if (user_signed_in?) && (current_user.volunteer?) %>
         <li ><p><%= link_to "View your profile", opportunities_that_have_been_claimed_path, class: "btn btn-success" %></p></li>
