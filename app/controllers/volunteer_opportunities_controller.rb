@@ -5,7 +5,7 @@ class VolunteerOpportunitiesController < ApplicationController
 
 def search
   if params[:search].present?
-    @volunteer_opportunities = VolunteerOpportunity.search(params[:search])
+    @volunteer_opportunities = VolunteerOpportunity.search(params[:search], operator: "or")
   else
     @volunteer_opportunities = VolunteerOpportunity.all
   end
