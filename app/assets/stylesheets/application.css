@@ -61,7 +61,7 @@ p {
 
 }
 
-	
+
 
 .profile-page {
 	min-height: 1000px;
@@ -88,16 +88,36 @@ p {
 
 }
 
-.name-profile{
+.name-profile {
 	font-size: 2rem;
 	margin-right: 50px;
 	margin-top: 10px;
+}
+
+.name-profile {
+	float: left;
 
 }
 
-.name-profile{
+.name-profile h2 {
 	float: left;
+	margin-top: 0px !important;
 
+}
+
+.name-profile p {
+	float: left;
+	margin-top: 30px !important;
+}
+
+.profile-pic {
+	 width: 200px;
+	 height: 200px;
+	 background-size: cover;
+	 display: block;
+	 border-radius: 100px;
+	 -webkit-border-radius: 100px;
+	 -moz-border-radius: 100px;
 }
 
 .name-profile h2 {
@@ -129,7 +149,6 @@ p {
 
 .connections-claimed h2{
 	text-align: center;
-	color: white;
 	padding-top: 15px;	
 
 }
@@ -155,18 +174,16 @@ p {
 
 
 .my-preferences {
-
 	margin-top: 10px;
-	background-color: #4DBFBF;
 	border: 0px solid black !important;
 	font-size: 2rem;
 	height: 30rem;
 	width: 91rem;
 	color: white;
+
 }
 
 .my-preferences, h3{
-
 	text-align: center;
 	margin-top: 10px !important;
 } 
