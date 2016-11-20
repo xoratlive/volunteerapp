@@ -61,24 +61,6 @@ p {
 
 }
 
-.profile-pic {
-	float: left;
-	width: 100px;
-	height: 100px;
-	background: #4dbfbf;
-	-moz-border-radius: 70px;
-	-webkit-border-radius: 70px;
-	border-radius: 70px;
-	margin: 0 auto;
-	padding-top: 15px;
-
-} 
-
-
-.profile-pic, p{
-
-	text-align: center;
-}
 
 .profile-page {
 	min-height: 1000px;
@@ -95,7 +77,6 @@ p {
 	height: 20rem;
 	width: 45rem;
 	padding: 0;
-	border-radius: 10px;
 }
 
 .profile-info p{
@@ -106,28 +87,46 @@ p {
 
 }
 
-.name-profile{
+.name-profile {
 	font-size: 2rem;
 	margin-right: 50px;
 	margin-top: 10px;
-
 }
 
-.name-profile{
+.name-profile {
 	float: left;
 
 }
 
-.connections-claimed {
-	background-color: #6D6D6D;
-	height: 7rem;
-	border-radius: 10px;
+.name-profile h2 {
+	float: left;
+	margin-top: 0px !important;
 
+}
+
+.name-profile p {
+	float: left;
+	margin-top: 30px !important;
+}
+
+.profile-pic {
+	 width: 200px;
+	 height: 200px;
+	 background-size: cover;
+	 display: block;
+	 border-radius: 100px;
+	 -webkit-border-radius: 100px;
+	 -moz-border-radius: 100px;
+}
+
+.connections-claimed {
+	background-color: #4DBFBF;
+	height: 7rem;
+	color: white;
 }
 
 .connections-claimed h2{
 	text-align: center;
-	color: white;
 	padding-top: 15px;	
 
 }
@@ -140,7 +139,6 @@ p {
 	font-size: 2rem;
 	height: 30rem;
 	width: 45rem;
-	border-radius: 10px;
 
 }
 
@@ -154,20 +152,16 @@ p {
 
 
 .my-preferences {
-
 	margin-top: 10px;
-	background-color: #4DBFBF;
 	border: 0px solid black !important;
 	font-size: 2rem;
 	height: 30rem;
 	width: 91rem;
-	border-radius: 10px;
-	color: white;
 }
 
 .my-preferences, h3{
-
 	text-align: center;
+	margin-top: 10px !important;
 } 
 /* The end of profile stylings*/
 
@@ -413,16 +407,17 @@ background-color: #D4D4D4;
 
  /* .start of styles for the volunteer_opportunities */ 
 .subheading{  
-	background-color:#6d6d6d;
+	background-color:#4DBFBF;
 	text-align: center !important;
 	color: white;
 	margin-top: 15px;
 }
 
 .subheading-top{  
-	background-color:#D4D4D4;
+	background-color:#4DBFBF;
 	text-align: center !important;
 	margin-top: 15px;
+	color: white;
 }
 
 .subheading h2{  
