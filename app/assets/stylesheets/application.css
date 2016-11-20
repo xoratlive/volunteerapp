@@ -32,13 +32,13 @@ p {
 
  
  .volunteer-checkbox {
- 	margin-top: 200px;
+ 	margin-top: 148px;
  	background: #4dbfbf !important;
  	height: 90px;
 
  }
   .organization-checkbox {
- 	margin-top: 200px;
+ 	margin-top: 148px;
  	background: #6d6d6d !important;
  	height: 90px;
  	margin-left: 10px;
@@ -61,24 +61,7 @@ p {
 
 }
 
-.profile-pic {
-	float: left;
-	width: 100px;
-	height: 100px;
-	background: #4dbfbf;
-	-moz-border-radius: 70px;
-	-webkit-border-radius: 70px;
-	border-radius: 70px;
-	margin: 0 auto;
-	padding-top: 15px;
-
-} 
-
-
-.profile-pic, p{
-
-	text-align: center;
-}
+	
 
 .profile-page {
 	min-height: 1000px;
@@ -95,7 +78,6 @@ p {
 	height: 20rem;
 	width: 45rem;
 	padding: 0;
-	border-radius: 10px;
 }
 
 .profile-info p{
@@ -118,10 +100,30 @@ p {
 
 }
 
+.name-profile h2 {
+ 	float: left;
+ 	margin-top: 0px !important;
+}
+
+.name-profile p {
+ 	float: left;
+ 	margin-top: 30px !important;
+}
+
+.profile-pic {
+ 	 width: 200px;
+ 	 height: 200px;
+ 	 background-size: cover;
+ 	 display: block;
+ 	 border-radius: 100px;
+ 	 -webkit-border-radius: 100px;
+ 	 -moz-border-radius: 100px;
+ }
+
 .connections-claimed {
-	background-color: #6D6D6D;
+	background-color: #4DBFBF;
 	height: 7rem;
-	border-radius: 10px;
+	color: white;
 
 }
 
@@ -140,7 +142,6 @@ p {
 	font-size: 2rem;
 	height: 30rem;
 	width: 45rem;
-	border-radius: 10px;
 
 }
 
@@ -161,15 +162,16 @@ p {
 	font-size: 2rem;
 	height: 30rem;
 	width: 91rem;
-	border-radius: 10px;
 	color: white;
 }
 
 .my-preferences, h3{
 
 	text-align: center;
+	margin-top: 10px !important;
 } 
 /* The end of profile stylings*/
+
 
 .btn-primary {
 	background: #4dbfbf !important;
@@ -221,7 +223,6 @@ p {
 }
 
 
-
 .hero-image {
 	color: white;
 }
@@ -245,6 +246,7 @@ p {
 .organizations-connect p {
 		padding-bottom: 70px;
 }
+
 #circle-teal {
 	width: 140px;
 	height: 140px;
@@ -254,6 +256,7 @@ p {
 	border-radius: 70px;
 	margin: 0 auto;
 }
+
 #circle-gray {
 	width: 140px;
 	height: 140px;
@@ -269,6 +272,7 @@ p {
 	text-align: center;
 	padding-top: 40%;
 }
+
 .organizations-connect p, .volunteer-connect p{
 	padding-top: 10px;
 	text-align: center;
@@ -413,16 +417,17 @@ background-color: #D4D4D4;
 
  /* .start of styles for the volunteer_opportunities */ 
 .subheading{  
-	background-color:#6d6d6d;
+	background-color:#4DBFBF;
 	text-align: center !important;
 	color: white;
 	margin-top: 15px;
 }
 
 .subheading-top{  
-	background-color:#D4D4D4;
+	background-color:#4DBFBF;
 	text-align: center !important;
 	margin-top: 15px;
+	color: white;
 }
 
 .subheading h2{  
