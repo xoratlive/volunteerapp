@@ -32,13 +32,13 @@ p {
 
  
  .volunteer-checkbox {
- 	margin-top: 200px;
+ 	margin-top: 148px;
  	background: #4dbfbf !important;
  	height: 90px;
 
  }
   .organization-checkbox {
- 	margin-top: 200px;
+ 	margin-top: 148px;
  	background: #6d6d6d !important;
  	height: 90px;
  	margin-left: 10px;
@@ -60,6 +60,7 @@ p {
 
 
 }
+
 
 
 .profile-page {
@@ -119,10 +120,31 @@ p {
 	 -moz-border-radius: 100px;
 }
 
+.name-profile h2 {
+ 	float: left;
+ 	margin-top: 0px !important;
+}
+
+.name-profile p {
+ 	float: left;
+ 	margin-top: 30px !important;
+}
+
+.profile-pic {
+ 	 width: 200px;
+ 	 height: 200px;
+ 	 background-size: cover;
+ 	 display: block;
+ 	 border-radius: 100px;
+ 	 -webkit-border-radius: 100px;
+ 	 -moz-border-radius: 100px;
+ }
+
 .connections-claimed {
 	background-color: #4DBFBF;
 	height: 7rem;
 	color: white;
+
 }
 
 .connections-claimed h2{
@@ -157,6 +179,8 @@ p {
 	font-size: 2rem;
 	height: 30rem;
 	width: 91rem;
+	color: white;
+
 }
 
 .my-preferences, h3{
@@ -164,6 +188,7 @@ p {
 	margin-top: 10px !important;
 } 
 /* The end of profile stylings*/
+
 
 .btn-primary {
 	background: #4dbfbf !important;
@@ -215,7 +240,6 @@ p {
 }
 
 
-
 .hero-image {
 	color: white;
 }
@@ -239,6 +263,7 @@ p {
 .organizations-connect p {
 		padding-bottom: 70px;
 }
+
 #circle-teal {
 	width: 140px;
 	height: 140px;
@@ -248,6 +273,7 @@ p {
 	border-radius: 70px;
 	margin: 0 auto;
 }
+
 #circle-gray {
 	width: 140px;
 	height: 140px;
@@ -263,6 +289,7 @@ p {
 	text-align: center;
 	padding-top: 40%;
 }
+
 .organizations-connect p, .volunteer-connect p{
 	padding-top: 10px;
 	text-align: center;

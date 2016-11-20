@@ -1,50 +1,77 @@
 <div class="container-fluid">
-<div class="col-md-5">
-<h2><%= current_user.name %></h2>
-<p>
-<%= image_tag current_user.image.url(:medium) %>
-</p>
 
-<p>
-  <strong>Address:</strong>
-<%= current_user.address %>
-</p>
+<div class="row">
+      <div class="col-sm-4">
+        <div class="profile-info">
+          <p>
+            <strong>Address:</strong>
+          <%= current_user.address %>
+          </p>
 
-<p>
-  <strong>Email:</strong>
-<%= current_user.email %>
-</p>
+          <p>
+            <strong>Email:</strong>
+          <%= current_user.email %>
+          </p>
 
 
-<p>
-  <strong>Phone:</strong>
-<%= current_user.phone_number %>
-</p>
+          <p>
+            <strong>Phone:</strong>
+          <%= current_user.phone_number %>
+          </p>
 
-<p>
-  <strong>Website:</strong>
-<%= current_user.website %>
-</p>
+          <p>
+            <strong>Website:</strong>
+          <%= current_user.website %>
+          </p>
+     </div>
+ </div>
 
-<p>
-<strong>Our mission:</strong>
-<%= current_user.biographical_information %>
-</p>
+<div class="col-sm-2">
+          <div class="name-profile">
+           <h2><%= current_user.name %></h2>
+            <p>
+             <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-success" %>
+            </p>
+     </div>
+  </div>
 
-<p>
-<strong>About <%= current_user.name %>:</strong>
-<%= current_user.about1 %>
-</p>
+<div class="col-sm-6">
+  <div class="profile-pic">
+           <p>
+              <%= image_tag current_user.image.url(:medium) %>
+            </p>
+        </div>
+   </div>
+</div>
 
-<p>
-<%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-success" %>
-</p>
+<div class="row">
+      <div class="col-sm-4">
+        <div class="my-causes">
+        <p>
+          <strong>About <%= current_user.name %>:</strong>
+          <%= current_user.about1 %>
+        </p>
+        </div>
+      </div>
 
-<% if (user_signed_in?) && (not current_user.volunteer?) %>
-<h2>Connections you have posted:</h2>
+      <div class="col-sm-8">
+        <div class="my-preferences">
+          <h3>Our mission:
+          <%= current_user.biographical_information %>
+          </h3>
+       </div>
+      </div>
 </div>
 
 
+<% if (user_signed_in?) && (not current_user.volunteer?) %>
+
+ <div class="connections-claimed">
+   <h2>Connections you have posted:</h2>
+    
+  </div>
+
+  <br>
 
 <table class= "table table-responsive">
   <thead>
