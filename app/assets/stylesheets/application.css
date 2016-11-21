@@ -426,7 +426,7 @@ background-color: #D4D4D4;
 
 
 .footer, .push{
-	height: 100px; /* .push must be the same height as .footer */
+	height: 7%; /* .push must be the same height as .footer */
 	background: #6d6d6d;
 
 
