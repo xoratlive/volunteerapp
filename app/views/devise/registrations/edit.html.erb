@@ -1,4 +1,4 @@
-<div class= "container-form">
+<div class= "container">
 <div class="container-fluid edit"> 
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -42,18 +42,18 @@ function change()
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
-
+ <div class="field">
   <% if (user_signed_in?) && (not current_user.volunteer?) %>
-  <div class="field">
+ 
     <%= f.label :our_mission %><br />
     <% else %>
     <%= f.label :tell_us_about_your_causes %><br />
     <% end %>
     <%= f.text_field :biographical_information, autofocus: true, class: "form-control" %>
   </div>
-
+ <div class="field">
   <% if (user_signed_in?) && (not current_user.volunteer?) %>
-  <div class="field">
+ 
     <%= f.label :tell_us_about_your_organization %><br />
     <% else %>
     <%= f.label :tell_us_what_you_are_passionate_about %><br />
@@ -108,7 +108,7 @@ function change()
 <input type='button' onclick="change()" id='hideshow' value='Change Password' class='btn btn-success' >
 
 <h3>Cancel my account</h3>
->>>>>>> d4b87a2efd7feba44c6ce7eeeb93e68404e8083b
+
 
 <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger btn-sm" %></p>
 

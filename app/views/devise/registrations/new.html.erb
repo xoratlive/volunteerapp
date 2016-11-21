@@ -29,15 +29,27 @@
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
 
-  <div>
-  <%= f.label :I_am_a_volunteer %>
-  <%= f.check_box :volunteer, checked: true  %>
-  </div>
-
+<div class="checkboxsignup">
+              <div class="col-sm-offset-0 col-sm-2 volunteer-checkbox">
+                    <div class="label-checkbox">
+                      <%= f.label :I_am_a_volunteer  %>
+                      <%= f.radio_button :volunteer, 1, checked: true  %>
+                    </div>
+              </div>
+              <div class="col-sm-2 organization-checkbox">
+                    <div class="label-checkbox">
+                      <%= f.label :I_am_an_organization %>
+                      <%= f.radio_button :volunteer, 0, checked: false  %>
+                    </div>
+              </div>
+</div>
  <div class="actions">
     <center><%= f.submit "Sign Up", class: "btn btn-primary btn-lg" %></center>
   </div>
+
 <% end %>
+
+ 
 
 </div>
 </div>
