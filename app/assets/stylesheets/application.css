@@ -458,7 +458,8 @@ background-color: #D4D4D4;
 
 .filter-button {
 
-	margin-left: 15px;
+	margin-right: 40px;
+	float: right;
  
 }
 
