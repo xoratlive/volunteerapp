@@ -29,21 +29,22 @@ p {
 }
 /* fonts needed for all of the headers and body text */
 
+.landingpagebuttons {
+	padding-top: 145px;
+	margin-right: 20px;
+}
 
- 
- .volunteer-checkbox {
- 	margin-top: 148px;
- 	background: #4dbfbf !important;
- 	height: 90px;
+.signuppagevolunteerbutton {
+	margin-right: 20px;
 
- }
-  .organization-checkbox {
- 	margin-top: 148px;
- 	background: #6d6d6d !important;
- 	height: 90px;
- 	margin-left: 10px;
+}
 
- }
+.signuppagebuttons {
+	padding-bottom: 20px;
+
+}
+
+
  .label-checkbox {
  	margin-top: 15px;
  	text-align: center;
@@ -244,7 +245,7 @@ p {
 color: white;
 font-size: 17px;
 padding-bottom: 260px;
-margin-top: -140px;
+padding-top: -100px;
 
 
 }
@@ -495,5 +496,106 @@ background-color: #D4D4D4;
 
 
 
+ /* volunteer and organization button start */
+.toggle-btn-grp.cssonly * {
+    width:150px;
+    height:100px;
+    line-height:30px;
+}
+.toggle-btn-grp.cssonly div {
+    display:inline-block;
+    position:relative;
+ 
+}
+
+.toggle-btn-grp.cssonly div label {
+    position:absolute;
+    z-index:0;
+    padding:0;
+    text-align:center;
+}
+
+.toggle-btn-grp.cssonly div input {
+    position:absolute;
+    z-index:1;
+    cursor:pointer;
+    opacity:0;
+}
+
+.toggle-btn-grp.cssonly div:hover label {
+    
+    background:#95D9D9; 
+}
+
+.toggle-btn-grp.cssonly div input:checked + label {
+    background:#4DBFBF;
+   
+
+}
 
 
+
+.toggle-btn-grp { 
+  margin:3px 0; 
+}
+.toggle-btn { 
+    text-align:centre; 
+    line-height: 95px !important;
+    margin:5px 2px;
+    padding:0.4em 3em; 
+    color:white; 
+    background-color:#6d6d6d; 
+    border-radius:5px; 
+    display:inline-block; 
+   
+    cursor:pointer;
+}
+
+.toggle-btn-grp.joint-toggle .toggle-btn { 
+    margin:5px 0; 
+    padding:0.4em 2em; 
+    border-radius:0;
+    border-right-color:white;
+}
+.toggle-btn-grp.joint-toggle .toggle-btn:first-child { 
+    margin-left:2px; 
+    border-radius: 10px 0px 0px 10px; 
+}
+.toggle-btn-grp.joint-toggle .toggle-btn:last-child { 
+    margin-right:2px;  
+    border-radius: 0px 10px 10px 0px;
+    border-right:solid 1px #CCC;
+}
+
+
+.toggle-btn:hover { 
+    border:solid 1px #a0d5dc !important; 
+    background:#7bffff;
+}
+
+
+.toggle-btn.success { 
+    background:lightgreen;
+    border:solid 1px green !important; 
+}
+
+
+.visuallyhidden { 
+    border: 0; 
+    clip: rect(0 0 0 0); 
+    height: 1px; 
+    margin: -1px; 
+    overflow: hidden; 
+    padding: 0; 
+    position: absolute; 
+    width: 1px; 
+}
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { 
+    clip: auto; 
+    height: auto; 
+    margin: 0; 
+    overflow: visible; 
+    position: static; 
+    width: auto; 
+}
+/* volunteer and organization button end */

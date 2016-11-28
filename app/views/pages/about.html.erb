@@ -4,21 +4,30 @@
       <div class="hero-image">
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
         <%= devise_error_messages! %>
-              <div class="col-sm-offset-3 col-sm-1 volunteer-checkbox">
-                    <div class="label-checkbox">
-                      <%= f.label :I_am_a_volunteer %>
+
+
+              <div class="toggle-btn-grp cssonly">
+                      <div class="col-sm-offset-1 col-sm-1 landingpagebuttons ">
+                      
                       <%= f.radio_button :volunteer, 1, checked: true  %>
-                    </div>
-              </div>
-              <div class="col-sm-1 organization-checkbox">
-                    <div class="label-checkbox">
-                      <%= f.label :I_am_an_organization %>
+                      <%= f.label :I_am_a_volunteer, onclick:"", class:"toggle-btn" %>
+                      </div>
+                      
+              
+                      <div class="col-sm-1 landingpagebuttons ">
+                      
                       <%= f.radio_button :volunteer, 0, checked: false  %>
-                    </div>
+                      <%= f.label :I_am_an_organization, onclick:"", class:"toggle-btn" %>
+                      
+                      </div>
+              
               </div>
+
             <div class="container form">
+
               <div class="col-sm-offset-1 col-sm-5">
                 <h2>Sign up</h2>
+
 
             <div class="field"><br>
               <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Name/Organization" %><br>
@@ -40,8 +49,9 @@
            <div class="actions"><br>
             <%= f.submit "Sign up", class: "btn btn-primary" %>
             </div>
+    
       </div><!--form container -->
-
+      
 
 
   
