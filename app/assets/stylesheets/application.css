@@ -188,6 +188,48 @@ p {
 	text-align: center;
 	margin-top: 10px !important;
 } 
+
+.info {
+	text-align: left;
+	padding: 10px;
+	color: white;
+	margin-top: 10px;
+	background-color: #4DBFBF;
+	border: 0px solid black !important;
+	font-size: 2rem;
+	height: 20rem;
+	width: 40rem;
+}
+
+.info2 {
+	text-align: left;
+	padding: 10px;
+	color: white;
+	margin-top: 10px;
+	background-color: grey;
+	border: 0px solid black !important;
+	font-size: 2rem;
+	height: 20rem;
+	width: 40rem;
+}
+
+
+.info3 {
+	text-align: left;
+	padding: 10px;
+	color: white;
+	background-color: 
+	margin-top: 10px;
+	background-color: grey;
+	border: 0px solid black !important;
+	font-size: 2rem;
+	height: 20rem;
+	width: 20rem;
+	position: : right;
+
+}
+
+
 /* The end of profile stylings*/
 
 
