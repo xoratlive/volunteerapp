@@ -22,6 +22,22 @@
                       </div>
               
               </div>
+<script>
+$(document).ready(function()
+{
+var volunteer = document.getElementById("user_volunteer_1");
+var organization = document.getElementById("user_volunteer_0");
+var input = document.getElementById("user_name");
+
+volunteer.onclick = function() {
+    input.placeholder = "First and last name";
+}
+
+organization.onclick = function() {
+    input.placeholder = "Organization name";
+}
+})
+</script>
 
             <div class="container form">
 
@@ -30,7 +46,7 @@
 
 
             <div class="field"><br>
-              <%= f.text_field :name, autofocus: true, class: "form-control", placeholder: "Name/Organization" %><br>
+              <%= f.text_field :name, autofocus: true, placeholder: "First and last name", class: "form-control" %><br>
             </div>
             <div class="field">
               <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>
