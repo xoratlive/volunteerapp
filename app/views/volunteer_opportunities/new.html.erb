@@ -1,5 +1,16 @@
 <div class="container">
+  <% if @volunteer_opportunity.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger alter-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@volunteer_opportunity.errors.count, "error") %> prohibited this connection from being saved:</h4>
 
+      <ul>
+      <% @volunteer_opportunity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 <h1 class="text-center">Create Volunteer Connection</h1>
 
 <%= render 'form' %>

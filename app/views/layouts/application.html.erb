@@ -21,6 +21,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
+
   <div class="container-fluid navbar">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -61,15 +62,26 @@
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
+
 </nav>
+<br>
 
-
+<div class="container">
+<% flash.each do |name, msg| %>
+    <% if msg.is_a?(String) %>
+      <div class="alert alert-<%= name == :notice ? "success" : "danger" %> alert-dismissable">
+        <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+        <%= content_tag :div, msg, :id => "flash_#{name}" %>
+      </div>
+    <% end %>
+  <% end %>
 
 
 <%= yield %>
-<div class="push"></div>
-<div class="footer">
 </div>
+<div class="push"></div>
+<div class="footer"></div>
+
 <script>
 
 

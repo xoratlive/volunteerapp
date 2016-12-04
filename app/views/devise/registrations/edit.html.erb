@@ -1,5 +1,5 @@
-<div class= "container">
-<div class="container-fluid edit"> 
+
+<%= devise_error_messages! %>
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <script>
@@ -25,7 +25,7 @@ function change()
 
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { multipart: true }) do |f| %>
-  <%= devise_error_messages! %>
+  
 
   <div id=content>
    <div class="field">
@@ -35,7 +35,7 @@ function change()
   
 
   <div class="field">
-    <%= f.label :email_address %><br />
+    <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, class: "form-control" %>
   </div>
 
@@ -82,10 +82,10 @@ function change()
   </div>
   <div id=content2>
 <div class="field">
-    <%= f.label :new_password %><i>(<% if @minimum_password_length %><em><%= @minimum_password_length %> characters minimum</em>)</i><% end %><br />
+    <%= f.label :password %> <i>(must be at least 6 characters)</i><br />
     <%= f.password_field :password, autocomplete: "off", class: "form-control" %>
     <div class="field">
-    <%= f.label :new_password_confirmation %><br />
+    <%= f.label :password_confirmation %><br />
     <%= f.password_field :password_confirmation, autocomplete: "off", class: "form-control" %>
   </div>
 
@@ -107,11 +107,13 @@ function change()
 
 <input type='button' onclick="change()" id='hideshow' value='Change Password' class='btn btn-success' >
 
+<!--Commenting this out for now because it causes a bug. Might fix later.
+
 <h3>Cancel my account</h3>
 
 
 <p><%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger btn-sm" %></p>
+-->
 
 
-</div>
-</div>
+
