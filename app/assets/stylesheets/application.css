@@ -29,6 +29,11 @@ p {
 }
 /* fonts needed for all of the headers and body text */
 
+
+
+
+
+
 .landingpagebuttons {
 	padding-top: 145px;
 	margin-right: 20px;
@@ -466,7 +471,7 @@ background-color: #D4D4D4;
 
 .btn-lg {
     display: block;
-    width:92rem;
+    width: 100%;
     float: left;
 }
 
