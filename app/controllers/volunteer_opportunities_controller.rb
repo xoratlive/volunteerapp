@@ -23,6 +23,7 @@ end
   # GET /volunteer_opportunities.json
   def index
     @volunteer_opportunities = VolunteerOpportunity.all.order("created_at DESC")
+    
   end
 
   # GET /volunteer_opportunities/1

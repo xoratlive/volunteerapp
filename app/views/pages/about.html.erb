@@ -30,11 +30,11 @@ var organization = document.getElementById("user_volunteer_0");
 var input = document.getElementById("user_name");
 
 volunteer.onclick = function() {
-    input.placeholder = "First and last name";
+    input.placeholder = "First and Last Name";
 }
 
 organization.onclick = function() {
-    input.placeholder = "Organization name";
+    input.placeholder = "Organization Name";
 }
 })
 </script>
@@ -46,7 +46,7 @@ organization.onclick = function() {
 
 
             <div class="field"><br>
-              <%= f.text_field :name, autofocus: true, placeholder: "First and last name", class: "form-control" %><br>
+              <%= f.text_field :name, autofocus: true, placeholder: "First and Last Name", class: "form-control" %><br>
             </div>
             <div class="field">
               <%= f.email_field :email, autofocus: true, class: "form-control", placeholder: "Email" %>

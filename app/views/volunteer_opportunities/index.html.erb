@@ -79,7 +79,99 @@
   </b>
   </div>
   <div class="descriptiontextpadding">
-  <%= volunteer_opportunity.Organization %><br>
+  <strong>Position: <br></strong>
+  <%= volunteer_opportunity.Organization %>
+  <br>
+  <br>
+     <strong>Morning availibility: <br></strong>
+        <% if volunteer_opportunity.monday_morning == "mmondaym" %>
+          Mo
+          <% end %>
+        <% if volunteer_opportunity.tuesday_morning == "mtuesdaym" %>
+          
+          Tu
+          <% end %>
+        <% if volunteer_opportunity.wednesday_morning == "mwednesdaym" %>
+          
+          We
+          <% end %>
+        <% if volunteer_opportunity.thursday_morning == "mthursdaym" %>
+          
+          Th
+          <% end %>
+        <% if volunteer_opportunity.friday_morning == "mfridaym" %>
+          
+          Fr
+          <% end %>
+        <% if volunteer_opportunity.saturday_morning == "msaturdaym" %>
+          
+          Sa
+          <% end %>
+        <% if volunteer_opportunity.sunday_morning == "msundaym" %>
+          
+          Su
+          <% end %>
+          <br>
+          <br>
+      <strong>Afternoon availibility: <br></strong>
+        <% if volunteer_opportunity.monday_afternoon == "amondaya" %>
+          Mo
+          <% end %>
+        <% if volunteer_opportunity.tuesday_afternoon == "atuesdaya" %>
+          
+          Tu
+          <% end %>
+        <% if volunteer_opportunity.wednesday_afternoon == "awednesdaya" %>
+          
+          We
+          <% end %>
+        <% if volunteer_opportunity.thursday_afternoon == "athursdaya" %>
+          
+          Th
+          <% end %>
+        <% if volunteer_opportunity.friday_afternoon == "afridaya" %>
+          
+          Fr
+          <% end %>
+        <% if volunteer_opportunity.saturday_afternoon == "asaturdaya" %>
+          
+          Sa
+          <% end %>
+        <% if volunteer_opportunity.sunday_afternoon == "asundaya" %>
+          
+          Su
+          <% end %>
+          <br>
+          <br>
+        <strong>Evening availibility: <br> </strong>
+        <% if volunteer_opportunity.monday_evening == "emondaye" %>
+          Mo
+          <% end %>
+        <% if volunteer_opportunity.tuesday_evening == "etuesdaye" %>
+          
+          Tu
+          <% end %>
+        <% if volunteer_opportunity.wednesday_evening == "ewednesdaye" %>
+          
+          We
+          <% end %>
+        <% if volunteer_opportunity.thursday_evening == "ethursdaye" %>
+          
+          Th
+          <% end %>
+        <% if volunteer_opportunity.friday_evening == "efridaye" %>
+          
+          Fr
+          <% end %>
+        <% if volunteer_opportunity.saturday_evening == "esaturdaye" %>
+          
+          Sa
+          <% end %>
+        <% if volunteer_opportunity.sunday_evening == "esundaye" %>
+          
+          Su
+          <% end %>
+
   </div>
   
   <center>
