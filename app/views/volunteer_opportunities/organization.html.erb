@@ -1,8 +1,28 @@
-<div class="container-fluid">
+<div class="container-fluid organization-profile">
 
 <div class="row">
+  <div class="col-sm-8">
+  <div class="calendar main-bio">
+                        <%= link_to "Edit Profile", edit_user_registration_path %>
+
+           <h1><%= current_user.name %></h1>
+
+           <div class="underline"></div>
+          
+              <%= image_tag current_user.image.url(:medium) %>
+              <br>
+              <h1>Our mission</h1>
+              <div class = "underline"></div>
+              <br>
+          <p><%= current_user.biographical_information %></p>
+          </h3>
+      </div>
+   </div>
       <div class="col-sm-4">
-        <div class="profile-info">
+        <div class="calendar">
+          <h1>Contact Us</h1>
+          <div class="underline-red"></div>
+          <br>
           <p>
             <strong>Address:</strong>
           <%= current_user.address %>
@@ -23,53 +43,24 @@
             <strong>Website:</strong>
           <%= current_user.website %>
           </p>
+
      </div>
- </div>
-
-<div class="col-sm-2">
-          <div class="name-profile">
-           <h2><%= current_user.name %></h2>
-            <p>
-             <%= link_to "Edit Profile", edit_user_registration_path, class: "btn btn-success" %>
-            </p>
-     </div>
-  </div>
-
-<div class="col-sm-6">
-  <div class="profile-pic">
-           <p>
-              <%= image_tag current_user.image.url(:medium) %>
-            </p>
+     <br>
+     <div class="calendar">
+  
+          <h1>About <%= current_user.name %></h1>
+          <div class="underline-red"></div>
+          <br>
+          <p><%= current_user.about1 %></p>
         </div>
-   </div>
-</div>
-
-<div class="row">
-      <div class="col-sm-4">
-        <div class="my-causes">
-        <p>
-          <strong>About <%= current_user.name %>:</strong>
-          <%= current_user.about1 %>
-        </p>
-        </div>
-      </div>
-
-      <div class="col-sm-8">
-        <div class="my-preferences">
-          <h3>Our mission:
-          <%= current_user.biographical_information %>
-          </h3>
-       </div>
-      </div>
-</div>
-
+ </div><!--sm-4-->
+</div><!--row-->
+<br>
 
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
-
- <div class="connections-claimed">
-   <h2>Connections you have posted:</h2>
-    
-  </div>
+<div class="calendar">
+   <h1>All Your Volunteer Opportunities</h1>
+   <div class="underline-purple"></div>
 
   <br>
 
@@ -104,10 +95,7 @@
 <br>
 <br>
 <% end %>
-<% if (user_signed_in?) && (not current_user.volunteer?) %>
-<%= link_to 'Create New Connection', new_volunteer_opportunity_path, class: "btn btn-success" %>
+</div>
 <br>
-<br>
-<% end %>
 </div>
 

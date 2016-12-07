@@ -1,8 +1,20 @@
-<div class="container-fluid profile-page">
+<div class="container-fluid organization-profile">
 
     <div class="row">
-      <div class="col-sm-4">
-        <div class="profile-info">
+      <div class="col-md-8 main-bio">
+           <div class="calendar">
+             <%= link_to "Edit your profile", edit_user_registration_path %>
+            <h1><%= current_user.name %>'s Profile</h1>
+            <div class="underline"></div>
+                 
+ 
+          <%= image_tag current_user.image.url(:medium) ,:class=> "profile-pic" %>
+        </div><!--calendar-->
+      </div><!--col-md-8-->
+      <div class="col-md-4">
+        <div class="calendar">
+          <h1>Contact Information</h1>
+          <div class="underline-red"></div>
           <p>
             <strong>Address:</strong>
           <%= current_user.address %>
@@ -19,118 +31,20 @@
           <%= current_user.phone_number %>
           </p>
         </div>
+        <br>
+      <div class="calendar">
+          <h1>My Major(s)</h1>
+          <div class="underline-red"></div>
+          <%= current_user.biographical_information %>
       </div>
-        <div class="col-sm-2">
-          <div class="name-profile">
-            <h2><%= current_user.name %></h2>
-            <p>
-            <%= link_to "Edit your profile", edit_user_registration_path %>
-            </p>
-          </div>
-        </div>
-
-      <div class="col-sm-6">
-          <%= image_tag current_user.image.url(:medium) ,:class=> "profile-pic" %>
-      </div>
-    </div>
+    </div><!--col-md-4-->
+  </div><!--row-->
 
     <div class="row">
-      <div class="col-sm-4">
-        <div class="my-causes">
+      <div class="calendar">
+        <h1>My Connections</h1>
+        <div class="underline-purple"></div>
 
-
-          <p>
-          <strong>My causes:</strong>
-          <%= current_user.biographical_information %>
-          </p>
-
-
-        </div>
-      </div>
-
-      <div class="col-sm-8">
-        <div class="my-preferences">
-
-          <h3>
-          <strong>My Time Preferences</strong>
-          </h3>
-
-            <div class="table-responsive">
-        <table class="table">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Monday</th>
-              <th>Tuesday</th>
-              <th>Wednesday</th>
-              <th>Thursday</th>
-              <th>Friday</th>
-              <th>Saturday </th>
-              <th>Sunday</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-            <th scope="row"></th>
-              <td>Morning:<input class="box" name="1" type="checkbox" value="mmondaym"/> </td>
-              <td>Morning:<input class="box" name="2" type="checkbox" value="mtuesdaym" /></td>
-              <td>Morning:<input class="box" name="3" type="checkbox" value="mwednesdaym" /></td>
-              <td>Morning:<input class="box" name="4" type="checkbox" value="mthursdaym" /></td>
-              <td>Morning:<input class="box" name="5" type="checkbox" value="mfridaym" /></td>
-              <td>Morning:<input class="box" name="6" type="checkbox" value="msaturdaym" /></td>
-              <td>Morning:<input class="box" name="7" type="checkbox" value="msundaym" /></td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>Afternoon:<input class="box" name="8" type="checkbox" value="amondaya" /></td>
-              <td>Afternoon:<input class="box" name="9" type="checkbox" value="atuesdaya" /></td>
-              <td>Afternoon:<input class="box" name="10" type="checkbox" value="awednesdaya" /></td>
-              <td>Afternoon:<input class="box" name="11" type="checkbox" value="athursdaya" /></td>
-              <td>Afternoon:<input class="box" name="12" type="checkbox" value="afridaya" /></td>
-              <td>Afternoon:<input class="box" name="13" type="checkbox" value="asaturdaya" /></td>
-              <td>Afternoon:<input class="box" name="14" type="checkbox" value="asundaya" /></td>
-            </tr>
-            <tr>
-              <th scope="row"></th>
-              <td>Evening:<input class="box" name="15" type="checkbox" value="emondaye" /></td>
-              <td>Evening:<input class="box" name="16" type="checkbox" value="etuesdaye" /></td>
-              <td>Evening:<input class="box" name="17" type="checkbox" value="ewednesdaye" /></td>
-              <td>Evening:<input class="box" name="18" type="checkbox" value="ethursdaye" /></td>
-              <td>Evening:<input class="box" name="19" type="checkbox" value="efridaye" /></td>
-              <td>Evening:<input class="box" name="20" type="checkbox" value="esaturdaye" /></td>
-              <td>Evening:<input class="box" name="21" type="checkbox" value="esundaye" /></td>
-            </tr>
-          
-          </tbody>
-        </table>
-      </div>
-
-        </div>
-      </div>
-    </div>
-
-
-
-
-
-
-
-
-
-  <div class="connections-claimed">
-    <h2> My Volunteering  </h2>
-    
-  </div>
-
-  <br>
-
-
-
-
-
-
-
-  <div class="row">
     <% @claim_opportunity.each do |claim_opportunity| %>
 
       <div class="col-md-3">
