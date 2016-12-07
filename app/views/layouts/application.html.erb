@@ -17,7 +17,7 @@
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-<link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Droid+Sans|Catamaran|Raleway|" rel="stylesheet">
 </head>
 <body>
 <nav class="navbar navbar-default" role="navigation">
@@ -40,6 +40,7 @@
 
       <ul class="nav navbar-nav navbar-right">
       <% if (user_signed_in?) && (not current_user.volunteer?) %>
+        <li><p><%= link_to 'Create New Connection', new_volunteer_opportunity_path, class: "btn btn-success" %></p></li>
         <li ><p><%= link_to "View Connections", opportunities_to_claim_path, class: "btn btn-success" %></p></li>
         <li ><p><%= link_to "View Profile", organization_path, class: "btn btn-success" %></p></li>
         <% end %>

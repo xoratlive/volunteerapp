@@ -13,19 +13,128 @@
  *= require_tree .
  *= require_self
  */
+ html {
+ 	font-size: 14px;
+ }
 
+ a {
+ 	font-size: 1rem;
+ 	font-family: 'raleway';
+ }
+ h1 {
+ 	font-family: 'Catamaran', sans-serif !important;
+	text-transform: uppercase;
+
+ }
+.listing-box h1 {
+	font-family: 'Catamaran', sans-serif !important;
+	text-transform: uppercase;
+	margin-bottom: 10px;
+	text-align: center;
+	border-bottom: 1px solid #8856a2;
+	color: #f4d6f9;
+	font-size: 2.5rem;
+}
+.listing-box h2 {
+	font-family: 'Catamaran', sans-serif !important;
+	font-size: 1.5rem;
+	color: #f4d6f9 !important;
+	text-align: center;
+}
+.listing-box h3 {
+	font-family: 'raleway' !important;
+	font-size: 1.4rem;
+	text-align: left;
+	color: #666666;
+	font-weight: bold;
+}
+.listing-box {
+	background-color: white;
+-webkit-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+margin-bottom: 10px;
+}
+.listing-box-container {
+	padding: 10px;
+}
+.listing-box a {
+	text-decoration: none;
+	color: #f4d6f9;
+}
+.boxfooter {
+	background-color: #8856a2;
+	color: white;
+	text-align: left;
+	font-size:1rem;
+	padding: 1px;
+}
+.listing-box span {
+	font-size: 1.4rem;
+	color: #666666;
+	font-weight: normal;
+
+}
+.listing-image img {
+	object-fit: cover;
+	width: 100%;
+}
+
+.calendar {
+	background-color: #d4d4d4 ;
+	padding: 10px;
+	border-radius: 5px;
+-webkit-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+}
+.calendar td {
+	text-align: center;
+		color: #6d6d6d;
+
+}
+.calendar th {
+	color: #6d6d6d;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+  padding-top: 20px !important;
+}
+.calendar h2 {
+		color: #6d6d6d;
+}
+.main-bio {
+	min-height: 500px !important;
+}
+.organization-profile h1 {
+	text-align: center;
+		color: #333333 !important;
+
+}
+.organization-profile p {
+	font-family: 'catamaran', sans-serif !important;
+	font-size: 1.4rem;
+	color: #333333;
+	line-height: 2.2rem;
+}
 h2 {
-	font-family: 'Droid Sans', sans-serif !important;
+	font-family: 'Catarmaran', sans-serif !important;
 
 }
 
 h4 {
-	font-family: 'Droid Sans', sans-serif !important;
+	font-family: 'Catarmaran', sans-serif !important;
 
 }
 
-p {
-	font-family: 'Open Sans', sans-serif !important;
+p, th {
+	font-family: 'Catarmaran', sans-serif !important;
 }
 /* fonts needed for all of the headers and body text */
 
@@ -311,50 +420,76 @@ padding-top: -100px;
 }
 
 .landing-page h1 {
-	font-family: 'Droid Sans' !important;
+	font-family: 'Catamaran' !important;
 	text-align: center;
 	font-size: 3rem;
-	border-bottom: 2px solid black;
 	padding-bottom: 10px;
+	color: #6d6d6d;
 }
 .organizations-connect {
-	margin-top: 100px;
-
+	background: #f2f2f2;
+	padding-top: 20px;
+	min-height: 450px;
 }
+.volunteer-connect {
+	
+	min-height: 380px;
+	}
 .organizations-connect p {
 		padding-bottom: 70px;
 }
 
 #circle-teal {
-	width: 140px;
-	height: 140px;
+	width: 180px;
+	height: 180px;
 	background: #4dbfbf;
-	-moz-border-radius: 70px;
-	-webkit-border-radius: 70px;
-	border-radius: 70px;
+	-moz-border-radius: 90px;
+	-webkit-border-radius: 90px;
+	border-radius: 90px;
 	margin: 0 auto;
 }
 
 #circle-gray {
-	width: 140px;
-	height: 140px;
+	width: 180px;
+	height: 180px;
 	background: #6d6d6d;
-		-moz-border-radius: 70px;
-	-webkit-border-radius: 70px;
-	border-radius: 70px;
+		-moz-border-radius: 90px;
+	-webkit-border-radius: 90px;
+	border-radius: 90px;
 	margin: 0 auto;
 }
-#circle-gray h2, #circle-teal h2 {
+#circle-purple {
+	width: 180px;
+	height: 180px;
+	background: #8856a2;
+	-moz-border-radius: 90px;
+	-webkit-border-radius: 90px;
+	border-radius: 90px;
+	margin: 0 auto;
+}
+#circle-red {
+	width: 180px;
+	height: 180px;
+	background: #db0202;
+	-moz-border-radius: 90px;
+	-webkit-border-radius: 90px;
+	border-radius: 90px;
+	margin: 0 auto;
+}
+#circle-gray h2, #circle-teal h2, #circle-purple h2 {
 	color: white;
-	font-size: 1.2rem;
+	font-size: 1.9rem;
 	text-align: center;
 	padding-top: 40%;
+	font-family: 'raleway', sans-serif !important;
 }
 
 .organizations-connect p, .volunteer-connect p{
-	padding-top: 10px;
+	padding-top: 18px;
 	text-align: center;
-	font-size: 1.4rem;
+	font-size: 2rem;
+	font-family: 'catamaran', sans-serif !important;
+	color: #6d6d6d;
 }
 
 img.banner {
@@ -398,12 +533,6 @@ h1.page-title {
     height: 30rem; 
 }
 
-.boxheader {
-	padding-top:2px;
-	height: 4rem;
-	background-color: #D4D4D4;
-	text-align: center;
-}
 
 
 
@@ -420,7 +549,11 @@ h1.page-title {
 }
 
 
-body { background-color:#F2F2F2 !important; }
+body { 
+
+	background: url('sayagata-400px.png') !important; 
+
+}
 
 .btn.btn-success.navbar-btn {
 	margin-right: 20px;
@@ -495,25 +628,34 @@ background-color: #D4D4D4;
 
  /* .start of styles for the volunteer_opportunities */ 
 .subheading{  
-	background-color:#4DBFBF;
+	background-color:;
 	text-align: center !important;
-	color: white;
-	margin-top: 15px;
+	color: gray;
+	margin-bottom: 50px;
 }
 
-.subheading-top{  
-	background-color:#4DBFBF;
-	text-align: center !important;
-	margin-top: 15px;
-	color: white;
-}
 
 .subheading h2{  
 	margin-bottom: 20px;
-}
+	font-family: 'raleway' !important;
+	margin-bottom: 10px;
+	text-transform: uppercase;
 
-.subheading-top h2{  
-	margin-bottom: 20px;
+}
+div.underline {
+	border-bottom: 5px solid #3abdb3;
+	width: 15%;
+	margin: 0 auto;
+}
+div.underline-purple {
+	border-bottom: 5px solid #8856a2;
+	width: 15%;
+	margin: 0 auto;
+}
+div.underline-red {
+	border-bottom: 5px solid #db0202;
+	width: 15%;
+	margin: 0 auto;
 }
 
 
