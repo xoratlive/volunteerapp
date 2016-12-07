@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161110104855) do
+ActiveRecord::Schema.define(version: 20161207071155) do
 
   create_table "claim_opportunities", force: :cascade do |t|
     t.string   "please_explain_why_you_are_interested_in_this_opportunity"
@@ -57,8 +57,8 @@ ActiveRecord::Schema.define(version: 20161110104855) do
     t.string   "Address"
     t.string   "Phone"
     t.string   "Website"
-    t.datetime "created_at",          null: false
-    t.datetime "updated_at",          null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
     t.integer  "user_id"
     t.text     "description"
     t.string   "event_date"
@@ -88,6 +88,16 @@ ActiveRecord::Schema.define(version: 20161110104855) do
     t.text     "sunday_evening"
     t.text     "skill_needed"
     t.text     "what_to_bring"
+    t.text     "chemistry"
+    t.text     "biology_medical"
+    t.text     "social_sciences"
+    t.text     "engineering_physics"
+    t.text     "english_communication"
+    t.text     "journalism"
+    t.text     "marketing_business"
+    t.text     "hospitality"
+    t.text     "mathematics"
+    t.text     "art_music"
   end
 
 end

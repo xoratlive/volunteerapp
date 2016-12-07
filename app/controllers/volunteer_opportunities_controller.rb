@@ -93,7 +93,7 @@ end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def volunteer_opportunity_params
-      params.require(:volunteer_opportunity).permit(:monday_morning, :monday_afternoon, :monday_evening, :tuesday_morning, :tuesday_afternoon, :tuesday_evening, :wednesday_morning, :wednesday_afternoon, :wednesday_evening, :thursday_morning, :thursday_afternoon, :thursday_evening, :friday_morning, :friday_afternoon, :friday_evening, :saturday_morning, :saturday_afternoon, :saturday_evening, :sunday_morning, :sunday_afternoon, :sunday_evening, :description, :Organization, :Address, :Phone, :Website, :skill_needed, :what_to_bring)
+      params.require(:volunteer_opportunity).permit(:chemistry, :biology_medical, :social_sciences, :engineering_physics, :english_communication, :journalism, :marketing_business, :hospitality, :mathematics, :art_music, :monday_morning, :monday_afternoon, :monday_evening, :tuesday_morning, :tuesday_afternoon, :tuesday_evening, :wednesday_morning, :wednesday_afternoon, :wednesday_evening, :thursday_morning, :thursday_afternoon, :thursday_evening, :friday_morning, :friday_afternoon, :friday_evening, :saturday_morning, :saturday_afternoon, :saturday_evening, :sunday_morning, :sunday_afternoon, :sunday_evening, :description, :Organization, :Address, :Phone, :Website, :skill_needed, :what_to_bring)
     end
     
     # Only let the creator of a volunteer opportunity edit or delete the opportunity.

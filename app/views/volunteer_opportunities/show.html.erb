@@ -28,7 +28,7 @@
     </div>
 
     <br>
-    <strong>Morning availibility: &ensp; </strong>
+    <strong>Morning availability: &ensp; </strong>
         <% if @volunteer_opportunity.monday_morning == "mmondaym" %>
           Mon
           <% end %>
@@ -58,7 +58,7 @@
           <% end %>
           <br>
           <br>
-      <strong>Afternoon availibility:</strong>
+      <strong>Afternoon availability:</strong>
         <% if @volunteer_opportunity.monday_afternoon == "amondaya" %>
           Mon
           <% end %>
@@ -88,7 +88,7 @@
           <% end %>
           <br>
           <br>
-        <strong>Evening availibility:&nbsp; &nbsp; </strong>
+        <strong>Evening availability:&nbsp; &nbsp; </strong>
         <% if @volunteer_opportunity.monday_evening == "emondaye" %>
           Mon
           <% end %>
@@ -116,6 +116,63 @@
           
           Sun
           <% end %>
+          <br>
+          <br>
+          <strong>College Majors: </strong>
+          <br>
+        <% if @volunteer_opportunity.chemistry == "123chemistry123" %>
+          Chemistry
+          <br>
+          <% end %>     
+        <% if @volunteer_opportunity.biology_medical == "123biology123" %>
+          
+          Biology or Medical
+          <br>
+          <% end %>
+        <% if @volunteer_opportunity.social_sciences == "123social123" %>
+          
+          Social Sciences
+          <br>
+          <% end %>
+        <% if @volunteer_opportunity.engineering_physics == "123engineering123" %>
+          
+          Engineering or Physics
+          <br>
+          <% end %>
+        <% if @volunteer_opportunity.english_communication == "123english123" %>
+          
+          English or Communication
+          <br>
+          <% end %>
+        <% if @volunteer_opportunity.journalism == "123journalism123" %>
+          
+          Journalism
+          <br>
+          <% end %>
+        <% if @volunteer_opportunity.marketing_business == "123marketing123" %>
+          
+          Marketing or Business
+          <br>
+          <% end %>
+
+          <% if @volunteer_opportunity.hospitality == "123hospitality123" %>
+          
+          Hospitality
+          <br>
+          <% end %>
+
+        <% if @volunteer_opportunity.mathematics == "123mathematics123" %>
+          
+          Mathematics
+          <br>
+          <% end %>
+
+        <% if @volunteer_opportunity.art_music == "123art123" %>
+          
+          Art or Music
+          <br>
+          <% end %>
+
 
     <% if user_signed_in? && current_user.volunteer? %>
       <p>

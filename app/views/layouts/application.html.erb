@@ -65,8 +65,9 @@
 
 </nav>
 <br>
-
-<div class="container" id="removediv">
+<% unless current_page?(root_path) %>
+<div class="container">
+<% end %>
 <% flash.each do |name, msg| %>
     <% if msg.is_a?(String) %>
       <div class="alert alert-<%= name == :notice ? "success" : "danger" %> alert-dismissable">
@@ -78,7 +79,9 @@
 
 
 <%= yield %>
+<% unless current_page?(root_path) %>
 </div>
+<% end %>
 <div class="push"></div>
 <div class="footer"></div>
 
