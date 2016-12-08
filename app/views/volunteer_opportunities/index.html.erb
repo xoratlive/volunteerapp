@@ -96,7 +96,7 @@
       <h1><%= volunteer_opportunity.Organization %></h1>
     </div>
     <div class="listing-image">
-          <%= image_tag current_user.image.url %>
+      <%= image_tag volunteer_opportunity.user.image.url, class: "show-image" %>
     </div>
     <div class="listing-box-container">
 
