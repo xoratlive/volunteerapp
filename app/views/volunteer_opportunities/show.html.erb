@@ -2,32 +2,61 @@
 <h1 class="page-title">Connect with <%= @volunteer_opportunity.user.name %> </h1>
 
 
-<div class="container-fluid show-page-container">
-<div class="row show-top">
+<div class="container-fluid organization-profile">
+
+<div class="col-md-4">
+<div class="calendar">
+<%= image_tag @volunteer_opportunity.user.image.url, class: "show-image" %>
+
+    <h1>Information</h1>
+    <div class="underline-purple"></div>
+    <p>
+      <strong>Address:</strong>
+    <%= @volunteer_opportunity.user.address %>
+    </p>
+
+    <p>
+      <strong>Phone:</strong>
+    <%= @volunteer_opportunity.user.phone_number %>
+    </p>
+
+    <p>
+    <strong>Our mission:</strong>
+    <%= @volunteer_opportunity.user.biographical_information %>
+    </p>
+
+    <p>
+    <strong>About <%= @volunteer_opportunity.user.name %>:</strong>
+    <%= @volunteer_opportunity.user.about1 %>
+    </p>
+
+
+    <p>
+    <strong>Website:</strong>
+    <%= @volunteer_opportunity.user.website %>
+    </p>
+    </div>
+</div>
+
 <div class= "col-md-7">
-    <div class="info">
-    <h2>Volunteer Position - <%= @volunteer_opportunity.Organization %></h2>
-    <p>
-    <strong>Description of Work:</strong>
-      <%= @volunteer_opportunity.description %>
-    </p>
-    </div>
+    <div class="calendar">
+      <h1>Volunteer Position - <%= @volunteer_opportunity.Organization %></h1>
+       <div class="underline"></div>
+        <p>
+        <strong>Description of Work:</strong>
+          <%= @volunteer_opportunity.description %>
+        </p>
 
-    <div class="info2">
-    <p>
-    <strong>Special skill needed:</strong>
-      <%= @volunteer_opportunity.skill_needed %>
-    </p>
-    </div>
+        <p>
+        <strong>Special skill needed:</strong>
+          <%= @volunteer_opportunity.skill_needed %>
+        </p>
 
-    <div class="info">
-    <p>
-    <strong>What to bring:</strong>
-      <%= @volunteer_opportunity.what_to_bring %>
-    </p>
-    </div>
+        <p>
+        <strong>What to bring:</strong>
+          <%= @volunteer_opportunity.what_to_bring %>
+        </p>
 
-    <br>
     <strong>Morning availability: &ensp; </strong>
         <% if @volunteer_opportunity.monday_morning == "mmondaym" %>
           Mon
@@ -182,69 +211,38 @@
       </p>
     <% end %>
   </div>
-<div class="col-md-4 other-events">
-<%= image_tag @volunteer_opportunity.user.image.url, class: "show-image" %>
-</div> <br>
-
-<div class="col-md-4">
-    <div class="info">
-    <p>
-      <strong>Address:</strong>
-    <%= @volunteer_opportunity.user.address %>
-    </p>
-
-    <p>
-      <strong>Phone:</strong>
-    <%= @volunteer_opportunity.user.phone_number %>
-    </p>
-
-    <p>
-    <strong>Our mission:</strong>
-    <%= @volunteer_opportunity.user.biographical_information %>
-    </p>
-
-    <p>
-    <strong>About <%= @volunteer_opportunity.user.name %>:</strong>
-    <%= @volunteer_opportunity.user.about1 %>
-    </p>
-
-
-    <p>
-    <strong>Website:</strong>
-    <%= @volunteer_opportunity.user.website %>
-    </p>
-    </div>
-
-
-    <div class="info2">
-    <h3>Other Connections from <%= @volunteer_opportunity.user.name %>
-  </h3>
-<table class="table table-border">
-  <thead>
-    <tr>
-      <th>Position</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-   
-    <% @volunteer_opportunities.each do |volunteer_opportunity| %>
-      <tr>
-        <td><%= volunteer_opportunity.Organization %></td>
-
-        <td><%= link_to 'Show', volunteer_opportunity, class: "btn btn-success" %></td>
-        <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
-        <td><%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity), class: "btn btn-success" %></td>
-        <td><%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
-        <% end %>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-</div>
 </div>
 
+    <div class="col-md-7">
+    <div class="calendar2"> 
+    <h2>Other Connections from <%= @volunteer_opportunity.user.name %>
+    </h2>
+    <div class="underline-red"></div>
+      <table class="table table-border">
+        <thead>
+          <tr>
+            <th>Position</th>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-</div>
+        <tbody>
+         
+          <% @volunteer_opportunities.each do |volunteer_opportunity| %>
+            <tr>
+              <td><%= volunteer_opportunity.Organization %></td>
+
+              <td><%= link_to 'Show', volunteer_opportunity, class: "btn btn-success" %></td>
+              <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
+              <td><%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity), class: "btn btn-success" %></td>
+              <td><%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-success" %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+  </div>
+  </div>
+
+
 </div>

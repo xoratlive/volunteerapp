@@ -106,9 +106,43 @@ input[type=checkbox]
   padding: 10px;
   padding-top: 20px !important;
 }
-.calendar h2 {
+.calendar2 h2 {
+		color: #6d6d6d;
+		text-align: center;
+}
+
+
+.calendar2 {
+	background-color: #d4d4d4 ;
+	padding: 10px;
+	border-radius: 5px;
+	margin-top: 10px;
+-webkit-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+}
+.calendar2 td {
+	text-align: center;
+		color: #6d6d6d;
+
+}
+.calendar2 th {
+	color: #6d6d6d;
+}
+input[type=checkbox]
+{
+  /* Double-sized Checkboxes */
+  -ms-transform: scale(1.5); /* IE */
+  -moz-transform: scale(1.5); /* FF */
+  -webkit-transform: scale(1.5); /* Safari and Chrome */
+  -o-transform: scale(1.5); /* Opera */
+  padding: 10px;
+  padding-top: 20px !important;
+}
+.calendar2 h2 {
 		color: #6d6d6d;
 }
+
 .main-bio {
 	min-height: 500px !important;
 }
