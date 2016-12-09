@@ -1,5 +1,5 @@
 
- <div class="row">
+<div class="row">
   <div class="col-md-8 calendar">
   <div class= "subheading">
     <h2>Filter by time</h2>
@@ -26,42 +26,47 @@
         <th scope="row"></th>
         <td><img class="icon icons8-Sunrise" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAADhUlEQVRoQ+2aj5ENQRDG+yJABFwEiAARcBEgAkSACBABFwEiQASIABEgAupXNXPV23pmZ/ptvzpXb6q2Xl3Z7Zmv+5v+60jy12UReSsi/N4RkV+ZWx5lCi8gPojIjbLPl2xQmYCwiAZTdZcKKgtQC0w6qCxA3Jl7K3ROsVQGoNci8mDwbr4TkZPBd4de2xoQQAA0s16JyOOZD3rvbgkIT/Y5eDCshLV2XlsC+iYi14InIjZdCX67+GxLQG9E5H7wUJvRbktAFsvtEoc8jGQMH4Pgu58dAE1o9cJZiGzhZ0MB/yXlwPKnAeimiJApbL4y71APUNq+aYKL6vFktxwzpO2bJrgD6HepkzanGwKzAT0Tkafm5J9EBA+YsrIBkd8B6m45/fvyd4pD2IeFUqzQE5ptoQOgXTVwsFBAg/QWqGKpeZ6LCGVG2tqHhXTh911EjtPQ7CEOeelPqhIjwgmKj0q0fzKQZNoEdW1PYhfBmHL+4YD8hcHXhHvssBQic+71q2cAUXLQaNG9CXoNw/3wCCB7QC462UBrzQDyUqV0QC8L5SoAtIeVuPDeGgWEVbAOVqprunkSsRAbcvhLauNeB3QUkG0fk5UDcphuu+RydDpfGHO0ymrAXy3v/mj07rz+Aw4HNkytiIXqBmTM19VuFHOAsov2cL1j/HqBlbGLLim+qpnS3gB5Wo0qyNIy3ESJHqBqTXdLTyemDlbrW8n5p2JF6+RdXEb4i0teu5R1dKKpRHCkqEMeTkSPJJEHPSn2dKHnyfHohjwCb51YEHzP9rYWwm3WzRHG5vAe9zmy6G3z/mjTHofB+1h3ZJGh8L527YtGvwXU6tKgSbxOqx9dJ93RXgFyGam02IBcvKpWdlXAouliAfEBMaW6WY/rmFgvvsFLaa2NaNu+Axicge039CaChAGoeqZozylwMPjJo4NnPYDmbA8MNGIjnppFQEW0zeONXiyo1kQQq3DHeRZW7Xm56hhqx8YC8lIV3uGyo4xWKlTltORzQGomfj1AXfkjbhttchHpgGrXbIMhB114nEHeeVmHTqWqS6efxzm6c6URQN65PM2FUpUi3AMVmrtGAVnrQIO1/5ewZjCsoundSqW6ciKAvGk3nF+7M2uAuFMUj3pNj10igCw9dkl5vLCgvd80jSOALDVCXG+Yy97NaSoDqDVlW6PIufz3A6BzaRZ1qAtnob9XLL0xe/JJcwAAAABJRU5ErkJggg==" width="52" height="52"><br>Morning
         </td>
-          <td><input class="box" name="1" type="checkbox" value="mmondaym"/></td>
-          <td><input class="box" name="2" type="checkbox" value="mtuesdaym" /></td>
-          <td><input class="box" name="3" type="checkbox" value="mwednesdaym" /></td>
-          <td><input class="box" name="4" type="checkbox" value="mthursdaym" /></td>
-          <td><input class="box" name="5" type="checkbox" value="mfridaym" /></td>
-          <td><input class="box" name="6" type="checkbox" value="msaturdaym" /></td>
-          <td><input class="box" name="7" type="checkbox" value="msundaym" /></td>
+          <td><input class="box" id="box1" name="1" type="checkbox" value="mmondaym"/></td>
+          <td><input class="box" id="box1" name="2" type="checkbox" value="mtuesdaym" /></td>
+          <td><input class="box" id="box1" name="3" type="checkbox" value="mwednesdaym" /></td>
+          <td><input class="box" id="box1" name="4" type="checkbox" value="mthursdaym" /></td>
+          <td><input class="box" id="box1" name="5" type="checkbox" value="mfridaym" /></td>
+          <td><input class="box" id="box1" name="6" type="checkbox" value="msaturdaym" /></td>
+          <td><input class="box" id="box1" name="7" type="checkbox" value="msundaym" /></td>
         </tr>
         <tr>
           <th scope="row"></th>
           <td><img class="icon icons8-Sun" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADp0lEQVR4Xu2agZENQRCG/4uADBABIkAEiAARIAJEgAgQwREBIkAEyIAIqK9u+6rf3Nu3O9O9tZ6dqXpV9652pru/+adnevadaOPtZOPxqwPoCtg4gb4EVhTAn8L2KpOxitEh8A6gK2CXwCpqXMVoXwJnBI4+BzwcZvJt406SBSDkR+sSwOibIfBHklogZAAI+9ECwBu1yW+BEAWQ4kcWAEDUQogA2Bd8iw/N1WCaAw35I9V2iwLM51RHZoJItxkBgM+1Dt2QdFfSbUmXJfGd9lXSL0mfJH0YvpdMam3NYhoFMAbhmwuOZ+5Jeinp6iyvpB+Snkp6754H0vWif23euWA+A0AJgeCZYWaUgNku+d7SUARBAgTF8N0ghIPHoSwABuGJCx55fxwcbwne+gDyzrAsDMKrxrPHYgooByb4LyNRvxtmEknzofE8H5TyYKTfzZHcEIGbqgBzBNkTPLPlG8kNhSDnQ43+zDDJ0jeUAISp/lVAMpeAGUb25ZonoRFUTQMWidM3cgDLIa1lAyDbnxbetQRvQ+yDcL/YHUIwsgF8L7Y6ZA+USGMr9MuBJXAtMqDvmwlgX+LD0eiaJScA1re0hJgJ4LmkZ85Lsr3V6tEJo9z2u8MLSdgLt0wAJKhbzqOUg8owXnkM/hw4XO1AOwSgLFfHaNsYbH12tufZNJkO4/pzBecHxqfV+rkYgEh9P0fKY+N3AHPojR37M5dAWa0tuQR8tbmYAmaCPX/sv0uCtQCW3AbLw9A/uQ1u/iCEYjj1XXHSYeY4u0catYU/Tv+suFmatJt5EMLY5oshIJTJkP9R1b2enI7dBx7vKaHTToBmKlsBjEvxwpZ4qQiY5UBpPFUc0Z97gLKK/D2cCKf6V3FeAgAOHLoSo7BBJezl/kqMy04uUsYKqMxzxTmkTAA4jmy5seH6CggEWiqhaoYkMfOAARbXbNw4sZxaXshesJ0FwFdrOGoQkDOO+iqxBgBrnrHtWpzgreBKqTYzAOx7Y+OrNdsduBP0W+QhEGx1JE7/YqSsNukfhhAFUPu6itkjudmrMXvJQT6wV2MEbbnBQ6q1NUtpEQCLODThdbrNVgDpjsyarrOHUm23AMhyIHKBkuVD05uhlJ+mJPxKLMWPFgWUMmzNxBEF2IpZ5UdS3jh/tx5IMgDYZDT70aqAipw1+mgWgJAvHUAIX6xzV0DBbxU1rmJ0CLwrYOsKiGWQpN5rLoGkEGLDdAAxfsffuyvg+OcwFsFfwp7aQarQfmYAAAAASUVORK5CYII=" width="52" height="52"><br>Afternoon</td>
 
-          <td><input class="box" name="8" type="checkbox" value="amondaya" /></td>
-          <td><input class="box" name="9" type="checkbox" value="atuesdaya" /></td>
-          <td><input class="box" name="10" type="checkbox" value="awednesdaya" /></td>
-          <td><input class="box" name="11" type="checkbox" value="athursdaya" /></td>
-          <td><input class="box" name="12" type="checkbox" value="afridaya" /></td>
-          <td><input class="box" name="13" type="checkbox" value="asaturdaya" /></td>
-          <td><input class="box" name="14" type="checkbox" value="asundaya" /></td>
+          <td><input class="box" id="box1" name="8" type="checkbox" value="amondaya" /></td>
+          <td><input class="box" id="box1" name="9" type="checkbox" value="atuesdaya" /></td>
+          <td><input class="box" id="box1" name="10" type="checkbox" value="awednesdaya" /></td>
+          <td><input class="box" id="box1" name="11" type="checkbox" value="athursdaya" /></td>
+          <td><input class="box" id="box1" name="12" type="checkbox" value="afridaya" /></td>
+          <td><input class="box" id="box1" name="13" type="checkbox" value="asaturdaya" /></td>
+          <td><input class="box" id="box1" name="14" type="checkbox" value="asundaya" /></td>
         </tr>
         <tr>
           <th scope="row"></th>
           <td><img class="icon icons8-Moon-Symbol" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADJUlEQVRoQ+2agZEOQRCF30WACBABIkAEiAARkAEiQASI4IgAESACRIAIqO9q3tXcf9jpnt67q62bqr/+q/q3d/v1e909vXN72sja2wgOnQM5a0yeFCM3Jd1qn4uSru8E4rOkb5L4/iDpYzRQawLB2UeS7krC+cj6KemtpGcN4KLtGkAA8LxF3w58b5HGOZzkQ/RZXG+WzNqF9hvXXVpEIZUmO848kfS4e/BLSa87p5d8AsgrSVck/ZL0QtLTJSN+r2KEqOKAtf+mOYDuRxcsOghh+wogOP++yQMJkROWzQgImMSe+2TsD54xC6QH8aXlBboeXT2Id5IetPwZtT+8bgZIDwIp4ERk9SAy9keelQXSOwETu31hBNB+kyFMIMeplQVCNaFHoGlAROSEwyQ1yZ21PwY6AwTHP7U73QgmNmaUVuxhNWP/V+YyQKgw1Pusrukr9yfsS4D0bFwd3T50T4aNr63Z8XdUkv/MoygjjiYdu+/go4nq3MqyWQbkx6S2YQMmynLDyCKMkBfkB5UGZ6LLssyW6/8+LwKEzRubwqysZu3LgDDwMCDda7NClBG28HckPWw74qh9GRBqP/K43WaLqCMORNa+DMjviSaIqQsFg1JZ2c0ku4FE8qqP4qx9OSObAZLtAciJWfzUpcXUd20Lyb6Z8uuGlt0neQbJNtSyZPcWhTcj7Hyjy1sUJEqela5oBXLCZhOeIFw+7U0jEdzMNr5qsIJZ5FnW4aPSghVXr2zSn4lRFyAVLx9IeJpjNteOFYoMI9zEIyvJizNRibgUZ+3LgPAqB4nR6bPl1PMJ38w4UyvLiCUGGCSC7hmYIqsPRsb+yLNmgOyCgRmGpojMejAwQzAi9odgZoHsgkHzyCR6rGCZZuwPwFQA4T68VSGi5Iwb5/D5X7NxAUnZVwExxb0zrm70m1GG2M+RL2xjkBj3IyCLqxqIpYYDvHHxQjLIx4ehnA/2h6EUDPpTf4SNLdcNnQivAcTO4xj9grMPn9IuRrZdAABAMzoMnUOuCaR32pEGHPnkXPI1vH3s/2EA9kLrpICEnMpcfA4kE7U1bTbDyB+Ps8QzYCNATgAAAABJRU5ErkJggg==" width="52" height="52"><br>Evening</td>
 
-          <td><input class="box" name="15" type="checkbox" value="emondaye" /></td>
-          <td><input class="box" name="16" type="checkbox" value="etuesdaye" /></td>
-          <td><input class="box" name="17" type="checkbox" value="ewednesdaye" /></td>
-          <td><input class="box" name="18" type="checkbox" value="ethursdaye" /></td>
-          <td><input class="box" name="19" type="checkbox" value="efridaye" /></td>
-          <td><input class="box" name="20" type="checkbox" value="esaturdaye" /></td>
-          <td><input class="box" name="21" type="checkbox" value="esundaye" /></td>
+          <td><input class="box" id="box1" name="15" type="checkbox" value="emondaye" /></td>
+          <td><input class="box" id="box1" name="16" type="checkbox" value="etuesdaye" /></td>
+          <td><input class="box" id="box1" name="17" type="checkbox" value="ewednesdaye" /></td>
+          <td><input class="box" id="box1" name="18" type="checkbox" value="ethursdaye" /></td>
+          <td><input class="box" id="box1" name="19" type="checkbox" value="efridaye" /></td>
+          <td><input class="box" id="box1" name="20" type="checkbox" value="esaturdaye" /></td>
+          <td><input class="box" id="box1" name="21" type="checkbox" value="esundaye" /></td>
         </tr>
       
       </tbody>
     </table>
-    <button id="filterbutton" class= "btn btn-primary">Find Your Connections</button>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="filterbutton" class= "btn btn-primary">Apply Filter</button>
   </div>
   <div class="col-md-offset-1 col-md-3 calendar">
     <div class= "subheading">
@@ -69,10 +74,52 @@
           <div class="underline-red"></div>
 
   </div>
-
+  
+    <table class="table">
+      <tbody>
+        <tr>
+        
+        <td>Chemistry</td>
+          <td><input class="box" id="box2" name="22" type="checkbox" value="123chemistry123"/></td>
+        </tr>
+        <tr>
+        
+        <td>Biology/Medical</td>
+          <td><input class="box" id="box2" name="23" type="checkbox" value="123biology123"/></td>
+        </tr>
+        <tr>
+        
+        <td>Social Sciences</td>
+          <td><input class="box" id="box2" name="24" type="checkbox" value="123social123"/></td>
+        </tr>
+        <td>Engineering/Physics</td>
+          <td><input class="box" id="box2" name="25" type="checkbox" value="123engineering123"/></td>
+        </tr>
+        <td>English/Communication</td>
+          <td><input class="box" id="box2" name="26" type="checkbox" value="123english123"/></td>
+        </tr>
+        <td>Journalism</td>
+          <td><input class="box" id="box2" name="27" type="checkbox" value="123journalism123"/></td>
+        </tr>
+        <td>Marketing/Business</td>
+          <td><input class="box" id="box2" name="28" type="checkbox" value="123marketing123"/></td>
+        </tr>
+        <td>Hospitality</td>
+          <td><input class="box" id="box2" name="29" type="checkbox" value="123hospitality123"/></td>
+        </tr>
+        <td>Mathematics</td>
+          <td><input class="box" id="box2" name="30" type="checkbox" value="123mathematics123"/></td>
+        </tr>
+        <td>Art/Music</td>
+          <td><input class="box" id="box2" name="31" type="checkbox" value="123art123"/></td>
+        </tr>
+      </tbody>
+    </table>
+    <button id="filterbutton2" class= "btn btn-primary">Apply Filter</button>
   </div><!--col-md-4-->
 </div><!--row closes-->
   
+<br>
 <br>
 <br>
 <br>

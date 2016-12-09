@@ -97,7 +97,21 @@
         $('#filterbutton').click(function (e) {
             e.preventDefault();
 
-            var queryString = $('input[type=checkbox]')
+            var queryString = $('input[id=box1]')
+            .filter(function() { return $(this).is(':checked'); })
+            .map(function () {
+                    return $(this).val();
+            }).get().join('+');
+
+            window.location = baseUrl + queryString;
+        });
+    });
+
+        $(document).ready(function () {
+        $('#filterbutton2').click(function (e) {
+            e.preventDefault();
+
+            var queryString = $('input[id=box2]')
             .filter(function() { return $(this).is(':checked'); })
             .map(function () {
                     return $(this).val();
