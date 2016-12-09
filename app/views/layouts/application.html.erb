@@ -65,8 +65,9 @@
   </div><!-- /.container-fluid -->
 
 </nav>
-<br>
+
 <% unless current_page?(root_path) %>
+<br>
 <div class="container">
 <% end %>
 <% flash.each do |name, msg| %>
@@ -102,7 +103,7 @@
             .map(function () {
                     return $(this).val();
             }).get().join('+');
-
+            localStorage.setItem("variableName","FILTERING BY TIME");
             window.location = baseUrl + queryString;
         });
     });
@@ -116,7 +117,7 @@
             .map(function () {
                     return $(this).val();
             }).get().join('+');
-
+            localStorage.setItem("variableName","FILTERING BY MAJOR");
             window.location = baseUrl + queryString;
         });
     });

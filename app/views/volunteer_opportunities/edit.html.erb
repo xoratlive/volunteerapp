@@ -14,7 +14,268 @@
 	<h1 class="text-center">Edit <%= @volunteer_opportunity.Organization %> Connection</h1>
 
 
-	<%= render 'form' %>
+<%= form_for(@volunteer_opportunity, html: { multipart: true }) do |f| %>
+
+    <div class="form-group">
+      <%= f.label :Position %><br>
+      <%= f.text_field :Organization, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Description_of_work %><br>
+      <%= f.text_area :description, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Special_skill_needed %><br>
+      <%= f.text_area :skill_needed, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :What_to_bring %><br>
+      <%= f.text_area :what_to_bring, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Address %><br>
+      <%= f.text_field :Address, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Phone %><br>
+      <%= f.text_field :Phone, class: "form-control" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :Website %><br>
+      <%= f.text_field :Website, class: "form-control" %>
+    </div>
+    
+    <div class="form-group">
+      <div class="container-fluid">
+      <h3>Schedule Morning Availability</h3><br>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Monday %></div>
+            <div class="col-md-1"><%= f.radio_button :monday_morning, "mmondaym" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :monday_morning, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Tuesday %></div>
+            <div class="col-md-1"><%= f.radio_button :tuesday_morning, "mtuesdaym" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :tuesday_morning, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Wednesday %></div>
+            <div class="col-md-1"><%= f.radio_button :wednesday_morning, "mwednesdaym" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :wednesday_morning, "blank564564" %>No</div>
+          </div> 
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Thursday %></div>
+            <div class="col-md-1"><%= f.radio_button :thursday_morning, "mthursdaym" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :thursday_morning, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Friday %></div>
+            <div class="col-md-1"><%= f.radio_button :friday_morning, "mfridaym" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :friday_morning, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Saturday %></div>
+            <div class="col-md-1"><%= f.radio_button :saturday_morning, "msaturdaym" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :saturday_morning, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Sunday %></div>
+            <div class="col-md-1"><%= f.radio_button :sunday_morning, "msundaym" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :sunday_morning, "blank564564" %>No</div>
+          </div>
+        </div>
+      <h3>Schedule Afternoon Availability</h3><br>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Monday %></div>
+            <div class="col-md-1"><%= f.radio_button :monday_afternoon, "amondaya" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :monday_afternoon, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Tuesday %></div>
+            <div class="col-md-1"><%= f.radio_button :tuesday_afternoon, "atuesdaya" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :tuesday_afternoon, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Wednesday %></div>
+            <div class="col-md-1"><%= f.radio_button :wednesday_afternoon, "awednesdaya" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :wednesday_afternoon, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Thursday %></div>
+            <div class="col-md-1"><%= f.radio_button :thursday_afternoon, "athursdaya" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :thursday_afternoon, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Friday %></div>
+            <div class="col-md-1"><%= f.radio_button :friday_afternoon, "afridaya" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :friday_afternoon, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Saturday %></div>
+            <div class="col-md-1"><%= f.radio_button :saturday_afternoon, "asaturdaya" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :saturday_afternoon, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Sunday %></div>
+            <div class="col-md-1"><%= f.radio_button :sunday_afternoon, "asundaya" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :sunday_afternoon, "blank564564" %>No</div>
+          </div>
+        </div>
+      <h3>Schedule Evening Availability</h3><br>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Monday %></div>
+            <div class="col-md-1"><%= f.radio_button :monday_evening, "emondaye" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :monday_evening, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Tuesday %></div>
+            <div class="col-md-1"><%= f.radio_button :tuesday_evening, "etuesdaye" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :tuesday_evening, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Wednesday %></div>
+            <div class="col-md-1"><%= f.radio_button :wednesday_evening, "ewednesdaye" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :wednesday_evening, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Thursday %></div>
+            <div class="col-md-1"><%= f.radio_button :thursday_evening, "ethursdaye" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :thursday_evening, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Friday %></div>
+            <div class="col-md-1"><%= f.radio_button :friday_evening, "efridaye" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :friday_evening, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Saturday %></div>
+            <div class="col-md-1"><%= f.radio_button :saturday_evening, "esaturdaye" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :saturday_evening, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Sunday %></div>
+            <div class="col-md-1"><%= f.radio_button :sunday_evening, "esundaye" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :sunday_evening, "blank564564" %>No</div>
+          </div>
+        </div><br>
+        <h3>Choose College Major</h3><br>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Chemistry %></div>
+            <div class="col-md-1"><%= f.radio_button :chemistry, "123chemistry123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :chemistry, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Biology_and_Medical %></div>
+            <div class="col-md-1"><%= f.radio_button :biology_medical, "123biology123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :biology_medical, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Social_Sciences %></div>
+            <div class="col-md-1"><%= f.radio_button :social_sciences, "123social123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :social_sciences, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Engineering_and_Physics %></div>
+            <div class="col-md-1"><%= f.radio_button :engineering_physics, "123engineering123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :engineering_physics, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :English_and_Communication %></div>
+            <div class="col-md-1"><%= f.radio_button :english_communication, "123english123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :english_communication, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Journalism %></div>
+            <div class="col-md-1"><%= f.radio_button :journalism, "123journalism123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :journalism, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Marketing_and_Business %></div>
+            <div class="col-md-1"><%= f.radio_button :marketing_business, "123marketing123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :marketing_business, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Hospitality %></div>
+            <div class="col-md-1"><%= f.radio_button :hospitality, "123hospitality123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :hospitality, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Mathematics %></div>
+            <div class="col-md-1"><%= f.radio_button :mathematics, "123mathematics123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :mathematics, "blank564564" %>No</div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-9">
+            <div class="col-md-2"><%= f.label :Art_and_Music %></div>
+            <div class="col-md-1"><%= f.radio_button :art_music, "123art123" %>Yes</div>
+            <div class="col-md-1"><%= f.radio_button :art_music, "blank564564" %>No</div>
+          </div>
+        </div>
+
+        <br>
+        <div class="actions">
+          <%= f.submit "Submit", class: "btn btn-success" %>
+        </div>
+      </div>  
+    </div>
+<% end %>
 
 
 	
