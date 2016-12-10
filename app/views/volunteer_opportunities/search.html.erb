@@ -1,3 +1,12 @@
+<script>
+$( document ).ready(function() {
+document.getElementById("filtermode").innerHTML = (localStorage.variableName);
+});
+
+</script>
+
+
+
 
 <div class="row">
   <div class="col-md-8 calendar">
@@ -128,9 +137,7 @@
 
 <div class= "subheading">
 <h2>
-<script>
-document.write(localStorage.variableName);
- </script>
+<div id="filtermode"></div>
 </h2>
       <div class="underline-purple"></div>
 </div>

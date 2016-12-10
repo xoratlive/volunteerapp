@@ -66,7 +66,7 @@
 
 </nav>
 
-<% unless current_page?(root_path) %>
+<% unless current_page?('/') %>
 <br>
 <div class="container">
 <% end %>
@@ -81,7 +81,7 @@
 
 
 <%= yield %>
-<% unless current_page?(root_path) %>
+<% unless current_page?('/') %>
 </div>
 <% end %>
 <div class="push"></div>
