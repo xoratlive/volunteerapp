@@ -1,6 +1,66 @@
 
 <%= form_for(@volunteer_opportunity, html: { multipart: true }) do |f| %>
 
+<script>
+jQuery(document).ready(function(){
+    jQuery('#hideshowmorning').on('click', function(event) {        
+         jQuery('#morning').toggle('show');
+    });
+jQuery('#morning').hide(1);
+
+
+    jQuery('#hideshowafternoon').on('click', function(event) {        
+         jQuery('#afternoon').toggle('show');
+    });
+jQuery('#afternoon').hide(1);
+
+    jQuery('#hideshowevening').on('click', function(event) {        
+         jQuery('#evening').toggle('show');
+    });
+jQuery('#evening').hide(1);
+
+  jQuery('#hideshowmajor').on('click', function(event) {        
+         jQuery('#major').toggle('show');
+    });
+jQuery('#major').hide(1);
+
+});
+
+
+function morning()
+{
+    var elem = document.getElementById("hideshowmorning");
+    if (elem.value=="Schedule Morning Availability") elem.value = "Hide Schedule";
+    else elem.value = "Schedule Morning Availability";
+
+}
+
+function afternoon()
+{
+    var elem = document.getElementById("hideshowafternoon");
+    if (elem.value=="Schedule Afternoon Availability") elem.value = "Hide Schedule";
+    else elem.value = "Schedule Afternoon Availability";
+}
+
+function evening()
+{
+    var elem = document.getElementById("hideshowevening");
+    if (elem.value=="Schedule Evening Availability") elem.value = "Hide Schedule";
+    else elem.value = "Schedule Evening Availability";
+}
+
+function major()
+{
+    var elem = document.getElementById("hideshowmajor");
+    if (elem.value=="Choose Volunteer Major(s)") elem.value = "Hide Majors";
+    else elem.value = "Choose Volunteer Major(s)";
+}
+
+</script>
+
+
+
+
     <div class="form-group">
       <%= f.label :Position %><br>
       <%= f.text_field :Organization, class: "form-control" %>
@@ -32,6 +92,7 @@
     
     <div class="form-group">
       <div class="container-fluid">
+      <div id=morning>
       <h3>Schedule Morning Availability</h3><br>
         <div class="row">
           <div class="col-md-9">
@@ -82,6 +143,11 @@
             <div class="col-md-1"><%= f.radio_button :sunday_morning, "blank564564", { :checked => true } %>No</div>
           </div>
         </div>
+        </div>
+      <input type='button' onclick="morning()" id='hideshowmorning' value='Schedule Morning Availability' class='btn btn-success' >
+      <br>
+      <br>
+      <div id=afternoon>
       <h3>Schedule Afternoon Availability</h3><br>
         <div class="row">
           <div class="col-md-9">
@@ -132,6 +198,11 @@
             <div class="col-md-1"><%= f.radio_button :sunday_afternoon, "blank564564", { :checked => true } %>No</div>
           </div>
         </div>
+        </div>
+        <input type='button' onclick="afternoon()" id='hideshowafternoon' value='Schedule Afternoon Availability' class='btn btn-success' >
+        <br>
+        <br>
+      <div id=evening>
       <h3>Schedule Evening Availability</h3><br>
         <div class="row">
           <div class="col-md-9">
@@ -182,7 +253,12 @@
             <div class="col-md-1"><%= f.radio_button :sunday_evening, "blank564564", { :checked => true } %>No</div>
           </div>
         </div><br>
-        <h3>Choose College Major</h3><br>
+        </div>
+         <input type='button' onclick="evening()" id='hideshowevening' value='Schedule Evening Availability' class='btn btn-success' >
+         <br>
+         <br>
+         <div id=major>
+        <h3>Choose Volunteer Major(s)</h3><br>
         <div class="row">
           <div class="col-md-9">
             <div class="col-md-2"><%= f.label :Chemistry %></div>
@@ -253,7 +329,10 @@
             <div class="col-md-1"><%= f.radio_button :art_music, "blank564564", { :checked => true } %>No</div>
           </div>
         </div>
+        </div>
+        <input type='button' onclick="major()" id='hideshowmajor' value='Choose Volunteer Major(s)' class='btn btn-success' >
 
+        <br>
         <br>
         <div class="actions">
           <%= f.submit "Submit", class: "btn btn-success" %>
