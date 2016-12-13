@@ -8,7 +8,7 @@
             <div class="underline"></div>
                  
  
-          <%= image_tag current_user.image.url(:medium) ,:class=> "profile-pic" %>
+          <%= image_tag current_user.image.url(:medium), :class=> "profile-pic" %>
         </div><!--calendar-->
       </div><!--col-md-8-->
       <div class="col-md-4">
@@ -16,9 +16,11 @@
           <h1>Contact Information</h1>
           <div class="underline-red"></div>
           <p>
+          <% if (current_user.address.present? ) %>
             <strong>Address:</strong>
           <%= current_user.address %>
           </p>
+          <% end %>
 
           <p>
             <strong>Email:</strong>
@@ -27,9 +29,11 @@
 
 
           <p>
+          <% if (current_user.phone_number.present? ) %>
             <strong>Phone:</strong>
           <%= current_user.phone_number %>
           </p>
+          <% end %>
         </div>
         <br>
       <div class="calendar">
@@ -40,39 +44,41 @@
     </div><!--col-md-4-->
   </div><!--row-->
 
-    <div class="row">
-      <div class="calendar">
-        <h1>My Connections</h1>
-        <div class="underline-purple"></div>
 
+
+<div class="calendar3">
+   <h1>My Connections</h1>
+   <div class="underline-purple"></div>
+
+  <br>
+
+<table class= "table table-responsive">
+  <thead>
+    <tr>
+      <th>Position</th>
+      <th>Address</th>
+      <th>Phone</th>
+      <th>Website</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
     <% @claim_opportunity.each do |claim_opportunity| %>
-
-      <div class="col-md-3">
-        <div class="paddingbottom">
-          <div class="border1">
-            <div class="boxesbackground">
-            
-            <%= claim_opportunity.volunteer_opportunity.user.name %><br>
-            </div>
-            <div class="descriptiontextpadding">
-            <%= claim_opportunity.volunteer_opportunity.Organization %><br>
-            </div>
-          
-            <center>
-              <div class="boxesbackground">
-              <%= link_to 'Learn More', claim_opportunity.volunteer_opportunity, class: 'orangefont' %><br>
-              </div>
-            </center>
-
-
-          </div>
-        </div>
-      </div>
+      <tr>
+        <td><%= claim_opportunity.volunteer_opportunity.Organization %></td>
+        <td><%= claim_opportunity.volunteer_opportunity.Address %></td>
+        <td><%= claim_opportunity.volunteer_opportunity.Phone %></td>
+        <td><%= claim_opportunity.volunteer_opportunity.Website %></td>
+        <td><%= link_to 'View', claim_opportunity.volunteer_opportunity, class: "btn btn-success" %> 
+      </tr>
     <% end %>
-  </div>
+  </tbody>
+</table>
+
+<br>
+<br>
 </div>
-
-
 
 
 

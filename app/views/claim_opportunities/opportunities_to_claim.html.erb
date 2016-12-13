@@ -1,6 +1,8 @@
 
-
-<h1 class="text-center">Connections you posted that volunteers have claimed</h1>
+<div class="calendar3">
+   <h1>Connections you have posted that volunteers have claimed</h1>
+   <div class="underline-purple"></div>
+  <br>
 
 
 <table class= "table table-responsive">
@@ -9,7 +11,7 @@
       <th>Position</th>
       <th>Name</th>
       <th>Phone</th>
-      <th>Causes</th>
+      <th>Major(s)</th>
       <th>Passions</th>
       <th>Cover Letter</th>
       <th>Contact</th>
@@ -26,7 +28,7 @@
         <td><%= claim_opportunity.volunteer.biographical_information  %></td>
         <td><%= claim_opportunity.volunteer.about1  %></td>
         <td><%= claim_opportunity.please_explain_why_you_are_interested_in_this_opportunity  %></td>
-        <td><a href="mailto:<%= claim_opportunity.volunteer.email  %>?subject=<%= current_user.name %> wants you to volunteer!&body=Hello <%= claim_opportunity.volunteer.name  %>, if you are interested in volunteering for the <%= claim_opportunity.volunteer_opportunity.Organization %> position, please let us know! ">Contact <%= claim_opportunity.volunteer.name  %></a></td>
+        <td><a href="mailto:<%= claim_opportunity.volunteer.email  %>?subject=<%= current_user.name %> wants to connect with you!&body=Hello <%= claim_opportunity.volunteer.name  %>, if you are interested in volunteering for the <%= claim_opportunity.volunteer_opportunity.Organization %> position, please let us know! ">Contact <%= claim_opportunity.volunteer.name  %></a></td>
         
 
       </tr>
@@ -35,7 +37,7 @@
 </table>
 
 <br>
-
+</div>
 
 
 

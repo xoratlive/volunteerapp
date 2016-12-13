@@ -9,7 +9,7 @@
 
            <div class="underline"></div>
           
-              <%= image_tag current_user.image.url(:medium) %>
+              <%= image_tag current_user.image.url(:medium), :class=> "profile-pic" %>
               <br>
               <h1>Our mission</h1>
               <div class = "underline"></div>
@@ -20,30 +20,33 @@
    </div>
       <div class="col-sm-4">
         <div class="calendar">
-          <h1>Contact Us</h1>
+          <h1>Contact Information</h1>
           <div class="underline-red"></div>
           <br>
+          <% if (current_user.address.present? ) %>
           <p>
             <strong>Address:</strong>
           <%= current_user.address %>
           </p>
+          <% end %>
 
           <p>
             <strong>Email:</strong>
           <%= current_user.email %>
           </p>
 
-
+          <% if (current_user.phone_number.present? ) %>
           <p>
             <strong>Phone:</strong>
           <%= current_user.phone_number %>
           </p>
-
+          <% end %>
+          <% if (current_user.website.present? ) %>
           <p>
             <strong>Website:</strong>
           <%= current_user.website %>
           </p>
-
+          <% end %>
      </div>
      <br>
      <div class="calendar">
@@ -58,7 +61,7 @@
 <br>
 
 <% if (user_signed_in?) && (not current_user.volunteer?) %>
-<div class="calendar">
+<div class="calendar3">
    <h1>All Your Volunteer Opportunities</h1>
    <div class="underline-purple"></div>
 

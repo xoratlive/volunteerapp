@@ -88,6 +88,17 @@ margin-bottom: 10px;
 -moz-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
 box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
 }
+
+.calendar3 {
+	background-color: #d4d4d4 ;
+	padding: 10px;
+	border-radius: 5px;
+-webkit-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+box-shadow: 10px 10px 43px -5px rgba(0,0,0,0.75);
+}
+
+
 .calendar td {
 	text-align: center;
 		color: #6d6d6d;

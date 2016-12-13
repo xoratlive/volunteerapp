@@ -12,28 +12,30 @@
     <div class="underline-purple"></div>
     <p>
       <strong>Address:</strong>
-    <%= @volunteer_opportunity.user.address %>
+    <%= @volunteer_opportunity.Address %>
     </p>
 
     <p>
       <strong>Phone:</strong>
-    <%= @volunteer_opportunity.user.phone_number %>
+    <%= @volunteer_opportunity.Phone %>
     </p>
-
+    <% if (@volunteer_opportunity.user.biographical_information.present? ) %>
     <p>
     <strong>Our mission:</strong>
     <%= @volunteer_opportunity.user.biographical_information %>
     </p>
-
+    <% end %>
+    <% if (@volunteer_opportunity.user.about1.present? ) %>
     <p>
     <strong>About <%= @volunteer_opportunity.user.name %>:</strong>
     <%= @volunteer_opportunity.user.about1 %>
     </p>
+    <% end %>
 
 
     <p>
     <strong>Website:</strong>
-    <%= @volunteer_opportunity.user.website %>
+    <%= @volunteer_opportunity.Website %>
     </p>
     </div>
 </div>
@@ -42,21 +44,24 @@
     <div class="calendar">
       <h1>Volunteer Position - <%= @volunteer_opportunity.Organization %></h1>
        <div class="underline"></div>
+        <% if (@volunteer_opportunity.description.present? ) %>
         <p>
         <strong>Description of Work:</strong>
           <%= @volunteer_opportunity.description %>
         </p>
-
+        <% end %>
+        <% if (@volunteer_opportunity.skill_needed.present? ) %>
         <p>
         <strong>Special skill needed:</strong>
           <%= @volunteer_opportunity.skill_needed %>
         </p>
-
+        <% end %>
+        <% if (@volunteer_opportunity.what_to_bring.present? ) %>
         <p>
         <strong>What to bring:</strong>
           <%= @volunteer_opportunity.what_to_bring %>
         </p>
-
+        <% end %>
     <strong>Morning availability: &ensp; </strong>
         <% if @volunteer_opportunity.monday_morning == "mmondaym" %>
           Mon
@@ -221,7 +226,7 @@
       <table class="table table-border">
         <thead>
           <tr>
-            <th>Position</th>
+            
             <th colspan="3"></th>
           </tr>
         </thead>
