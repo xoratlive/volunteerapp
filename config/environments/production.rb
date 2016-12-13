@@ -93,4 +93,13 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
   config.serve_static_assets = true
 config.assets.compile = true
+
+config.action_mailer.default_url_options = { :host => 'tecm4400volunteerapp.herokuapp.com' }
+ActionMailer::Base.smtp_settings = {
+  :address          => "smtp.sendgrid.net",
+  :port             => "25",
+  :authentication   => :plain,
+  :user_name        => ENV['SENDGRID_USERNAME'],
+  :password         => ENV['SENDGRID_PASSWORD'],
+  :domain           => ENV['SENDGRID_DOMAIN']
 end
