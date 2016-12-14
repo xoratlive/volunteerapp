@@ -256,7 +256,7 @@
     <div class="boxfooter">
            <h2 class="listing-header">Organization: <%= volunteer_opportunity.user.name %></h2>
  
- <% if (user_signed_in?) && (current_user == volunteer_opportunity.user) %>
+ <% if (user_signed_in?) && (current_user.admin?) or (current_user == volunteer_opportunity.user) %>
   <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %> | 
   <%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>

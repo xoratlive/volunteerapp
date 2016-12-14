@@ -98,7 +98,7 @@ end
     
     # Only let the creator of a volunteer opportunity edit or delete the opportunity.
     def check_user
-      if current_user != @volunteer_opportunity.user
+      unless (@volunteer_opportunity.user == current_user) || (current_user.admin?)
         redirect_to root_url, alert: "Sorry, this volunteer opportunity belongs to someone else."
     end
   end
