@@ -134,11 +134,11 @@
       <h2>Available Connections</h2>
       <div class="underline-purple"></div>
 </div>
-<br>
+
 <% @volunteer_opportunities.each do |volunteer_opportunity| %>
 
   
-  <b><div class="col-md-3">
+  <div class="col-md-3">
 
 <%= link_to volunteer_opportunity do %>
 
@@ -256,13 +256,9 @@
   <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %> | 
   <%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
-  <% if (user_signed_in?) && (not current_user == volunteer_opportunity.user) %>
-  <br>
-<% end %>
 <% end %>
 </div>
   </div>
-  <br>
 </div><!--row-->
 <% end %>
 </div>
@@ -270,7 +266,7 @@
 
 
 
-<br>
+
 
 
 
