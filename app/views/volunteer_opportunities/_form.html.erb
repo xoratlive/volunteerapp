@@ -60,36 +60,37 @@ function major()
 
 
 
-
+  <div class="calender">
     <div class="form-group">
-      <%= f.label :Position %><br>
+      <p><%= f.label :Position %> </p>
       <%= f.text_field :Organization, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :Description_of_work %><br>
+      <p><%= f.label :Description_of_work %></p>
       <%= f.text_area :description, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :Special_skill_needed %><br>
+      <p><%= f.label :Special_skill_needed %></p>
       <%= f.text_area :skill_needed, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :What_to_bring %><br>
+      <p><%= f.label :What_to_bring %></p>
       <%= f.text_area :what_to_bring, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :Address %><br>
+      <p><%= f.label :Address %></p>
       <%= f.text_field :Address, value: current_user.address, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :Phone %><br>
+      <p><%= f.label :Phone %></p>
       <%= f.text_field :Phone, value: current_user.phone_number, class: "form-control" %>
     </div>
     <div class="form-group">
-      <%= f.label :Website %><br>
+      <p><%= f.label :Website %></p>
       <%= f.text_field :Website, value: current_user.website, class: "form-control" %>
     </div>
     
+
     <div class="form-group">
       <div class="container-fluid">
       <input type='button' onclick="morning()" id='hideshowmorning' value='Schedule Morning Availability' class='btn btn-success' >
@@ -344,5 +345,6 @@ function major()
     </div>
 <% end %>
 
+</div>
 
 
