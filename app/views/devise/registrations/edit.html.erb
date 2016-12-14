@@ -61,26 +61,27 @@ function change()
  <div class="field">
  <div class="form-group">
   <% if (user_signed_in?) && (not current_user.volunteer?) %>
- 
     <%= f.label :About_your_organization %><br />
-    <% else %>
-    <%= f.label :What_you_are_passionate_about %><br />
-    <% end %>
     <%= f.text_area :about1, autofocus: true, cols: "30", rows: "3", class: "form-control" %>
+    <% end %>
   </div>
   </div>
 
   <div class="field">
   <div class="form-group">
+   <% if (user_signed_in?) && (not current_user.volunteer?) %>
     <%= f.label :website %><br />
     <%= f.text_field :website, autofocus: true, class: "form-control" %>
+    <% end %>
   </div>
   </div>
 
   <div class="field">
   <div class="form-group">
+  <% if (user_signed_in?) && (not current_user.volunteer?) %>
     <%= f.label :address %><br />
     <%= f.text_field :address, autofocus: true, class: "form-control" %>
+  <% end %>
   </div>
   </div>
 

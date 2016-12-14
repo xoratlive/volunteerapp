@@ -17,6 +17,7 @@
         <div class="calendar">
           <h1>Contact Information</h1>
           <div class="underline-red"></div>
+          <br>
           <p>
           <% if (current_user.address.present? ) %>
             <strong>Address:</strong>
@@ -41,6 +42,7 @@
       <div class="calendar">
           <h1>My Major(s)</h1>
           <div class="underline-red"></div>
+          <br>
           <%= current_user.biographical_information %>
       </div>
     </div><!--col-md-4-->

@@ -10,6 +10,7 @@
 
     <h1>Information</h1>
     <div class="underline-purple"></div>
+    <br>
     <p>
       <strong>Address:</strong>
     <%= @volunteer_opportunity.Address %>
@@ -46,6 +47,7 @@
     <div class="calendar">
       <h1>Volunteer Position - <%= @volunteer_opportunity.Organization %></h1>
        <div class="underline"></div>
+       <br>
         <% if (@volunteer_opportunity.description.present? ) %>
         <p>
         <strong>Description of Work:</strong>
