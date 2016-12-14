@@ -8,6 +8,10 @@ document.getElementById("filtermode").innerHTML = (localStorage.variableName);
 
 
 
+
+
+
+
 <div class="row">
   <div class="col-md-8 calendar">
   <div class= "subheading">
@@ -141,10 +145,14 @@ document.getElementById("filtermode").innerHTML = (localStorage.variableName);
       <div class="underline-purple"></div>
 </div>
 <br>
+<br>
+<br>
+
+
 <% @volunteer_opportunities.each do |volunteer_opportunity| %>
 
   
-  <b><div class="col-md-3">
+  <div class="col-md-3">
 
 <%= link_to volunteer_opportunity do %>
 
@@ -262,21 +270,12 @@ document.getElementById("filtermode").innerHTML = (localStorage.variableName);
   <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %> | 
   <%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
-  <% if (user_signed_in?) && (not current_user == volunteer_opportunity.user) %>
-  <br>
-<% end %>
 <% end %>
 </div>
   </div>
-  <br>
 </div><!--row-->
 <% end %>
 </div>
-
-
-
-
-<br>
 
 
 
