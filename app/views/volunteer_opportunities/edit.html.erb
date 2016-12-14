@@ -82,15 +82,15 @@ function major()
     </div>
     <div class="form-group">
       <%= f.label :Description_of_work %><br>
-      <%= f.text_area :description, class: "form-control" %>
+      <%= f.text_area :description, cols: "30", rows: "3", class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :Special_skill_needed %><br>
-      <%= f.text_area :skill_needed, class: "form-control" %>
+      <%= f.text_area :skill_needed, cols: "30", rows: "3", class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :What_to_bring %><br>
-      <%= f.text_area :what_to_bring, class: "form-control" %>
+      <%= f.text_area :what_to_bring, cols: "30", rows: "3", class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :Address %><br>
@@ -98,7 +98,7 @@ function major()
     </div>
     <div class="form-group">
       <%= f.label :Phone %><br>
-      <%= f.text_field :Phone, class: "form-control" %>
+      <%= f.text_field :Phone, maxlength: 10, class: "form-control" %>
     </div>
     <div class="form-group">
       <%= f.label :Website %><br>

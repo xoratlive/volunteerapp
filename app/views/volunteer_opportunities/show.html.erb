@@ -62,9 +62,11 @@
           <%= @volunteer_opportunity.what_to_bring %>
         </p>
         <% end %>
+        <p>
     <strong>Morning availability: &ensp; </strong>
         <% if (not @volunteer_opportunity.monday_morning == "mmondaym") & (not @volunteer_opportunity.tuesday_morning == "mtuesdaym") & (not @volunteer_opportunity.wednesday_morning == "mwednesdaym") & (not @volunteer_opportunity.thursday_morning == "mthursdaym") & (not @volunteer_opportunity.friday_morning == "mfridaym") & (not @volunteer_opportunity.saturday_morning == "msaturdaym") & (not @volunteer_opportunity.sunday_morning == "msundaym")  %>
           <span>None</span>
+
         <% end %>
 
         <% if @volunteer_opportunity.monday_morning == "mmondaym" %>
@@ -94,8 +96,8 @@
           
           Sun
           <% end %>
-          <br>
-          <br>
+          </p>
+          <p>
       <strong>Afternoon availability:</strong>
         <% if (not @volunteer_opportunity.monday_afternoon == "amondaya") & (not @volunteer_opportunity.tuesday_afternoon == "atuesdaya") & (not @volunteer_opportunity.wednesday_afternoon == "awednesdaya") & (not @volunteer_opportunity.thursday_afternoon == "athursdaya") & (not @volunteer_opportunity.friday_afternoon == "afridaya") & (not @volunteer_opportunity.saturday_afternoon == "asaturdaya") & (not @volunteer_opportunity.sunday_afternoon == "asundaya")  %>
           <span>None</span>
@@ -127,8 +129,8 @@
           
           Sun
           <% end %>
-          <br>
-          <br>
+          </p>
+          <p>
         <strong>Evening availability:&nbsp; &nbsp; </strong>
         <% if (not @volunteer_opportunity.monday_evening == "emondaye") & (not @volunteer_opportunity.tuesday_evening == "etuesdaye") & (not @volunteer_opportunity.wednesday_evening == "ewednesdaye") & (not @volunteer_opportunity.thursday_evening == "ethursdaye") & (not @volunteer_opportunity.friday_evening == "efridaye") & (not @volunteer_opportunity.saturday_evening == "esaturdaye") & (not @volunteer_opportunity.sunday_evening == "esundaye")  %>
         <span>None</span>
@@ -160,8 +162,8 @@
           
           Sun
           <% end %>
-          <br>
-          <br>
+          </p>
+          <p>
           <strong>College Majors: </strong>
           <br>
           <% if (not @volunteer_opportunity.chemistry == "123chemistry123") & (not @volunteer_opportunity.biology_medical == "123biology123") & (not @volunteer_opportunity.social_sciences == "123social123") & (not @volunteer_opportunity.engineering_physics == "123engineering123") & (not @volunteer_opportunity.english_communication == "123english123") & (not @volunteer_opportunity.journalism == "123journalism123") & (not @volunteer_opportunity.marketing_business == "123marketing123") & (not @volunteer_opportunity.hospitality == "123hospitality123") & (not @volunteer_opportunity.mathematics == "123mathematics123") & (not @volunteer_opportunity.art_music == "123art123")   %>
@@ -220,6 +222,7 @@
           Art or Music
           <br>
           <% end %>
+          </p>
 
 
     <% if user_signed_in? && current_user.volunteer? %>
@@ -234,7 +237,7 @@
 
     <div class="col-md-7">
     <div class="calendar2"> 
-    <h2>Other Connections from this org.</h2>
+    <h2>All Connections from This Org.</h2>
     </h2>
     <div class="underline-red"></div>
       <table class="table table-border">

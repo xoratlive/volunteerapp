@@ -1,5 +1,16 @@
 <div class="container">
+ <% if @claim_opportunity.errors.any? %>
+    <div id="error_explanation" class="alert alert-danger alter-dismissable">
+    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+      <h4><%= pluralize(@claim_opportunity.errors.count, "error") %> prohibited this opportunity from being claimed:</h4>
 
+      <ul>
+      <% @claim_opportunity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 <h1>Claim <%= @volunteer_opportunity.Organization %> from <%= @volunteer_opportunity.user.name %></h1>
 
 <br>

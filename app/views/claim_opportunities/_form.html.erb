@@ -1,16 +1,7 @@
 <div class="container-fluid organization-profile">
 <%= form_for([@volunteer_opportunity, @claim_opportunity]) do |f| %>
-  <% if @claim_opportunity.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@claim_opportunity.errors.count, "error") %> prohibited this claim_opportunity from being saved:</h2>
 
-      <ul>
-      <% @claim_opportunity.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+
 
   <div class="form-group">
     <%= f.label :please_explain_why_you_are_interested_in_this_opportunity, "Share why you want to volunteer for this opportunity" %><br>
@@ -21,3 +12,8 @@
   </div>
 <% end %>
 </div>
+
+
+
+
+

@@ -12,7 +12,6 @@ class ClaimOpportunitiesController < ApplicationController
   end
 
 
- 
 
   # GET /claim_opportunities/new
   def new
