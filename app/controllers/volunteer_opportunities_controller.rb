@@ -52,7 +52,7 @@ end
 
     respond_to do |format|
       if @volunteer_opportunity.save
-        format.html { redirect_to @volunteer_opportunity, notice: 'Volunteer opportunity was successfully created.' }
+        format.html { redirect_to @volunteer_opportunity, notice: 'Connection was successfully created.' }
         format.json { render :show, status: :created, location: @volunteer_opportunity }
       else
         format.html { render :new }
@@ -66,7 +66,7 @@ end
   def update
     respond_to do |format|
       if @volunteer_opportunity.update(volunteer_opportunity_params)
-        format.html { redirect_to @volunteer_opportunity, notice: 'Volunteer opportunity was successfully updated.' }
+        format.html { redirect_to @volunteer_opportunity, notice: 'Connection was successfully updated.' }
         format.json { render :show, status: :ok, location: @volunteer_opportunity }
       else
         format.html { render :edit }
@@ -80,7 +80,7 @@ end
   def destroy
     @volunteer_opportunity.destroy
     respond_to do |format|
-      format.html { redirect_to volunteer_opportunities_url, notice: 'Volunteer opportunity was successfully destroyed.' }
+      format.html { redirect_to volunteer_opportunities_url, notice: 'Connection was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -99,7 +99,7 @@ end
     # Only let the creator of a volunteer opportunity edit or delete the opportunity.
     def check_user
       unless (@volunteer_opportunity.user == current_user) || (current_user.admin?)
-        redirect_to root_url, alert: "Sorry, this volunteer opportunity belongs to someone else."
+        redirect_to root_url, alert: "Sorry, this connection belongs to someone else."
     end
   end
 end
