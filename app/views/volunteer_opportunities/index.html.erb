@@ -156,101 +156,109 @@
     <div class="listing-box-container">
 
 
-     <h3>Morning availability: <br></h3>
+     <h3><img class="icon icons8-Sunrise" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAA0CAYAAADFeBvrAAADhUlEQVRoQ+2aj5ENQRDG+yJABFwEiAARcBEgAkSACBABFwEiQASIABEgAupXNXPV23pmZ/ptvzpXb6q2Xl3Z7Zmv+5v+60jy12UReSsi/N4RkV+ZWx5lCi8gPojIjbLPl2xQmYCwiAZTdZcKKgtQC0w6qCxA3Jl7K3ROsVQGoNci8mDwbr4TkZPBd4de2xoQQAA0s16JyOOZD3rvbgkIT/Y5eDCshLV2XlsC+iYi14InIjZdCX67+GxLQG9E5H7wUJvRbktAFsvtEoc8jGQMH4Pgu58dAE1o9cJZiGzhZ0MB/yXlwPKnAeimiJApbL4y71APUNq+aYKL6vFktxwzpO2bJrgD6HepkzanGwKzAT0Tkafm5J9EBA+YsrIBkd8B6m45/fvyd4pD2IeFUqzQE5ptoQOgXTVwsFBAg/QWqGKpeZ6LCGVG2tqHhXTh911EjtPQ7CEOeelPqhIjwgmKj0q0fzKQZNoEdW1PYhfBmHL+4YD8hcHXhHvssBQic+71q2cAUXLQaNG9CXoNw/3wCCB7QC462UBrzQDyUqV0QC8L5SoAtIeVuPDeGgWEVbAOVqprunkSsRAbcvhLauNeB3QUkG0fk5UDcphuu+RydDpfGHO0ymrAXy3v/mj07rz+Aw4HNkytiIXqBmTM19VuFHOAsov2cL1j/HqBlbGLLim+qpnS3gB5Wo0qyNIy3ESJHqBqTXdLTyemDlbrW8n5p2JF6+RdXEb4i0teu5R1dKKpRHCkqEMeTkSPJJEHPSn2dKHnyfHohjwCb51YEHzP9rYWwm3WzRHG5vAe9zmy6G3z/mjTHofB+1h3ZJGh8L527YtGvwXU6tKgSbxOqx9dJ93RXgFyGam02IBcvKpWdlXAouliAfEBMaW6WY/rmFgvvsFLaa2NaNu+Axicge039CaChAGoeqZozylwMPjJo4NnPYDmbA8MNGIjnppFQEW0zeONXiyo1kQQq3DHeRZW7Xm56hhqx8YC8lIV3uGyo4xWKlTltORzQGomfj1AXfkjbhttchHpgGrXbIMhB114nEHeeVmHTqWqS6efxzm6c6URQN65PM2FUpUi3AMVmrtGAVnrQIO1/5ewZjCsoundSqW6ciKAvGk3nF+7M2uAuFMUj3pNj10igCw9dkl5vLCgvd80jSOALDVCXG+Yy97NaSoDqDVlW6PIufz3A6BzaRZ1qAtnob9XLL0xe/JJcwAAAABJRU5ErkJggg==" width="32" height="32"> Morning availability: <br></h3>
+     <div class="day-listing">
         <% if (not volunteer_opportunity.monday_morning == "mmondaym") & (not volunteer_opportunity.tuesday_morning == "mtuesdaym") & (not volunteer_opportunity.wednesday_morning == "mwednesdaym") & (not volunteer_opportunity.thursday_morning == "mthursdaym") & (not volunteer_opportunity.friday_morning == "mfridaym") & (not volunteer_opportunity.saturday_morning == "msaturdaym") & (not volunteer_opportunity.sunday_morning == "msundaym")  %>
           <span>None</span>
         <% end %>
         <% if volunteer_opportunity.monday_morning == "mmondaym" %>
-          <span>Mo</span>
+          <span>Mo - </span>
           <% end %>
         <% if volunteer_opportunity.tuesday_morning == "mtuesdaym" %>
           
-          <span>Tu</span>
+          <span>Tu - </span>
           <% end %>
         <% if volunteer_opportunity.wednesday_morning == "mwednesdaym" %>
           
-         <span>We</span>
+         <span>We - </span>
           <% end %>
         <% if volunteer_opportunity.thursday_morning == "mthursdaym" %>
           
-          <span>Th</span>
+          <span>Th - </span>
           <% end %>
         <% if volunteer_opportunity.friday_morning == "mfridaym" %>
           
-          <span>Fr</span>
+          <span>Fr - </span>
           <% end %>
         <% if volunteer_opportunity.saturday_morning == "msaturdaym" %>
           
-          <span>Sa</span>
+          <span>Sa - </span>
           <% end %>
         <% if volunteer_opportunity.sunday_morning == "msundaym" %>
           
-          <span>Su</span>
+          <span>Su - </span>
           <% end %>
-   
-      <h3>Afternoon availability: <br></h3>
+        </div>
+        <div class="listing-underline"></div>
+
+      <h3><img class="icon icons8-Sun" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAADp0lEQVR4Xu2agZENQRCG/4uADBABIkAEiAARIAJEgAgQwREBIkAEyIAIqK9u+6rf3Nu3O9O9tZ6dqXpV9652pru/+adnevadaOPtZOPxqwPoCtg4gb4EVhTAn8L2KpOxitEh8A6gK2CXwCpqXMVoXwJnBI4+BzwcZvJt406SBSDkR+sSwOibIfBHklogZAAI+9ECwBu1yW+BEAWQ4kcWAEDUQogA2Bd8iw/N1WCaAw35I9V2iwLM51RHZoJItxkBgM+1Dt2QdFfSbUmXJfGd9lXSL0mfJH0YvpdMam3NYhoFMAbhmwuOZ+5Jeinp6iyvpB+Snkp6754H0vWif23euWA+A0AJgeCZYWaUgNku+d7SUARBAgTF8N0ghIPHoSwABuGJCx55fxwcbwne+gDyzrAsDMKrxrPHYgooByb4LyNRvxtmEknzofE8H5TyYKTfzZHcEIGbqgBzBNkTPLPlG8kNhSDnQ43+zDDJ0jeUAISp/lVAMpeAGUb25ZonoRFUTQMWidM3cgDLIa1lAyDbnxbetQRvQ+yDcL/YHUIwsgF8L7Y6ZA+USGMr9MuBJXAtMqDvmwlgX+LD0eiaJScA1re0hJgJ4LmkZ85Lsr3V6tEJo9z2u8MLSdgLt0wAJKhbzqOUg8owXnkM/hw4XO1AOwSgLFfHaNsYbH12tufZNJkO4/pzBecHxqfV+rkYgEh9P0fKY+N3AHPojR37M5dAWa0tuQR8tbmYAmaCPX/sv0uCtQCW3AbLw9A/uQ1u/iCEYjj1XXHSYeY4u0catYU/Tv+suFmatJt5EMLY5oshIJTJkP9R1b2enI7dBx7vKaHTToBmKlsBjEvxwpZ4qQiY5UBpPFUc0Z97gLKK/D2cCKf6V3FeAgAOHLoSo7BBJezl/kqMy04uUsYKqMxzxTmkTAA4jmy5seH6CggEWiqhaoYkMfOAARbXbNw4sZxaXshesJ0FwFdrOGoQkDOO+iqxBgBrnrHtWpzgreBKqTYzAOx7Y+OrNdsduBP0W+QhEGx1JE7/YqSsNukfhhAFUPu6itkjudmrMXvJQT6wV2MEbbnBQ6q1NUtpEQCLODThdbrNVgDpjsyarrOHUm23AMhyIHKBkuVD05uhlJ+mJPxKLMWPFgWUMmzNxBEF2IpZ5UdS3jh/tx5IMgDYZDT70aqAipw1+mgWgJAvHUAIX6xzV0DBbxU1rmJ0CLwrYOsKiGWQpN5rLoGkEGLDdAAxfsffuyvg+OcwFsFfwp7aQarQfmYAAAAASUVORK5CYII=" width="32" height="32"> Afternoon availability: <br></h3>
+      <div class="day-listing">
           <% if (not volunteer_opportunity.monday_afternoon == "amondaya") & (not volunteer_opportunity.tuesday_afternoon == "atuesdaya") & (not volunteer_opportunity.wednesday_afternoon == "awednesdaya") & (not volunteer_opportunity.thursday_afternoon == "athursdaya") & (not volunteer_opportunity.friday_afternoon == "afridaya") & (not volunteer_opportunity.saturday_afternoon == "asaturdaya") & (not volunteer_opportunity.sunday_afternoon == "asundaya")  %>
           <span>None</span>
         <% end %>
         <% if volunteer_opportunity.monday_afternoon == "amondaya" %>
-          <span>Mo</span>
+          <span>Mo - </span>
           <% end %>
         <% if volunteer_opportunity.tuesday_afternoon == "atuesdaya" %>
           
-          <span>Tu</span>
+          <span>Tu - </span>
           <% end %>
         <% if volunteer_opportunity.wednesday_afternoon == "awednesdaya" %>
           
-          <span>We</span>
+          <span>We - </span>
           <% end %>
         <% if volunteer_opportunity.thursday_afternoon == "athursdaya" %>
           
-          <span>Th</span>
+          <span>Th - </span>
           <% end %>
         <% if volunteer_opportunity.friday_afternoon == "afridaya" %>
           
-          <span>Fr</span>
+          <span>Fr - </span>
           <% end %>
         <% if volunteer_opportunity.saturday_afternoon == "asaturdaya" %>
           
-         <span>Sa</span>
+         <span>Sa - </span>
           <% end %>
         <% if volunteer_opportunity.sunday_afternoon == "asundaya" %>
           
-          <span>Su</span>
+          <span>Su - </span>
           <% end %>
-  
-        <h3>Evening availability: <br> </h3>
+        </div>
+       <div class="listing-underline"></div>
+
+        <h3><img class="icon icons8-Moon-Symbol" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAADJUlEQVRoQ+2agZEOQRCF30WACBABIkAEiAARkAEiQASI4IgAESACRIAIqO9q3tXcf9jpnt67q62bqr/+q/q3d/v1e909vXN72sja2wgOnQM5a0yeFCM3Jd1qn4uSru8E4rOkb5L4/iDpYzRQawLB2UeS7krC+cj6KemtpGcN4KLtGkAA8LxF3w58b5HGOZzkQ/RZXG+WzNqF9hvXXVpEIZUmO848kfS4e/BLSa87p5d8AsgrSVck/ZL0QtLTJSN+r2KEqOKAtf+mOYDuRxcsOghh+wogOP++yQMJkROWzQgImMSe+2TsD54xC6QH8aXlBboeXT2Id5IetPwZtT+8bgZIDwIp4ERk9SAy9keelQXSOwETu31hBNB+kyFMIMeplQVCNaFHoGlAROSEwyQ1yZ21PwY6AwTHP7U73QgmNmaUVuxhNWP/V+YyQKgw1Pusrukr9yfsS4D0bFwd3T50T4aNr63Z8XdUkv/MoygjjiYdu+/go4nq3MqyWQbkx6S2YQMmynLDyCKMkBfkB5UGZ6LLssyW6/8+LwKEzRubwqysZu3LgDDwMCDda7NClBG28HckPWw74qh9GRBqP/K43WaLqCMORNa+DMjviSaIqQsFg1JZ2c0ku4FE8qqP4qx9OSObAZLtAciJWfzUpcXUd20Lyb6Z8uuGlt0neQbJNtSyZPcWhTcj7Hyjy1sUJEqela5oBXLCZhOeIFw+7U0jEdzMNr5qsIJZ5FnW4aPSghVXr2zSn4lRFyAVLx9IeJpjNteOFYoMI9zEIyvJizNRibgUZ+3LgPAqB4nR6bPl1PMJ38w4UyvLiCUGGCSC7hmYIqsPRsb+yLNmgOyCgRmGpojMejAwQzAi9odgZoHsgkHzyCR6rGCZZuwPwFQA4T68VSGi5Iwb5/D5X7NxAUnZVwExxb0zrm70m1GG2M+RL2xjkBj3IyCLqxqIpYYDvHHxQjLIx4ehnA/2h6EUDPpTf4SNLdcNnQivAcTO4xj9grMPn9IuRrZdAABAMzoMnUOuCaR32pEGHPnkXPI1vH3s/2EA9kLrpICEnMpcfA4kE7U1bTbDyB+Ps8QzYCNATgAAAABJRU5ErkJggg==" width="32" height="32"> Evening availability: <br> </h3>
+      <div class="day-listing">
         <% if (not volunteer_opportunity.monday_evening == "emondaye") & (not volunteer_opportunity.tuesday_evening == "etuesdaye") & (not volunteer_opportunity.wednesday_evening == "ewednesdaye") & (not volunteer_opportunity.thursday_evening == "ethursdaye") & (not volunteer_opportunity.friday_evening == "efridaye") & (not volunteer_opportunity.saturday_evening == "esaturdaye") & (not volunteer_opportunity.sunday_evening == "esundaye")  %>
           <span>None</span>
           <% end %>
         <% if volunteer_opportunity.monday_evening == "emondaye" %>
-         <span>Mo</span>
+         <span>Mo - </span>
           <% end %>
         <% if volunteer_opportunity.tuesday_evening == "etuesdaye" %>
           
-          <span>Tu</span>
+          <span>Tu - </span>
           <% end %>
         <% if volunteer_opportunity.wednesday_evening == "ewednesdaye" %>
           
-          <span>We</span>
+          <span>We - </span>
           <% end %>
         <% if volunteer_opportunity.thursday_evening == "ethursdaye" %>
           
-          <span>Th</span>
+          <span>Th - </span>
           <% end %>
         <% if volunteer_opportunity.friday_evening == "efridaye" %>
           
-         <span>Fr</span>
+         <span>Fr - </span>
           <% end %>
         <% if volunteer_opportunity.saturday_evening == "esaturdaye" %>
           
-          <span>Sa</span>
+          <span>Sa - </span>
           <% end %>
         <% if volunteer_opportunity.sunday_evening == "esundaye" %>
           
-          <span>Su</span>
+          <span>Su - </span>
           <% end %>
+        </div>
 
   </div>
     <div class="boxfooter">

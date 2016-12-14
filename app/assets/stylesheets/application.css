@@ -16,7 +16,18 @@
 
 
 /*media all*/
+.listing-underline {
+	border-bottom: 1px dotted gray;
+}
+.day-listing {
+	text-align: center;
+	padding-bottom: 10px;
+	font-weight: bolder;
+}
 
+.listing-box h3 {
+	text-transform: uppercase;
+}
 table td  {
 	max-width: 200px;
 	word-wrap: break-word;
