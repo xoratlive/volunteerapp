@@ -107,6 +107,7 @@ function major()
     
     <div class="form-group">
       <div class="container-fluid">
+      <input type='button' onclick="morning()" id='hideshowmorning' value='Schedule Morning Availability' class='btn btn-success' >
       <div id=morning>
       <h3>Schedule Morning Availability</h3><br>
         <div class="row">
@@ -159,9 +160,10 @@ function major()
           </div>
         </div>
         </div>
-      <input type='button' onclick="morning()" id='hideshowmorning' value='Schedule Morning Availability' class='btn btn-success' >
+      
       <br>
       <br>
+      <input type='button' onclick="afternoon()" id='hideshowafternoon' value='Schedule Afternoon Availability' class='btn btn-success' >
       <div id=afternoon>
       <h3>Schedule Afternoon Availability</h3><br>
         <div class="row">
@@ -214,9 +216,10 @@ function major()
           </div>
         </div>
         </div>
-        <input type='button' onclick="afternoon()" id='hideshowafternoon' value='Schedule Afternoon Availability' class='btn btn-success' >
+        
         <br>
         <br>
+        <input type='button' onclick="evening()" id='hideshowevening' value='Schedule Evening Availability' class='btn btn-success' >
       <div id=evening>
       <h3>Schedule Evening Availability</h3><br>
         <div class="row">
@@ -269,9 +272,10 @@ function major()
           </div>
         </div><br>
         </div>
-         <input type='button' onclick="evening()" id='hideshowevening' value='Schedule Evening Availability' class='btn btn-success' >
+         
          <br>
          <br>
+         <input type='button' onclick="major()" id='hideshowmajor' value='Choose Volunteer Major(s)' class='btn btn-success' >
          <div id=major>
         <h3>Choose Volunteer Major(s)</h3><br>
         <div class="row">
@@ -283,7 +287,7 @@ function major()
         </div>
         <div class="row">
           <div class="col-md-9">
-            <div class="col-md-2"><%= f.label :Biology_and_Medical %></div>
+            <div class="col-md-2"><%= f.label :Biology_or_Medical %></div>
             <div class="col-md-1"><%= f.radio_button :biology_medical, "123biology123" %>Yes</div>
             <div class="col-md-1"><%= f.radio_button :biology_medical, "blank564564" %>No</div>
           </div>
@@ -297,14 +301,14 @@ function major()
         </div>
         <div class="row">
           <div class="col-md-9">
-            <div class="col-md-2"><%= f.label :Engineering_and_Physics %></div>
+            <div class="col-md-2"><%= f.label :Engineering_or_Physics %></div>
             <div class="col-md-1"><%= f.radio_button :engineering_physics, "123engineering123" %>Yes</div>
             <div class="col-md-1"><%= f.radio_button :engineering_physics, "blank564564" %>No</div>
           </div>
         </div>
         <div class="row">
           <div class="col-md-9">
-            <div class="col-md-2"><%= f.label :English_and_Communication %></div>
+            <div class="col-md-2"><%= f.label :English_or_Communication %></div>
             <div class="col-md-1"><%= f.radio_button :english_communication, "123english123" %>Yes</div>
             <div class="col-md-1"><%= f.radio_button :english_communication, "blank564564" %>No</div>
           </div>
@@ -318,7 +322,7 @@ function major()
         </div>
         <div class="row">
           <div class="col-md-9">
-            <div class="col-md-2"><%= f.label :Marketing_and_Business %></div>
+            <div class="col-md-2"><%= f.label :Marketing_or_Business %></div>
             <div class="col-md-1"><%= f.radio_button :marketing_business, "123marketing123" %>Yes</div>
             <div class="col-md-1"><%= f.radio_button :marketing_business, "blank564564" %>No</div>
           </div>
@@ -339,18 +343,18 @@ function major()
         </div>
         <div class="row">
           <div class="col-md-9">
-            <div class="col-md-2"><%= f.label :Art_and_Music %></div>
+            <div class="col-md-2"><%= f.label :Art_or_Music %></div>
             <div class="col-md-1"><%= f.radio_button :art_music, "123art123" %>Yes</div>
             <div class="col-md-1"><%= f.radio_button :art_music, "blank564564" %>No</div>
           </div>
         </div>
         </div>
-        <input type='button' onclick="major()" id='hideshowmajor' value='Choose Volunteer Major(s)' class='btn btn-success' >
+        
 
         <br>
         <br>
         <div class="actions">
-          <%= f.submit "Submit", class: "btn btn-success" %>
+          <%= f.submit "Submit Changes", class: "btn btn-primary btn-lg" %>
         </div>
       </div>  
     </div>

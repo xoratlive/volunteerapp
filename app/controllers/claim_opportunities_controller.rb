@@ -36,7 +36,7 @@ class ClaimOpportunitiesController < ApplicationController
 
     respond_to do |format|
       if @claim_opportunity.save
-        format.html { redirect_to volunteer_opportunities_path, notice: 'You have successfully claimed the opportunity.' }
+        format.html { redirect_to volunteer_opportunities_path, notice: 'You have successfully volunteered for the opportunity. The organization will contact you via email if they are interested.' }
         format.json { render :show, status: :created, location: @claim_opportunity }
       else
         format.html { render :new }
