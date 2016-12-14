@@ -127,6 +127,7 @@
 <br>
 <br>
 <br>
+
 <div class="row calendar">
 
 <div class= "subheading">
@@ -152,6 +153,9 @@
 
 
      <h3>Morning availability: <br></h3>
+        <% if (not volunteer_opportunity.monday_morning == "mmondaym") & (not volunteer_opportunity.tuesday_morning == "mtuesdaym") & (not volunteer_opportunity.wednesday_morning == "mwednesdaym") & (not volunteer_opportunity.thursday_morning == "mthursdaym") & (not volunteer_opportunity.friday_morning == "mfridaym") & (not volunteer_opportunity.saturday_morning == "msaturdaym") & (not volunteer_opportunity.sunday_morning == "msundaym")  %>
+          <span>None</span>
+        <% end %>
         <% if volunteer_opportunity.monday_morning == "mmondaym" %>
           <span>Mo</span>
           <% end %>
@@ -181,6 +185,9 @@
           <% end %>
    
       <h3>Afternoon availability: <br></h3>
+          <% if (not volunteer_opportunity.monday_afternoon == "amondaya") & (not volunteer_opportunity.tuesday_afternoon == "atuesdaya") & (not volunteer_opportunity.wednesday_afternoon == "awednesdaya") & (not volunteer_opportunity.thursday_afternoon == "athursdaya") & (not volunteer_opportunity.friday_afternoon == "afridaya") & (not volunteer_opportunity.saturday_afternoon == "asaturdaya") & (not volunteer_opportunity.sunday_afternoon == "asundaya")  %>
+          <span>None</span>
+        <% end %>
         <% if volunteer_opportunity.monday_afternoon == "amondaya" %>
           <span>Mo</span>
           <% end %>
@@ -210,6 +217,9 @@
           <% end %>
   
         <h3>Evening availability: <br> </h3>
+        <% if (not volunteer_opportunity.monday_evening == "emondaye") & (not volunteer_opportunity.tuesday_evening == "etuesdaye") & (not volunteer_opportunity.wednesday_evening == "ewednesdaye") & (not volunteer_opportunity.thursday_evening == "ethursdaye") & (not volunteer_opportunity.friday_evening == "efridaye") & (not volunteer_opportunity.saturday_evening == "esaturdaye") & (not volunteer_opportunity.sunday_evening == "esundaye")  %>
+          <span>None</span>
+          <% end %>
         <% if volunteer_opportunity.monday_evening == "emondaye" %>
          <span>Mo</span>
           <% end %>
@@ -246,12 +256,18 @@
   <%= link_to 'Edit', edit_volunteer_opportunity_path(volunteer_opportunity) %> | 
   <%= link_to 'Destroy', volunteer_opportunity, method: :delete, data: { confirm: 'Are you sure?' } %>
   <% end %>
+  <% if (user_signed_in?) && (not current_user == volunteer_opportunity.user) %>
+  <br>
+<% end %>
 <% end %>
 </div>
   </div>
+  <br>
 </div><!--row-->
 <% end %>
 </div>
+
+
 
 
 <br>
